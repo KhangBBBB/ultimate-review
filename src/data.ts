@@ -263,7 +263,7 @@ export const topics: models.Topic[] = [
         flashcards: [
             // Bash.
             {
-                question: "Write a Bash script that uses a for loop toprint numbers from 1 to 100.",
+                question: "Write a Bash script that uses a for loop to print numbers from 1 to 100.",
                 answer: "#!/bin/bash\n\nfor i in {1..100}; do\n  echo $i\ndone",
             },
             {
@@ -273,6 +273,18 @@ export const topics: models.Topic[] = [
             {
                 question: "What is an array in Bash, and how do you use it?",
                 answer: "An array in Bash is a collection of elements. You can declare an array using 'array_name=(element1 element2 element3)'. To access individual elements, use '${array_name[index]}'."
+            },
+            {
+                question: "How do you iterate over an array of fruits in Bash using a for loop?",
+                answer: `#!/bin/bash
+
+# Define an array of fruits
+fruits=("apple" "banana" "orange" "grape" "kiwi")
+
+# Iterate over the array using a for loop
+for fruit in "\${fruits[@]}"; do
+    echo "I like \$fruit"
+done`,
             },
             {
                 question: "What is variable substitution in Bash?",
