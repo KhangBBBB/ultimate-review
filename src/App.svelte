@@ -3,11 +3,7 @@
     import Deck from "./components/Deck.svelte";
     import DropdownMenuButton from "./components/DropdownMenuButton.svelte";
 
-    const topicTitles = topics.map((topic) => topic.title);
-    const topicIndex = topics.map((_, index) => index);
-
     let curTopicIndex = 0;
-    let flashcardCount = 0;
 </script>
 
 <div class="control-box">
