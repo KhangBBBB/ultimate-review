@@ -7,6 +7,7 @@
     const topicIndex = topics.map((_, index) => index);
 
     let curTopicIndex = 0;
+    let flashcardCount = 0;
 </script>
 
 <div class="control-box">
@@ -21,6 +22,10 @@
             };
         })}
     />
+    <div style="margin-right: 20px;"></div>
+    <div>
+        Number of Flashcards: {topics[curTopicIndex].flashcards.length}
+    </div>
 </div>
 
 {#each topics as topic, topicIndex}
