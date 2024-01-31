@@ -34,6 +34,15 @@ export const topics: models.Topic[] = [
                 question: "Who constitutes the 'Users' component in a computer system?",
                 answer: "Users can include people, machines, and other computers."
             },
+            // Cont.
+            {
+                question: "How is the kernel defined in the context of an operating system?",
+                answer: "The one program running at all times on the computer."
+            },
+            {
+                question: "What are the two categories that encompass everything else besides kernel in an operating system?",
+                answer: "System program (ships with the operating system) or an application program."
+            },
             // Process Managemnet.
             {
                 question: "What is a process in the context of computer systems?",
@@ -54,7 +63,7 @@ export const topics: models.Topic[] = [
             // Process Management.
             {
                 question: "What activities is the operating system responsible for in connection with process management?",
-                answer: "The operating system is responsible for the following activities in connection with process management:\n1. Creating and deleting both user and system processes\n2. Suspending and resuming processes\n3. Providing mechanisms for process synchronization\n4. Providing mechanisms for process communication\n5. Providing mechanisms for deadlock handling"
+                answer: "1. Creating and deleting both user and system processes\n2. Suspending and resuming processes\n3. Providing mechanisms for process synchronization\n4. Providing mechanisms for process communication\n5. Providing mechanisms for deadlock handling"
             },
             // Memory Management.
             {
@@ -248,10 +257,6 @@ export const topics: models.Topic[] = [
                 question: "What is a benefit of Type 2 VMMs despite their potential performance limitations?",
                 answer: "A benefit of Type 2 VMMs is that they require no changes to the host operating system. This means that the host OS remains unchanged, simplifying the implementation process."
             },
-            {
-                question: "How can a student use a Type 2 hypervisor on a native host?",
-                answer: "A student could have a Type 2 hypervisor on a native host, allowing them to run multiple guests. All of this occurs on a standard host operating system such as Windows, Linux, or MacOS."
-            }
         ],
     },
     {
