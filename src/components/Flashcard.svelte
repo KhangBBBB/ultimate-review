@@ -17,7 +17,13 @@
     $: cardType = showAnswer ? "Answer" : "Question";
 </script>
 
-<div class="flashcard" on:click={handleCardClick} on:keypress={handleCardClick}>
+<div
+    class="flashcard"
+    on:click={handleCardClick}
+    on:keypress={handleCardClick}
+    role="button"
+    tabindex="0"
+>
     <div class="question-answer">
         {cardType}
     </div>
