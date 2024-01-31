@@ -299,6 +299,81 @@ export const topics: models.Topic[] = [
                 question: "Explain the role of user authentication in ensuring security in multiuser or networked computer systems.",
                 answer: "User authentication is crucial for security in multiuser or networked computer systems. It verifies the identity of users, preventing unauthorized access and ensuring that only authenticated users can access sensitive information."
             },
+            // User Operating System Interface - CLI.
+            {
+                question: "What does CLI stand for in the context of User Operating System Interface?",
+                answer: "CLI stands for Command Line Interface."
+            },
+            {
+                question: "Where is the CLI or command interpreter sometimes implemented?",
+                answer: "CLI is sometimes implemented in the kernel and sometimes by systems programs."
+            },
+            {
+                question: "____ are multiple flavors of CLI implemented to interpret commands.",
+                answer: "Shells",
+            },
+            {
+                question: "What is the primary function of a CLI or command interpreter?",
+                answer: "The primary function of a CLI is to fetch a command from the user and execute it."
+            },
+            {
+                question: "How are commands handled in CLI regarding built-in features and programs?",
+                answer: "Commands in CLI can be either built-in or just names of programs. If the latter, adding new features doesn't require shell modification."
+            },
+            // User Operating System Interface - GUI.
+            {
+                question: "How are files, programs, and actions represented in a desktop metaphor interface?",
+                answer: "Icons are used to represent files, programs, actions, etc.",
+            },
+            {
+                question: "What kind of actions can be triggered by various mouse buttons over objects in a desktop metaphor interface?",
+                answer: "Various mouse buttons over objects in the interface can cause actions such as providing information, displaying options, executing functions, or opening directories (known as folders).",
+            },
+            {
+                question: "Where was the desktop metaphor interface invented?",
+                answer: "The desktop metaphor interface was invented at Xerox PARC.",
+            },
+            {
+                question: "Many systems now include both ____ and ____ interfaces",
+                answer: "GUI\nCLI",
+            },
+            {
+                question: "Describe the interface of Apple Mac OS X, including its underlying components.",
+                answer: "Apple Mac OS X has an \"Aqua\" GUI interface with a UNIX kernel underneath and shells available.",
+            },
+            {
+                question: "How do Unix and Linux systems typically provide interfaces, and what are some examples?",
+                answer: "Unix and Linux systems typically have a CLI with optional GUI interfaces. Examples of GUI interfaces include CDE, KDE, and GNOME.",
+            },
+            {
+                question: "How are actions and selections typically performed on touchscreen devices?",
+                answer: "Actions and selections on touchscreen devices are based on gestures.",
+            },
+            {
+                question: "What is used for text entry on touchscreen devices?",
+                answer: "Text entry on touchscreen devices is facilitated using a virtual keyboard.",
+            },
+            {
+                question: "Besides gestures and virtual keyboards, what is another method of interaction with touchscreen devices?",
+                answer: "Voice commands are another method of interaction with touchscreen devices.",
+            },
+            // System Calls.
+            {
+                question: "What is the role of system calls in the context of an operating system?",
+                answer: "System calls provide a programming interface to the services offered by the operating system.",
+            },
+            {
+                question: "In what programming languages are system calls typically written?",
+                answer: "High-level language, such as C or C++",
+            },
+            {
+                question: "How are programs most commonly accessing system calls?",
+                answer: "Via a high-level Application Programming Interface (API) rather than through direct system call use",
+            },
+            {
+                question: "Name three of the most common APIs for accessing System Calls.",
+                answer: "1. Win32 API for Windows\n2. POSIX API for POSIX-based systems (including UNIX, Linux, and Mac OS X)\n3. Java API for the Java virtual machine (JVM)",
+            },
         ],
     },
     {
