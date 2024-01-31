@@ -374,6 +374,66 @@ export const topics: models.Topic[] = [
                 question: "Name three of the most common APIs for accessing System Calls.",
                 answer: "1. Win32 API for Windows\n2. POSIX API for POSIX-based systems (including UNIX, Linux, and Mac OS X)\n3. Java API for the Java virtual machine (JVM)",
             },
+            // Example of Standard API.
+            {
+                question: "Give an example for a standard API in Linux operating system.",
+                answer: "#include <unistd.h>\nssize_t read(int fd, void *buf, size_t count)\n\n* int fd - represents the file descriptor intended for reading\n* void *buf - refers to a buffer designated for storing the read data\n* size_t count - denotes the maximum number of bytes to be read into the buffer",
+            },
+            // System Call Implementation.
+            {
+                question: "How are system calls typically identified in the context of their implementation?",
+                answer: "System calls are typically associated with a number, and the system-call interface maintains a table indexed according to these numbers."
+            },
+            {
+                question: "What is the role of the system call interface?",
+                answer: "The system-call interface invokes the intended system call in the OS kernel and returns the status of the system call along with any return values."
+            },
+            {
+                question: "What knowledge does the caller need about the system call implementation?",
+                answer: "The caller does not need to know anything about how the system call is implemented. They just need to obey the API (Application Programming Interface) and understand what the OS will do as a result of the call."
+            },
+            {
+                question: "How are most details of the OS interface hidden from the programmer?",
+                answer: "Most details of the OS interface are hidden from the programmer by the API. This abstraction is managed by a run-time support library, which is a set of functions built into libraries included with the compiler."
+            },
+            // System Call Parameter Passing.
+            {
+                question: "What are the three general methods used for passing parameters to the OS during a system call?",
+                answer: "The three general methods are: 1) Passing parameters in registers, 2) Storing parameters in a block or table in memory, with the address of the block passed as a parameter in a register (used by Linux), and 3) Placing parameters onto the stack by the program and having the operating system pop them off the stack."
+            },
+            {
+                question: "How does the simplest method of passing parameters work?",
+                answer: "The simplest method involves passing the parameters directly in registers. However, in some cases, there may be more parameters than available registers."
+            },
+            {
+                question: "Which approach is taken by Linux for passing parameters during a system call?",
+                answer: "Linux uses the approach of storing parameters in a block or table in memory, with the address of the block passed as a parameter in a register."
+            },
+            {
+                question: "What is common between the block and stack methods of passing parameters?",
+                answer: "Both the block and stack methods do not limit the number or length of parameters being passed."
+            },
+            // Example: MS-DOS.
+            {
+                question: "What is a notable characteristic of MS-DOS in terms of multitasking?",
+                answer: "MS-DOS is a single-tasking operating system, meaning it can only execute one task at a time."
+            },
+            {
+                question: "When is the shell invoked in MS-DOS?",
+                answer: "The shell in MS-DOS is invoked when the system is booted."
+            },
+            {
+                question: "How does MS-DOS handle the running of programs?",
+                answer: "In MS-DOS, running a program involves a simple method with no process creation. The program is loaded into memory, overwriting all but the kernel, without creating a separate process."
+            },
+            {
+                question: "What is the memory model used by MS-DOS?",
+                answer: "MS-DOS operates with a single memory space."
+            },
+            {
+                question: "What happens when a program exits in MS-DOS?",
+                answer: "Upon program exit, the shell is reloaded in MS-DOS."
+            },
         ],
     },
     {
