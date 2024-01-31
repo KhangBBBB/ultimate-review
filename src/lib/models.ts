@@ -6,6 +6,7 @@ export namespace models {
 
     export type Topic = {
         title: string
+        subtitle: string
         flashcards: Flashcard[]
     };
 }

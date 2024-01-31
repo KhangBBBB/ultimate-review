@@ -3,6 +3,7 @@ import type { models } from "./lib/models";
 export const topics: models.Topic[] = [
     {
         title: "OS: Lecture 2",
+        subtitle: "OS Overview, Virtual Machine Monitor",
         flashcards: [
             // 2.0.
             // What is an Operating System?
@@ -261,6 +262,7 @@ export const topics: models.Topic[] = [
     },
     {
         title: "OS: Lecture 3",
+        subtitle: "Structure",
         flashcards: [
             // 3.1.
             {
@@ -476,6 +478,7 @@ export const topics: models.Topic[] = [
     },
     {
         title: "OS: Bash and Linux Commands",
+        subtitle: "",
         flashcards: [
             // Bash.
             {
