@@ -2,8 +2,13 @@
     import { topics } from "./data";
     import Deck from "./components/Deck.svelte";
     import DropdownMenuButton from "./components/DropdownMenuButton.svelte";
+    import Button from "./components/Button.svelte";
 
     let curTopicIndex = 0;
+
+    function handleScrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
 </script>
 
 <div class="control-box">
@@ -29,6 +34,10 @@
         <Deck {topic} />
     {/if}
 {/each}
+
+<div>
+    <Button label="Scroll to Top" onClick={handleScrollToTop} />
+</div>
 
 <style>
     .control-box {
