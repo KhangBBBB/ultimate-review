@@ -2,7 +2,7 @@ import type { models } from "./lib/models";
 
 export const topics: models.Topic[] = [
     {
-        title: "Lecture 2",
+        title: "OS: Lecture 2",
         flashcards: [
             // 2.0.
             // What is an Operating System?
@@ -259,7 +259,7 @@ export const topics: models.Topic[] = [
         ],
     },
     {
-        title: "Lecture 3",
+        title: "OS: Lecture 3",
         flashcards: [
             {
                 question: "What are the different user interfaces in operating systems?",

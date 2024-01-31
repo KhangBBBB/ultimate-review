@@ -9,7 +9,7 @@
     let curTopicIndex = 0;
 </script>
 
-<div>
+<div class="control-box">
     <DropdownMenuButton
         label="Select Topic"
         items={topics.map((topic, index) => {
@@ -28,3 +28,13 @@
         <Deck {topic} />
     {/if}
 {/each}
+
+<style>
+    .control-box {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background-color: #ffffff;
+    }
+</style>

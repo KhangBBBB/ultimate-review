@@ -9,7 +9,7 @@
     button {
         font-weight: bold;
         background-color: rgb(145, 203, 242);
-        padding: 5px 10px;
+        padding: 8px 16px;
         border: 1px solid #5899cb;
         border-radius: 5px;
         transition: background-color 0.3s ease;

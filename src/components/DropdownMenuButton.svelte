@@ -51,7 +51,7 @@
         display: block;
         background-color: transparent;
         border: none;
-        padding: 5px;
+        padding: 10px;
         margin: 0;
         cursor: pointer;
         outline: none;
@@ -64,7 +64,7 @@
     .dropdown-button {
         font-weight: bold;
         background-color: rgb(145, 203, 242);
-        padding: 5px 10px;
+        padding: 8px 32px;
         border: 1px solid #5899cb;
         border-radius: 5px;
         transition: background-color 0.3s ease;
