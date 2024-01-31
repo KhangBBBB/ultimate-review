@@ -260,6 +260,48 @@ export const topics: models.Topic[] = [
         ],
     },
     {
+        title: "OS: Lecture 3",
+        flashcards: [
+            // 3.1.
+            {
+                question: "Operating systems provide an ____ for execution of programs and services to ____ and ____",
+                answer: "environment\nprograms\nusers",
+            },
+            {
+                question: "What are the different user interfaces in operating systems?",
+                answer: "Command-Line (CLI), Graphical User Interface (GUI), Batch",
+            },
+            {
+                question: "What are some of the operating-system services that provide functions helpful to the user?",
+                answer: `1. User interface\n2. Program execution\n3. I/O operations\n4. File-system manipulation\n5. Communications\n6. Error detection\n7. Resources allocation\n8. Accounting\n9. Protection and security`,
+            },
+            {
+                question: "What is accounting function in the operating system?",
+                answer: "Keep track of which users use how much and what kinds of computer resources",
+            },
+            {
+                question: "Why is protection and security important in multiuser or networked computer systems?",
+                answer: "In multiuser or networked computer systems, protection and security are essential to control access to information, ensuring that concurrent processes do not interfere with each other. Protection involves controlling access to system resources, while security requires user authentication to safeguard the system from outsiders."
+            },
+            {
+                question: "How do processes communicate in operating systems, and what are the two main methods mentioned?",
+                answer: "Processes in operating systems communicate either on the same computer or between computers over a network. Communication methods include shared memory and message passing, where packets are moved by the OS."
+            },
+            {
+                question: "Define protection in the context of operating systems.",
+                answer: "Protection in operating systems involves ensuring that all access to system resources is controlled. It aims to prevent unauthorized access and misuse of resources by enforcing access restrictions based on user permissions."
+            },
+            {
+                question: "How does resource allocation work when multiple users or jobs are running concurrently?",
+                answer: "In a multiuser environment, resource allocation involves distributing CPU cycles, main memory, file storage, and I/O devices among concurrent users or jobs. This ensures fair and efficient utilization of resources."
+            },
+            {
+                question: "Explain the role of user authentication in ensuring security in multiuser or networked computer systems.",
+                answer: "User authentication is crucial for security in multiuser or networked computer systems. It verifies the identity of users, preventing unauthorized access and ensuring that only authenticated users can access sensitive information."
+            },
+        ],
+    },
+    {
         title: "OS: Bash and Linux Commands",
         flashcards: [
             // Bash.
