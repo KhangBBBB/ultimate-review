@@ -434,6 +434,44 @@ export const topics: models.Topic[] = [
                 question: "What happens when a program exits in MS-DOS?",
                 answer: "Upon program exit, the shell is reloaded in MS-DOS."
             },
+            // Types of System Calls.
+            {
+                question: "What are examples of process control system calls?",
+                answer: "Process control system calls include creating processes, terminating processes, ending processes, aborting processes, loading processes, executing processes, getting process attributes, setting process attributes, waiting for time, waiting for events, signaling events, memory allocation and deallocation, memory dumping in case of errors, using a debugger for bug determination, and single-step execution. Additionally, locks are used for managing access to shared data between processes."
+            },
+            {
+                question: "What are examples of file management system calls?",
+                answer: "File management system calls involve creating files, deleting files, opening files, closing files, reading from files, writing to files, repositioning within files, and getting or setting file attributes."
+            },
+            {
+                question: "What operations are covered by device management system calls?",
+                answer: "Device management system calls include requesting devices, releasing devices, reading from devices, writing to devices, repositioning within devices, getting device attributes, setting device attributes, and logically attaching or detaching devices."
+            },
+            {
+                question: "What functions do information maintenance system calls perform?",
+                answer: "Information maintenance system calls include getting or setting time and date, getting system data, setting system data, and getting or setting process, file, or device attributes."
+            },
+            {
+                question: "What are the communication-related system calls?",
+                answer: "Communication system calls involve creating and deleting communication connections, sending and receiving messages (if following a message-passing model with host or process names, especially from client to server), using a shared-memory model to create and gain access to memory regions, transferring status information, and attaching or detaching remote devices."
+            },
+            // Examples for Windows and Unix System Calls.
+            {
+                question: "Give examples for Windows system calls for process controls",
+                answer: "CreateProcess()\nExitProcess()\nWaitForSingleObject",
+            },
+            {
+                question: "Give examples for Unix system calls for process controls",
+                answer: "fork()\nexit()\nwait()",
+            },
+            {
+                question: "Give examples for Windows system calls for file manipulation.",
+                answer: "CreateFile()\nReadFile()\nWriteFile()\nCloseHandle()",
+            },
+            {
+                question: "Give examples for Unix system calls for file manipulation.",
+                answer: "open()\nread()\nwrite()\nclose()",
+            },
         ],
     },
     {
