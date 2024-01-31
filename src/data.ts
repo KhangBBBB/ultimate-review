@@ -97,6 +97,31 @@ export const topics: models.Topic[] = [
                 question: "Why is backing up files onto stable storage media important in storage management?",
                 answer: "Backing up files onto stable (non-volatile) storage media is crucial for data preservation and recovery. It ensures that important data is stored redundantly and can be retrieved in case of system failures or data loss."
             },
+            // I/O Subsystems.
+            {
+                question: "What is the responsibility of the I/O subsystem?",
+                answer: "1. Memory management of I/O, including buffering (storing data temporarily during transfer), caching (storing parts of data in faster storage for performance), and spooling (overlapping output of one job with input of other jobs)\n2. Providing a general device-driver interface\n3. Managing drivers for specific hardware devices"
+            },
+            {
+                question: "What is buffering in the context of I/O subsystem?",
+                answer: "Buffering in the I/O subsystem involves temporarily storing data while it is being transferred. This helps in managing and optimizing the flow of data between the CPU and I/O devices."
+            },
+            {
+                question: "What is caching, and how does it contribute to I/O subsystem performance?",
+                answer: "Caching in the I/O subsystem involves storing parts of data in faster storage for performance. It enhances speed by allowing frequently accessed data to be retrieved quickly from the cache rather than the slower main memory or external storage."
+            },
+            {
+                question: "What is spooling in the context of the I/O subsystem?",
+                answer: "Spooling in the I/O subsystem refers to the overlapping of the output of one job with the input of other jobs. This helps in improving overall system efficiency and resource utilization."
+            },
+            {
+                question: "What is the purpose of the general device-driver interface in the I/O subsystem?",
+                answer: "The general device-driver interface in the I/O subsystem provides a standardized way for the operating system to interact with various hardware devices. It abstracts the details of specific device drivers, allowing the OS to support a variety of devices seamlessly."
+            },
+            {
+                question: "What role do drivers play in the I/O subsystem?",
+                answer: "Drivers in the I/O subsystem are responsible for specific hardware devices. They facilitate communication between the operating system and the hardware, ensuring proper functioning and interaction with the devices."
+            },
         ],
     },
     {
