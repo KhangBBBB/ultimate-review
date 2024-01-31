@@ -48,6 +48,7 @@
 
     .dropdown-item {
         text-decoration: none;
+        text-align: left;
         display: block;
         background-color: transparent;
         border: none;
@@ -55,6 +56,7 @@
         margin: 0;
         cursor: pointer;
         outline: none;
+        width: 100%;
 
         &:hover {
             background-color: #b5b5b5;
