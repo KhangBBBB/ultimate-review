@@ -197,12 +197,8 @@ export const topics: models.Topic[] = [
                 answer: "Actions such as freeze, suspend, and running VM can be performed. VMs can be moved or copied to another location and then resumed. Snapshot functionality captures a given state, allowing restoration to that state. Some Virtual Machine Monitors (VMMs) enable multiple snapshots per VM. Cloning involves creating a copy and running both the original and the copy."
             },
             {
-                question: "What is a notable benefit of virtualization for OS research and system development efficiency?",
-                answer: "Virtualization is great for OS research and enhances system development efficiency."
-            },
-            {
                 question: "What is a practical use of running multiple, different OSes on a single machine?",
-                answer: "Running multiple, different operating systems on a single machine is useful for purposes such as consolidation and application development."
+                answer: "Consolidation and application development"
             },
             // Internet Services.
             {
