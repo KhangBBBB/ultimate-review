@@ -23,12 +23,31 @@ for ((i = 1; i <= 100; i++)); do
 done`,
             },
             {
-                question: "How do you declare and use variables in Bash?",
-                answer: "Variables in Bash are declared by assigning a value to a variable name. For example, 'variable_name=value'. To use a variable, prepend the variable name with a '$' symbol, like '$variable_name'."
+                question: "What is the difference between single and double quotes when defining a variable in Bash?",
+                answer: "Single quotes preserve the literal value of each character within the quotes, while double quotes allow variable substitution and interpret certain escape sequences.",
             },
             {
-                question: "What is an array in Bash, and how do you use it?",
-                answer: "An array in Bash is a collection of elements. You can declare an array using 'array_name=(element1 element2 element3)'. To access individual elements, use '${array_name[index]}'."
+                question: "Declare a variable in Bash.",
+                answer: `msg="Hello World"`,
+            },
+            {
+                question: "How do you access the value of a variable in Bash?",
+                answer: "Prefix the variable name with a dollar sign ($). For example, echo $variable_name will print the value.",
+            },
+            {
+                question: "Declare an array of numbers in Bash.",
+                answer: "numbers=(1 2 3 4 5)",
+            },
+            {
+                question: "Declare an array of strings in Bash.",
+                answer: `fruits=("apple" "banana" "orange" "grape" "kiwi")`,
+            },
+            {
+                question: "How can one access individual elements in an array in Bash?",
+                answer: `# Define an array of fruits.
+fruits=("apple" "banana" "orange" "grape" "kiwi")
+# Access the 2nd element.
+echo $\{fruits[1]\}`,
             },
             {
                 question: "How do you iterate over an array of fruits in Bash using a for loop?",
@@ -48,7 +67,7 @@ done`,
             },
             {
                 question: "How do you execute a command in Bash and store its output in a variable?",
-                answer: "To execute a command and store its output in a variable, use 'variable_name=$(command)'. This captures the output of the command and assigns it to the specified variable."
+                answer: "variable_name=$(command)"
             },
             {
                 question: "FRUIT=\"Apple\"\necho '$FRUIT'",
@@ -456,8 +475,8 @@ echo $str`,
                 answer: "CPU (Central Processing Unit), memory, I/O (Input/Output), files, and initialization data."
             },
             {
-                question: "What is a multi-threaded process, and how is it different?",
-                answer: "A multi-threaded process has one program counter per thread. Threads within a process can execute independently. This allows for more efficient parallel execution of tasks within the same process."
+                question: "What is a multi-threaded process?",
+                answer: "A multi-threaded process has one program counter per thread. Threads within a process can execute independently."
             },
             {
                 question: "How do processes run concurrently in a computer system?",
@@ -520,8 +539,12 @@ echo $str`,
                 answer: "Buffering in the I/O subsystem involves temporarily storing data while it is being transferred. This helps in managing and optimizing the flow of data between the CPU and I/O devices."
             },
             {
-                question: "What is caching, and how does it contribute to I/O subsystem performance?",
-                answer: "Caching in the I/O subsystem involves storing parts of data in faster storage for performance. It enhances speed by allowing frequently accessed data to be retrieved quickly from the cache rather than the slower main memory or external storage."
+                question: "What is caching?",
+                answer: "Caching in the I/O subsystem involves storing parts of data in faster storage for performance."
+            },
+            {
+                question: "How does caching contribute to the I/O subsystem performance?",
+                answer: "It enhances speed by allowing frequently accessed data to be retrieved quickly from the cache rather than the slower main memory or external storage.",
             },
             {
                 question: "What is spooling in the context of the I/O subsystem?",
@@ -685,23 +708,27 @@ echo $str`,
             },
             {
                 question: "Why is protection and security important in multiuser or networked computer systems?",
-                answer: "In multiuser or networked computer systems, protection and security are essential to control access to information, ensuring that concurrent processes do not interfere with each other. Protection involves controlling access to system resources, while security requires user authentication to safeguard the system from outsiders."
+                answer: "Ensure that concurrent processes do not interfere with each other. Protection involves controlling access to system resources, while security requires user authentication to safeguard the system from outsiders."
             },
             {
                 question: "How do processes communicate in operating systems, and what are the two main methods mentioned?",
-                answer: "Processes in operating systems communicate either on the same computer or between computers over a network. Communication methods include shared memory and message passing, where packets are moved by the OS."
+                answer: "Processes in operating systems communicate either on the same computer or between computers over a network."
+            },
+            {
+                question: "What are the two main methods for processes to communicate in an operating system?",
+                answer: "Shared memory and message passing",
             },
             {
                 question: "Define protection in the context of operating systems.",
-                answer: "Protection in operating systems involves ensuring that all access to system resources is controlled. It aims to prevent unauthorized access and misuse of resources by enforcing access restrictions based on user permissions."
+                answer: "Protection controls access to system resources, preventing unauthorized use by enforcing user permission-based restrictions."
             },
             {
                 question: "How does resource allocation work when multiple users or jobs are running concurrently?",
-                answer: "In a multiuser environment, resource allocation involves distributing CPU cycles, main memory, file storage, and I/O devices among concurrent users or jobs. This ensures fair and efficient utilization of resources."
+                answer: "Resource allocation involves distributing CPU cycles, main memory, file storage, and I/O devices among concurrent users or jobs. This ensures fair and efficient utilization of resources."
             },
             {
                 question: "Explain the role of user authentication in ensuring security in multiuser or networked computer systems.",
-                answer: "User authentication is crucial for security in multiuser or networked computer systems. It verifies the identity of users, preventing unauthorized access and ensuring that only authenticated users can access sensitive information."
+                answer: "User authentication verifies and restricts access to authorized users, ensuring the security of sensitive information."
             },
             // User Operating System Interface - CLI.
             {
@@ -709,7 +736,7 @@ echo $str`,
                 answer: "CLI stands for Command Line Interface."
             },
             {
-                question: "Where is the CLI or command interpreter sometimes implemented?",
+                question: "Where is the CLI sometimes implemented?",
                 answer: "CLI is sometimes implemented in the kernel and sometimes by systems programs."
             },
             {
@@ -717,7 +744,7 @@ echo $str`,
                 answer: "Shells",
             },
             {
-                question: "What is the primary function of a CLI or command interpreter?",
+                question: "What is the primary function of a CLI?",
                 answer: "The primary function of a CLI is to fetch a command from the user and execute it."
             },
             {
@@ -727,7 +754,7 @@ echo $str`,
             // User Operating System Interface - GUI.
             {
                 question: "How are files, programs, and actions represented in a desktop metaphor interface?",
-                answer: "Icons are used to represent files, programs, actions, etc.",
+                answer: "Icons",
             },
             {
                 question: "What kind of actions can be triggered by various mouse buttons over objects in a desktop metaphor interface?",
@@ -735,7 +762,7 @@ echo $str`,
             },
             {
                 question: "Where was the desktop metaphor interface invented?",
-                answer: "The desktop metaphor interface was invented at Xerox PARC.",
+                answer: "Xerox PARC.",
             },
             {
                 question: "Many systems now include both ____ and ____ interfaces",
@@ -746,8 +773,12 @@ echo $str`,
                 answer: "Apple Mac OS X has an \"Aqua\" GUI interface with a UNIX kernel underneath and shells available.",
             },
             {
-                question: "How do Unix and Linux systems typically provide interfaces, and what are some examples?",
-                answer: "Unix and Linux systems typically have a CLI with optional GUI interfaces. Examples of GUI interfaces include CDE, KDE, and GNOME.",
+                question: "How do Unix and Linux systems typically provide interfaces?",
+                answer: "Unix and Linux systems typically have a CLI with optional GUI interfaces.",
+            },
+            {
+                question: "What are some examples of desktop environments (GUI interfaces) for Linux?",
+                answer: "CDE, KDE, and GNOME",
             },
             {
                 question: "How are actions and selections typically performed on touchscreen devices?",
@@ -759,7 +790,7 @@ echo $str`,
             },
             {
                 question: "Besides gestures and virtual keyboards, what is another method of interaction with touchscreen devices?",
-                answer: "Voice commands are another method of interaction with touchscreen devices.",
+                answer: "Voice commands",
             },
             // System Calls.
             {
@@ -794,7 +825,11 @@ echo $str`,
             },
             {
                 question: "What knowledge does the caller need about the system call implementation?",
-                answer: "The caller does not need to know anything about how the system call is implemented. They just need to obey the API (Application Programming Interface) and understand what the OS will do as a result of the call."
+                answer: "The caller does not need to know anything about how the system call is implemented. They just need to obey the API and understand what the OS will do as a result of the call."
+            },
+            {
+                question: "What does API stand for?",
+                answer: "Application Programming Interface",
             },
             {
                 question: "How are most details of the OS interface hidden from the programmer?",
@@ -828,7 +863,7 @@ echo $str`,
             },
             {
                 question: "How does MS-DOS handle the running of programs?",
-                answer: "In MS-DOS, running a program involves a simple method with no process creation. The program is loaded into memory, overwriting all but the kernel, without creating a separate process."
+                answer: "Running a program involves a simple method with no process creation. The program is loaded into memory, overwriting all but the kernel, without creating a separate process."
             },
             {
                 question: "What is the memory model used by MS-DOS?",
@@ -836,20 +871,24 @@ echo $str`,
             },
             {
                 question: "What happens when a program exits in MS-DOS?",
-                answer: "Upon program exit, the shell is reloaded in MS-DOS."
+                answer: "The shell is reloaded."
             },
             // Types of System Calls.
             {
-                question: "What are examples of process control system calls?",
-                answer: "Process control system calls include creating processes, terminating processes, ending processes, aborting processes, loading processes, executing processes, getting process attributes, setting process attributes, waiting for time, waiting for events, signaling events, memory allocation and deallocation, memory dumping in case of errors, using a debugger for bug determination, and single-step execution. Additionally, locks are used for managing access to shared data between processes."
+                question: "What operations are covered by process control system calls?",
+                answer: "Creating processes, terminating processes, ending processes, aborting processes, loading processes, executing processes, getting process attributes, setting process attributes, waiting for time, waiting for events, signaling events, memory allocation and deallocation, memory dumping in case of errors, using a debugger for bug determination, and single-step execution. Additionally, ."
             },
             {
-                question: "What are examples of file management system calls?",
-                answer: "File management system calls involve creating files, deleting files, opening files, closing files, reading from files, writing to files, repositioning within files, and getting or setting file attributes."
+                question: "____ are used for managing access to shared data between processes",
+                answer: "Locks",
+            },
+            {
+                question: "What operations are covered by file management system calls?",
+                answer: "Creating files, deleting files, opening files, closing files, reading from files, writing to files, repositioning within files, and getting or setting file attributes."
             },
             {
                 question: "What operations are covered by device management system calls?",
-                answer: "Device management system calls include requesting devices, releasing devices, reading from devices, writing to devices, repositioning within devices, getting device attributes, setting device attributes, and logically attaching or detaching devices."
+                answer: "Requesting devices, releasing devices, reading from devices, writing to devices, repositioning within devices, getting device attributes, setting device attributes, and logically attaching or detaching devices."
             },
             {
                 question: "What functions do information maintenance system calls perform?",
@@ -862,7 +901,7 @@ echo $str`,
             // Examples for Windows and Unix System Calls.
             {
                 question: "Give examples for Windows system calls for process controls",
-                answer: "CreateProcess()\nExitProcess()\nWaitForSingleObject",
+                answer: "CreateProcess()\nExitProcess()\nWaitForSingleObject()",
             },
             {
                 question: "Give examples for Unix system calls for process controls",
@@ -879,12 +918,12 @@ echo $str`,
             // 3.2.
             // System Programs.
             {
-                question: "What do system programs provide?",
-                answer: "System programs provide a convenient environment for program development and execution."
+                question: "System programs provide a ____ environment for program ____ and ____.",
+                answer: "convenient\ndevelopment\nexecution"
             },
             {
-                question: "How can system programs be divided?",
-                answer: "System programs can be divided into categories such as file manipulation, status information, programming language support, program loading and execution, communications, background services, and application programs."
+                question: "Into what categories can system programs be divided?",
+                answer: "File manipulation, status information, programming language support, program loading and execution, communications, background services, and application programs."
             },
             {
                 question: "What is the role of system programs in defining a user's view of the operating system?",
@@ -893,7 +932,7 @@ echo $str`,
             //
             {
                 question: "What functions does file management system programs perform?",
-                answer: "File management system programs perform functions such as creating, deleting, copying, renaming, printing, dumping, listing, and generally manipulating files and directories."
+                answer: "Creating, deleting, copying, renaming, printing, dumping, listing, and generally manipulating files and directories."
             },
             {
                 question: "What tasks are performed by status information system programs?",
@@ -906,11 +945,11 @@ echo $str`,
             },
             {
                 question: "What types of tools are included in programming-language support system programs?",
-                answer: "Programming-language support system programs include compilers, assemblers, debuggers, and interpreters. These tools are sometimes provided to aid in the development and execution of programs written in specific programming languages."
+                answer: "Programming-language support system programs include compilers, assemblers, debuggers, and interpreters."
             },
             {
                 question: "What functions are associated with program loading and execution system programs?",
-                answer: "Program loading and execution system programs include absolute loaders, relocatable loaders, linkage editors, overlay loaders, and debugging systems for both higher-level and machine language. These programs play a crucial role in the loading and execution of programs."
+                answer: "Program loading and execution system programs include absolute loaders, relocatable loaders, linkage editors, overlay loaders, and debugging systems for both higher-level and machine language."
             },
             {
                 question: "What is the role of communication system programs?",
