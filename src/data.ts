@@ -401,7 +401,7 @@ export const topics: models.Topic[] = [
             // System Call Parameter Passing.
             {
                 question: "What are the three general methods used for passing parameters to the OS during a system call?",
-                answer: "The three general methods are: 1) Passing parameters in registers, 2) Storing parameters in a block or table in memory, with the address of the block passed as a parameter in a register (used by Linux), and 3) Placing parameters onto the stack by the program and having the operating system pop them off the stack."
+                answer: "1. Passing parameters in registers\n2. Storing parameters in a block or table in memory, with the address of the block passed as a parameter in a register (used by Linux)\n3. Placing parameters onto the stack by the program and having the operating system pop them off the stack."
             },
             {
                 question: "How does the simplest method of passing parameters work?",
@@ -473,6 +473,78 @@ export const topics: models.Topic[] = [
             {
                 question: "Give examples for Unix system calls for file manipulation.",
                 answer: "open()\nread()\nwrite()\nclose()",
+            },
+            // 3.2.
+            // System Programs.
+            {
+                question: "What do system programs provide?",
+                answer: "System programs provide a convenient environment for program development and execution."
+            },
+            {
+                question: "How can system programs be divided?",
+                answer: "System programs can be divided into categories such as file manipulation, status information, programming language support, program loading and execution, communications, background services, and application programs."
+            },
+            {
+                question: "What is the role of system programs in defining a user's view of the operating system?",
+                answer: "Most users' view of the operating system is defined by system programs, not the actual system calls."
+            },
+            //
+            {
+                question: "What functions does file management system programs perform?",
+                answer: "File management system programs perform functions such as creating, deleting, copying, renaming, printing, dumping, listing, and generally manipulating files and directories."
+            },
+            {
+                question: "What tasks are performed by status information system programs?",
+                answer: "Status information system programs perform tasks such as querying the system for information like date, time, available memory, disk space, and the number of users. They may also provide detailed performance, logging, and debugging information. Typically, these programs format and print the output to the terminal or other output devices. Some systems implement a registry for storing and retrieving configuration information."
+            },
+            //
+            {
+                question: "What functions do file modification system programs perform?",
+                answer: "File modification system programs include text editors for creating and modifying files. Additionally, they provide special commands to search the contents of files or perform transformations on the text."
+            },
+            {
+                question: "What types of tools are included in programming-language support system programs?",
+                answer: "Programming-language support system programs include compilers, assemblers, debuggers, and interpreters. These tools are sometimes provided to aid in the development and execution of programs written in specific programming languages."
+            },
+            {
+                question: "What functions are associated with program loading and execution system programs?",
+                answer: "Program loading and execution system programs include absolute loaders, relocatable loaders, linkage editors, overlay loaders, and debugging systems for both higher-level and machine language. These programs play a crucial role in the loading and execution of programs."
+            },
+            {
+                question: "What is the role of communication system programs?",
+                answer: "Communication system programs provide the mechanism for creating virtual connections among processes, users, and computer systems. They enable users to send messages to one another's screens, browse web pages, send electronic-mail messages, log in remotely, and transfer files from one machine to another."
+            },
+            {
+                question: "What is the startup behavior of background services system programs?",
+                answer: "Background services system programs launch at boot time, and some terminate after system startup, while others continue running from system boot to shutdown."
+            },
+            {
+                question: "What facilities do background services system programs provide?",
+                answer: "Background services system programs offer facilities such as disk checking, process scheduling, error logging, and printing to enhance the overall system functionality."
+            },
+            {
+                question: "In which context do background services system programs run?",
+                answer: "Background services system programs run in user context, not kernel context, contributing to system stability and security."
+            },
+            {
+                question: "What are background services system programs commonly known as?",
+                answer: "Background services system programs are commonly known as services, subsystems, or daemons."
+            },
+            {
+                question: "What distinguishes application programs within system programs?",
+                answer: "Application programs don't pertain to the system itself; instead, they are designed to serve users' specific needs and tasks."
+            },
+            {
+                question: "Who runs application programs?",
+                answer: "Application programs are run by users to perform various tasks and functions on the computer."
+            },
+            {
+                question: "Is an application program typically considered part of the operating system?",
+                answer: "No, application programs are not typically considered part of the operating system; they operate independently and serve user-specific purposes."
+            },
+            {
+                question: "How are application programs launched?",
+                answer: "Application programs can be launched by various means, such as command line inputs, mouse clicks, or finger pokes, depending on the user interface."
             },
         ],
     },
@@ -671,7 +743,7 @@ done`,
             },
             {
                 question: "What is the purpose of the '-e' option with the 'echo' command?",
-                answer: "The '-e' option enables the interpretation of backslash escapes, allowing you to include special characters in the output. For example, 'echo -e 'Line1\nLine2'' will print two lines."
+                answer: "The '-e' option enables the interpretation of backslash escapes, allowing you to include special characters in the output. For example, 'echo -e 'Line1\\nLine2'' will print two lines."
             },
             {
                 question: "How can you redirect the output of 'echo' to a file?",
