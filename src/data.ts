@@ -90,7 +90,7 @@ echo $str`,
             // cp.
             {
                 question: "What is the purpose of the 'cp' command in Linux?",
-                answer: "The 'cp' command in Linux is used to copy files or directories from one location to another."
+                answer: "To copy files or directories from one location to another."
             },
             {
                 question: "How do you use the 'cp' command to copy a file in Linux?",
@@ -98,20 +98,20 @@ echo $str`,
             },
             {
                 question: "How can you copy multiple files using the 'cp' command?",
-                answer: "To copy multiple files, you can specify them as a list after the 'cp' command, followed by the destination directory. For example, 'cp file1.txt file2.txt /path/to/destination/'"
+                answer: "Specify them as a list after the 'cp' command, followed by the destination directory. For example, 'cp file1.txt file2.txt /path/to/destination/'"
             },
             {
                 question: "What option is used to preserve the original file attributes, such as timestamps, when copying with 'cp'?",
-                answer: "The '-p' option is used to preserve the original file attributes, including timestamps. For example, 'cp -p file.txt /path/to/destination/'"
+                answer: "Option '-p'. For example, 'cp -p file.txt /path/to/destination/'"
             },
             {
                 question: "How do you recursively copy directories and their contents using the 'cp' command?",
-                answer: "To copy directories and their contents recursively, use the '-r' or '-R' option. For example, 'cp -r source_directory /path/to/destination/'"
+                answer: "Use the '-r' or '-R' option. For example, 'cp -r source_directory /path/to/destination/'"
             },
             // ps.
             {
                 question: "What is the purpose of the 'ps' command in Linux?",
-                answer: "The 'ps' command is used to display information about the currently running processes on a Linux system."
+                answer: "To display information about the currently running processes."
             },
             {
                 question: "What is the basic syntax of the 'ps' command?",
@@ -119,20 +119,20 @@ echo $str`,
             },
             {
                 question: "How can you view information about all processes running on the system using 'ps'?",
-                answer: "To view information about all processes on the system, use 'ps -e' or 'ps aux'. These options show a detailed list of processes."
+                answer: "Use 'ps -e' or 'ps aux'."
             },
             {
                 question: "What does the 'ps' option '-f' do?",
-                answer: "The '-f' option with 'ps' provides a full-format listing, displaying more detailed information about each process, including the process hierarchy."
+                answer: "It provides a full-format listing, displaying more detailed information about each process, including the process hierarchy."
             },
             {
                 question: "How do you filter and display specific process information using 'ps'?",
-                answer: "To filter and display specific process information, you can use the 'ps' command with options like '-C' followed by the process name. For example, 'ps -C firefox' will display information about the Firefox process."
+                answer: "Use the 'ps' command with options like '-C' followed by the process name. For example, 'ps -C firefox' will display information about the Firefox process."
             },
             // ls.
             {
                 question: "What is the purpose of the 'ls' command in Linux?",
-                answer: "The 'ls' command is used to list files and directories in a directory."
+                answer: "To list files and directories in a directory."
             },
             {
                 question: "What is the basic syntax of the 'ls' command?",
@@ -140,20 +140,20 @@ echo $str`,
             },
             {
                 question: "How do you display detailed information about files using 'ls'?",
-                answer: "To display detailed information about files, use the '-l' option. For example, 'ls -l' shows details like file permissions, owner, size, and modification time."
+                answer: "Use the '-l' option. For example, 'ls -l' shows details like file permissions, owner, size, and modification time."
             },
             {
                 question: "How can you list all files, including hidden ones, using 'ls'?",
-                answer: "To list all files, including hidden ones, use the '-a' option. For example, 'ls -a' shows all files, including those whose names start with a dot."
+                answer: "Use the '-a' option. For example, 'ls -a' shows all files, including those whose names start with a dot."
             },
             {
                 question: "What 'ls' option is used to sort files by modification time, with the newest first?",
-                answer: "The '-t' option is used to sort files by modification time, displaying the newest files first. For example, 'ls -lt' lists files in long format with the newest at the top."
+                answer: "Option '-t'. For example, 'ls -lt' lists files in long format with the newest at the top."
             },
             // mv.
             {
                 question: "What is the purpose of the 'mv' command in Linux?",
-                answer: "The 'mv' command is used to move or rename files and directories in Linux."
+                answer: "To move or rename files and directories."
             },
             {
                 question: "How do you use 'mv' to move a file or directory to a different location?",
@@ -161,20 +161,20 @@ echo $str`,
             },
             {
                 question: "What happens if you use 'mv' to move a file to an existing directory?",
-                answer: "If the destination is an existing directory, the 'mv' command will move the file into that directory."
+                answer: "The 'mv' command will move the file into that directory."
             },
             {
                 question: "How do you use 'mv' to rename a file?",
-                answer: "To rename a file, use 'mv' with the current filename as the source and the new filename as the destination. For example, 'mv old_name.txt new_name.txt'"
+                answer: "Use 'mv' with the current filename as the source and the new filename as the destination. For example, 'mv old_name.txt new_name.txt'"
             },
             {
                 question: "What is the purpose of the '-i' option with the 'mv' command?",
-                answer: "The '-i' option prompts for confirmation before overwriting an existing file. For example, 'mv -i file.txt /path/to/destination/'"
+                answer: "To prompt for confirmation before overwriting an existing file. For example, 'mv -i file.txt /path/to/destination/'"
             },
             // rm.
             {
                 question: "What is the purpose of the 'rm' command in Linux?",
-                answer: "The 'rm' command is used to remove or delete files and directories in Linux."
+                answer: "To remove or delete files and directories."
             },
             {
                 question: "How do you use 'rm' to delete a file?",
@@ -186,16 +186,16 @@ echo $str`,
             },
             {
                 question: "How can you force the removal of files without prompting for confirmation?",
-                answer: "To force the removal of files without prompting for confirmation, use the '-f' option. For example, 'rm -f file.txt'"
+                answer: "Use the '-f' option. For example, 'rm -f file.txt'"
             },
             {
                 question: "What is the purpose of the '-i' option with the 'rm' command?",
-                answer: "The '-i' option prompts for confirmation before removing each file. For example, 'rm -i file.txt'"
+                answer: "To prompt for confirmation before removing each file. For example, 'rm -i file.txt'"
             },
             // mkdir.
             {
                 question: "What is the purpose of the 'mkdir' command in Linux?",
-                answer: "The 'mkdir' command is used to create new directories (folders) in Linux."
+                answer: "To create new directories (folders)."
             },
             {
                 question: "How do you use 'mkdir' to create a new directory?",
@@ -203,84 +203,84 @@ echo $str`,
             },
             {
                 question: "What 'mkdir' option is used to create parent directories if they do not exist?",
-                answer: "The '-p' option with 'mkdir' is used to create parent directories if they do not exist. For example, 'mkdir -p path/to/new_directory/'"
+                answer: "Option '-p'. For example, 'mkdir -p path/to/new_directory/'"
             },
             {
                 question: "How can you set the permissions of the new directory using 'mkdir'?",
-                answer: "To set permissions for the new directory, you can use the '--mode' or '-m' option followed by the numeric mode. For example, 'mkdir -m 755 new_directory/'"
+                answer: "Use the '--mode' or '-m' option followed by the numeric mode. For example, 'mkdir -m 755 new_directory/'"
             },
             {
                 question: "What happens if you try to create a directory that already exists with 'mkdir'?",
-                answer: "If you attempt to create a directory that already exists, 'mkdir' will display an error message unless the '-p' option is used."
+                answer: "It will display an error message unless the '-p' option is used."
             },
             // rmdir.
             {
                 question: "What is the purpose of the 'rmdir' command in Linux?",
-                answer: "The 'rmdir' command is used to remove empty directories in Linux."
+                answer: "To remove empty directories."
             },
             {
                 question: "How do you use 'rmdir' to remove an empty directory?",
-                answer: "The basic syntax for removing an empty directory is 'rmdir directory_name'. This command deletes the specified empty directory."
+                answer: "rmdir directory_name"
             },
             {
                 question: "What happens if you attempt to use 'rmdir' on a non-empty directory?",
-                answer: "If you try to use 'rmdir' on a directory that contains files or other directories, it will display an error message as 'rmdir' can only remove empty directories."
+                answer: "It will display an error message as 'rmdir' can only remove empty directories."
             },
             {
                 question: "What is an alternative command for removing directories, including non-empty ones?",
-                answer: "The 'rm' command with the '-r' option can be used to remove directories and their contents, including non-empty directories. For example, 'rm -r directory/'"
+                answer: "rm -r directory/"
             },
             {
                 question: "Is there any option available for 'rmdir' to force the removal of a non-empty directory?",
-                answer: "No, 'rmdir' does not have an option to force the removal of a non-empty directory. For that purpose, 'rm -r' is commonly used."
+                answer: "No. For that purpose, 'rm -r' is commonly used."
             },
             // echo.
             {
                 question: "What is the purpose of the 'echo' command in Linux?",
-                answer: "The 'echo' command is used to display messages or values on the terminal."
+                answer: "To display messages or values on the terminal."
             },
             {
                 question: "How do you use 'echo' to print a message to the terminal?",
-                answer: "The basic syntax for printing a message is 'echo message'. For example, 'echo Hello, World!' will print 'Hello, World!' to the terminal."
+                answer: "echo Hello, World!"
             },
             {
                 question: "What is the purpose of the '-e' option with the 'echo' command?",
-                answer: "The '-e' option enables the interpretation of backslash escapes, allowing you to include special characters in the output. For example, 'echo -e 'Line1\\nLine2'' will print two lines."
+                answer: "To enable the interpretation of backslash escapes, allowing you to include special characters in the output. For example, 'echo -e 'Line1\\nLine2'' will print two lines."
             },
             {
                 question: "How can you redirect the output of 'echo' to a file?",
-                answer: "To redirect the output of 'echo' to a file, use the '>' operator. For example, 'echo 'Hello' > output.txt' will create a file named 'output.txt' with the text 'Hello'."
+                answer: "Use the '>' operator. For example, 'echo 'Hello' > output.txt' will create a file named 'output.txt' with the text 'Hello'."
             },
             {
                 question: "What is the purpose of the '-n' option with the 'echo' command?",
-                answer: "The '-n' option suppresses the trailing newline, allowing you to print text without adding a newline character at the end."
+                answer: "To suppress the trailing newline, allowing you to print text without adding a newline character at the end."
             },
             // more.
 
             {
                 question: "What is the purpose of the 'more' command in Linux?",
-                answer: "The 'more' command is used to display the contents of a text file or command output in a paginated manner."
+                answer: "To display the contents of a text file or command output in a paginated manner."
             },
             {
-                question: "How do you use 'more' to view the contents of a text file?",
-                answer: "The basic syntax for viewing a text file is 'more filename'. For example, 'more example.txt' will display the contents of 'example.txt' page by page."
+                question: "How do you use 'more' to view the contents of a text file page by page?",
+                answer: "more file_name"
             },
             {
                 question: "What key can you press to advance to the next page while using 'more'?",
-                answer: "You can press the 'Space' key to advance to the next page when using 'more' to view a text file."
+                answer: "Space"
             },
             {
                 question: "How can you quit or exit from the 'more' command?",
-                answer: "To quit or exit from the 'more' command, press the 'q' key. This will return you to the command prompt."
+                answer: "Press the 'q' key."
             },
             {
                 question: "What is an alternative command to 'more' that also allows backward navigation?",
-                answer: "The 'less' command is an alternative to 'more' that not only allows forward navigation with the 'Space' key but also supports backward navigation using the 'b' key."
+                answer: "less",
             },
             // date.
             {
                 question: "What is the purpose of the 'date' command in Linux?",
-                answer: "The 'date' command is used to display or set the system date and time in the Linux terminal."
+                answer: "To display or set the system date and time."
             },
             {
                 question: "How do you use 'date' to display the current date and time?",
@@ -292,16 +292,16 @@ echo $str`,
             },
             {
                 question: "How do you set the system date and time using 'date'?",
-                answer: "To set the system date and time, use the 'date' command with the '-s' option followed by the desired date and time. For example, 'sudo date -s '2024-01-30 12:34:56''"
+                answer: "Use the 'date' command with the '-s' option followed by the desired date and time. For example, 'sudo date -s '2024-01-30 12:34:56''"
             },
             {
                 question: "What is the purpose of the '-u' option with the 'date' command?",
-                answer: "The '-u' option displays or sets the Coordinated Universal Time (UTC) instead of the local time."
+                answer: "To display or set the Coordinated Universal Time (UTC) instead of the local time."
             },
             // time.
             {
                 question: "What is the purpose of the 'time' command in Linux?",
-                answer: "The 'time' command is used to measure the execution time of a command or script in Linux."
+                answer: "To measure the execution time of a command or script."
             },
             {
                 question: "How do you use 'time' to measure the execution time of a command?",
@@ -309,20 +309,20 @@ echo $str`,
             },
             {
                 question: "What does the 'real', 'user', and 'sys' values represent in the output of 'time'?",
-                answer: "In the output of 'time', 'real' represents the elapsed or wall clock time, 'user' represents the CPU time spent in user mode, and 'sys' represents the CPU time spent in system mode."
+                answer: "'real' represents the elapsed or wall clock time, 'user' represents the CPU time spent in user mode, and 'sys' represents the CPU time spent in system mode."
             },
             {
                 question: "How can you redirect only the timing information of 'time' to a file?",
-                answer: "To redirect only the timing information to a file, you can use 'time command 2> timing.txt'. This will redirect the standard error (stderr) output to the specified file."
+                answer: "Use 'time command 2> timing.txt'. This will redirect the standard error (stderr) output to the specified file."
             },
             {
                 question: "What is the purpose of the '-p' option with the 'time' command?",
-                answer: "The '-p' option with 'time' changes the output format to be more machine-readable, providing timing information in a format that is easier to parse."
+                answer: "To change the output format to be more machine-readable, providing timing information in a format that is easier to parse."
             },
             // kill.
             {
                 question: "What is the purpose of the 'kill' command in Linux?",
-                answer: "The 'kill' command is used to send signals to processes, allowing for termination or manipulation of their behavior."
+                answer: "To send signals to processes, allowing for termination or manipulation of their behavior."
             },
             {
                 question: "How do you use 'kill' to terminate a process by its process ID (PID)?",
@@ -330,11 +330,11 @@ echo $str`,
             },
             {
                 question: "What is the default signal sent by 'kill'?",
-                answer: "The default signal sent by 'kill' is SIGTERM (termination signal), which allows the process to perform cleanup operations before exiting."
+                answer: "SIGTERM (termination signal), which allows the process to perform cleanup operations before exiting."
             },
             {
                 question: "How can you force the termination of a process using 'kill'?",
-                answer: "To force the termination of a process, you can use 'kill -9 PID' or 'kill -SIGKILL PID'. This sends the SIGKILL signal, which immediately terminates the process without allowing it to perform cleanup."
+                answer: "Use 'kill -9 PID' or 'kill -SIGKILL PID'. This sends the SIGKILL signal, which immediately terminates the process without allowing it to perform cleanup."
             },
             {
                 question: "What is an alternative command to 'kill' for sending signals to processes?",
@@ -343,7 +343,7 @@ echo $str`,
             // history.
             {
                 question: "What is the purpose of the 'history' command in Linux?",
-                answer: "The 'history' command is used to display the command history list, which shows the previously executed commands in the current session."
+                answer: "To display the command history list, which shows the previously executed commands in the current session."
             },
             {
                 question: "How do you use 'history' to display the command history list?",
@@ -351,24 +351,24 @@ echo $str`,
             },
             {
                 question: "What 'history' option is used to limit the number of commands displayed?",
-                answer: "The '-n' option with 'history' is used to limit the number of commands displayed. For example, 'history -n 10' will show the last 10 commands."
+                answer: "Option '-n'. For example, 'history -n 10' will show the last 10 commands."
             },
             {
                 question: "How can you execute a command from the history by its number?",
-                answer: "To execute a command from the history by its number, use '!n', where 'n' is the command number. For example, '!5' will re-run the fifth command from the history."
+                answer: "Use '!n', where 'n' is the command number. For example, '!5' will re-run the fifth command from the history."
             },
             {
                 question: "What is the purpose of the 'history' command with the '-c' option?",
-                answer: "The 'history -c' option is used to clear the entire command history, removing all previously executed commands from the history list."
+                answer: "To clear the entire command history, removing all previously executed commands from the history list."
             },
             // chmod.
             {
                 question: "What is the purpose of the 'chmod' command in Linux?",
-                answer: "The 'chmod' command is used to change the permissions (read, write, execute) of files and directories in Linux."
+                answer: "To change the permissions (read, write, execute) of files and directories."
             },
             {
                 question: "How do you use 'chmod' to add execute permission to a file?",
-                answer: "The basic syntax for adding execute permission to a file is 'chmod +x filename'. This command grants execute permission to the specified file."
+                answer: "chmod +x filename"
             },
             {
                 question: "What is the numeric representation of read, write, and execute permissions in 'chmod'?",
@@ -376,16 +376,16 @@ echo $str`,
             },
             {
                 question: "How can you recursively change permissions for all files and subdirectories within a directory?",
-                answer: "To recursively change permissions for all files and subdirectories within a directory, use 'chmod -R'. For example, 'chmod -R 644 directory/' sets read and write permissions for the owner and read-only permissions for others on all files and directories inside 'directory'."
+                answer: "Use 'chmod -R'. For example, 'chmod -R 644 directory/' sets read and write permissions for the owner and read-only permissions for others on all files and directories inside 'directory'."
             },
             {
                 question: "What is the purpose of the 'chmod' option '-c'?",
-                answer: "The '-c' option with 'chmod' is used to display a message only if changes are made to the permissions."
+                answer: "To display a message only if changes are made to the permissions."
             },
             // chown.
             {
                 question: "What is the purpose of the 'chown' command in Linux?",
-                answer: "The 'chown' command is used to change the ownership of files and directories in Linux."
+                answer: "To change the ownership of files and directories."
             },
             {
                 question: "How do you use 'chown' to change the owner of a file or directory?",
@@ -393,20 +393,20 @@ echo $str`,
             },
             {
                 question: "What is the purpose of the '-R' option with 'chown'?",
-                answer: "The '-R' option with 'chown' is used to recursively change ownership. This means that the specified ownership changes are applied to all files and subdirectories within the target directory."
+                answer: "To recursively change ownership. This means that the specified ownership changes are applied to all files and subdirectories within the target directory."
             },
             {
                 question: "How can you change only the group ownership of a file using 'chown'?",
-                answer: "To change only the group ownership of a file, use 'chown :new_group filename'. Omitting 'new_owner' and specifying only the 'new_group' will change the group ownership."
+                answer: "Use 'chown :new_group filename'. Omitting 'new_owner' and specifying only the 'new_group' will change the group ownership."
             },
             {
                 question: "What is the purpose of the '--reference' option with 'chown'?",
-                answer: "The '--reference' option allows you to copy the ownership of one file or directory to another. For example, 'chown --reference=reference_file target_file' sets the ownership of 'target_file' to match 'reference_file'."
+                answer: "To copy the ownership of one file or directory to another. For example, 'chown --reference=reference_file target_file' sets the ownership of 'target_file' to match 'reference_file'."
             },
             // Bonus: man.
             {
                 question: "What is the purpose of the 'man' command in Linux?",
-                answer: "The 'man' command in Linux is used to display the manual pages for other commands, providing detailed information, usage, options, and examples."
+                answer: "To display the manual pages for other commands, providing detailed information, usage, options, and examples."
             },
             {
                 question: "How do you use the 'man' command to view the manual page for a specific command?",
@@ -414,7 +414,7 @@ echo $str`,
             },
             {
                 question: "What are manual pages in Linux?",
-                answer: "Manual pages, or man pages, are organized documentation providing information on commands, utilities, and functions in the Linux operating system."
+                answer: "Manual pages are organized documentation providing information on commands, utilities, and functions in the Linux operating system."
             },
             {
                 question: "How are manual pages organized?",
@@ -438,11 +438,11 @@ echo $str`,
             },
             {
                 question: "What are the four components of a computer system?",
-                answer: "hardware, operating system, application programs, and users."
+                answer: "Hardware, operating system, application programs, and users."
             },
             {
                 question: "What does the hardware component of a computer system provide?",
-                answer: "The hardware component provides basic computing resources, including the CPU (Central Processing Unit), memory, and I/O (Input/Output) devices."
+                answer: "CPU (Central Processing Unit), memory, and I/O (Input/Output) devices."
             },
             {
                 question: "What is the role of the operating system in a computer system?",
@@ -454,7 +454,7 @@ echo $str`,
             },
             {
                 question: "Who constitutes the 'Users' component in a computer system?",
-                answer: "Users can include people, machines, and other computers."
+                answer: "People, machines, and other computers."
             },
             // Cont.
             {
@@ -583,7 +583,7 @@ echo $str`,
             },
             {
                 question: "What is the purpose of a Virtual Machine Monitor?",
-                answer: "The purpose of a VMM is to enable running multiple operating systems on a single physical machine."
+                answer: "To enable running multiple operating systems on a single physical machine."
             },
             {
                 question: "Can you provide examples of Virtual Machine Monitors?",
