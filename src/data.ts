@@ -948,6 +948,119 @@ echo $str`,
                 question: "How are application programs launched?",
                 answer: "Application programs can be launched by various means, such as command line inputs, mouse clicks, or finger pokes, depending on the user interface."
             },
+            // Operating System Design and Implementation.
+            {
+                question: "Where should the design of an operating system start?",
+                answer: "The design of an operating system should start by defining goals and specifications, which are influenced by factors such as hardware and the type of system."
+            },
+            {
+                question: "What are the key considerations for operating system design in relation to user goals?",
+                answer: "User goals for operating systems include being convenient to use, easy to learn, reliable, safe, and fast, ensuring a positive user experience."
+            },
+            {
+                question: "What are the key considerations for operating system design in relation to system goals?",
+                answer: "System goals for operating systems include being easy to design, implement, and maintain, as well as being flexible, reliable, error-free, and efficient."
+            },
+            // Operating System Design and Implementation.
+            {
+                question: "How are mechanisms and policies related in operating system design?",
+                answer: "Mechanisms determine how to perform a task, while policies decide what specific actions will be taken in the operating system."
+            },
+            {
+                question: "Why is the separation of policy from mechanism considered a crucial principle?",
+                answer: "The separation of policy from mechanism is crucial because it allows maximum flexibility. If policy decisions need to be changed later, the system can adapt without significant modifications to the underlying mechanisms (e.g., timer)."
+            },
+            // Implementation.
+            {
+                question: "What is the typical language mix in operating system implementation?",
+                answer: "Operating system implementation usually involves a mix of languages, with the lowest levels written in assembly, the main body in C, and system programs using languages like C, C++, and scripting languages such as PERL, Python, and shell scripts."
+            },
+            {
+                question: "Why is using a high-level language advantageous for operating systems?",
+                answer: "Implementing more of the operating system in a high-level language makes it easier to port the system to other hardware. However, this approach may lead to slower performance compared to lower-level languages."
+            },
+            {
+                question: "How can emulation be beneficial for operating systems?",
+                answer: "Emulation allows an operating system to run on non-native hardware, providing compatibility and flexibility in diverse computing environments."
+            },
+            // Operating System Structure.
+            {
+                question: "What are some approaches to structuring operating systems?",
+                answer: "Operating systems can be structured in various ways, ranging from simple structures, such as MS-DOS, to more complex structures, like UNIX. Another approach is the microkernel structure, as seen in systems like Mach."
+            },
+            {
+                question: "Can you provide an example of an operating system with a simple structure?",
+                answer: "MS-DOS is an example of an operating system with a simple structure, which reflects a straightforward design to manage basic system functions."
+            },
+            {
+                question: "What is an example of an operating system with a more complex structure?",
+                answer: "UNIX is an example of an operating system with a more complex structure, designed to handle a wide range of functionalities and accommodate diverse user needs."
+            },
+            {
+                question: "What is the microkernel structure in operating systems?",
+                answer: "The microkernel structure, exemplified by systems like Mach, involves a small, core set of essential functions, while additional features are implemented as separate user-level processes or servers, promoting modularity and flexibility."
+            },
+            // Simple Structure -- MS-DOS. 
+            {
+                question: "What is a characteristic of the operating system MS-DOS in terms of its structure?",
+                answer: "MS-DOS is an example of an operating system with a simple structure. It was designed to provide the most functionality in the least space and is not divided into modules. Although MS-DOS has some structure, its interfaces and levels of functionality are not well separated."
+            },
+            // Non Simple Structure -- UNIX.
+            {
+                question: "What are the two separable parts that UNIX consists of?",
+                answer: "System programs and the kernel."
+            },
+            // Microkernel System Structure.
+            {
+                question: "What is a characteristic of the microkernel system structure?",
+                answer: "In a microkernel system structure, as much functionality as possible is moved from the kernel into user space."
+            },
+            {
+                question: "Can you provide an example of a microkernel system?",
+                answer: "Mach is an example of a microkernel system. The Mac OS X kernel (Darwin) is partly based on Mach."
+            },
+            {
+                question: "How does communication occur in a microkernel system?",
+                answer: "Communication in a microkernel system takes place between user modules using message passing."
+            },
+            {
+                question: "What are the benefits of a microkernel system?",
+                answer: "Benefits of a microkernel system include easier extensibility, easier porting to new architectures, increased reliability (as less code is running in kernel mode), and improved security."
+            },
+            {
+                question: "What is a detriment of a microkernel system?",
+                answer: "A potential detriment of a microkernel system is the performance overhead of user space to kernel space communication."
+            },
+            // Debugging.
+            {
+                question: "What is the primary goal of debugging in the context of operating systems?",
+                answer: "Debugging in operating systems involves finding and fixing errors, commonly known as bugs, to enhance system stability and performance."
+            },
+            {
+                question: "How do operating systems handle error information?",
+                answer: "Operating systems generate log files containing error information. Additionally, the failure of an application can lead to the creation of a core dump file, capturing the memory state of the process."
+            },
+            {
+                question: "What does a crash dump file in operating systems contain?",
+                answer: "In the case of an operating system failure, a crash dump file is generated, containing information about the kernel memory at the time of the crash."
+            },
+            {
+                question: "Aside from fixing crashes, what is another aspect of operating-system debugging?",
+                answer: "Beyond addressing crashes, operating-system debugging includes performance tuning to optimize system performance. This may involve using trace listings of activities recorded for analysis and profiling, which is a periodic sampling of the instruction pointer to identify statistical trends."
+            },
+            // Operating System Generation.
+            {
+                question: "What is the purpose of operating system generation?",
+                answer: "Operating systems are designed to run on any of a class of machines, but they must be configured for each specific computer site. Operating system generation involves configuring the system for a particular hardware setup."
+            },
+            {
+                question: "What is the role of the SYSGEN program in operating system generation?",
+                answer: "The SYSGEN program obtains information about the specific configuration of the hardware system. It is used to build a system-specific compiled kernel or system-tuned configuration, potentially resulting in more efficient code than a one-size-fits-all general kernel."
+            },
+            {
+                question: "What are the objectives of the SYSGEN program?",
+                answer: "The SYSGEN program's objectives include obtaining hardware-specific information and building a system configuration that is optimized for the particular computer site. This can lead to the generation of more efficient and tailored operating system code."
+            },
         ],
     },
 ];
