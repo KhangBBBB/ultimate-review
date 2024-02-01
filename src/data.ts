@@ -1102,4 +1102,47 @@ echo $str`,
             },
         ],
     },
+    {
+        title: "OS: Lecture 4",
+        subtitle: "Process",
+        flashcards: [
+            // Definitions.
+            {
+                question: "What are the multiple parts of a process?",
+                answer: "* Program code (text section)\n* Current activity (program counter, processor registers)\n* Stack (temporary data like function parameters, return addresses, local variables)\n* Data section (containing global variables)\n* Heap (containing dynamically allocated memory during runtime)"
+            },
+            {
+                question: "Can one program result in several processes?",
+                answer: "Yes, one program can be associated with several processes, especially when multiple users execute the same program."
+            },
+            {
+                question: "When does a program become a process?",
+                answer: "When its executable file is loaded into memory."
+            },
+        ],
+    },
+    {
+        title: "OS: Lecture 5",
+        subtitle: "Thread",
+        flashcards: [
+            // Objectives.
+            {
+                question: "What is the notion of a thread?",
+                answer: "A thread is a fundamental unit of CPU utilization and forms the basis of multithreaded computer systems."
+            },
+            // Motivations.
+            {
+                question: "Why are most modern applications multithreaded?",
+                answer: "Most modern applications are multithreaded to run multiple tasks within the application concurrently. This allows for tasks such as updating the display, fetching data, spell checking, and handling network requests to be implemented by separate threads."
+            },
+            {
+                question: "What is the advantage of using threads for tasks within an application?",
+                answer: "Thread creation is light-weight compared to process creation, making it more efficient. Using threads can simplify code and increase overall application efficiency by allowing multiple tasks to run concurrently."
+            },
+            {
+                question: "Are kernels generally multithreaded?",
+                answer: "Yes, kernels are generally multithreaded, contributing to better system performance and resource utilization."
+            },
+        ],
+    },
 ];
