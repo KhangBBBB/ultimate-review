@@ -13,8 +13,6 @@
     function handleCardClick() {
         showAnswer = !showAnswer;
     }
-
-    $: cardType = showAnswer ? "Answer" : "Question";
 </script>
 
 <div
@@ -25,9 +23,9 @@
     tabindex="0"
 >
     <div class="question-answer">
-        {cardType}
+        {showAnswer ? "Answer" : "Question"}
     </div>
-    <div style="font-size: 16px; white-space: pre-wrap; text-align: left;">
+    <div class="question-answer-content">
         {#if showAnswer}
             {answer}
         {:else}
@@ -57,5 +55,11 @@
         margin-bottom: 10px;
         font-size: 18px;
         font-weight: bold;
+    }
+
+    .question-answer-content {
+        font-size: 16px;
+        white-space: pre-wrap;
+        text-align: left;
     }
 </style>
