@@ -7,8 +7,20 @@ export const topics: models.Topic[] = [
         flashcards: [
             // Bash.
             {
-                question: "Write a Bash script that uses a for loop to print numbers from 1 to 100.",
-                answer: "#!/bin/bash\n\nfor i in {1..100}; do\n  echo $i\ndone",
+                question: "Write a Bash script that uses a for loop (range) to print numbers from 1 to 100.",
+                answer: `#!/bin/bash
+                
+for i in {1..100}; do
+    echo $i
+done`,
+            },
+            {
+                question: "Write a Bash script that uses a for loop (C-like) to print numbers from 1 to 100.",
+                answer: `#!/bin/bash
+
+for ((i = 1; i <= 100; i++)); do
+  echo $i
+done`,
             },
             {
                 question: "How do you declare and use variables in Bash?",
@@ -37,6 +49,24 @@ done`,
             {
                 question: "How do you execute a command in Bash and store its output in a variable?",
                 answer: "To execute a command and store its output in a variable, use 'variable_name=$(command)'. This captures the output of the command and assigns it to the specified variable."
+            },
+            {
+                question: "FRUIT=\"Apple\"\necho '$FRUIT'",
+                answer: "$FRUIT",
+            },
+            {
+                question: `get_full_name() {
+  echo John Doe
+}
+
+echo "My full name is $(get_full_name)."`,
+                answer: "My full name is John Doe.",
+            },
+            {
+                question: `str1="Hello"
+str+=" World"
+echo $str`,
+                answer: "Hello World"
             },
             // cp.
             {
@@ -353,6 +383,23 @@ done`,
             {
                 question: "What is the purpose of the '--reference' option with 'chown'?",
                 answer: "The '--reference' option allows you to copy the ownership of one file or directory to another. For example, 'chown --reference=reference_file target_file' sets the ownership of 'target_file' to match 'reference_file'."
+            },
+            // Bonus: man.
+            {
+                question: "What is the purpose of the 'man' command in Linux?",
+                answer: "The 'man' command in Linux is used to display the manual pages for other commands, providing detailed information, usage, options, and examples."
+            },
+            {
+                question: "How do you use the 'man' command to view the manual page for a specific command?",
+                answer: "Use the syntax 'man [command]'. For example, 'man ls' displays the manual page for the 'ls' command."
+            },
+            {
+                question: "What are manual pages in Linux?",
+                answer: "Manual pages, or man pages, are organized documentation providing information on commands, utilities, and functions in the Linux operating system."
+            },
+            {
+                question: "How are manual pages organized?",
+                answer: "Manual pages are organized into sections, denoted by numbers (e.g., Section 1 for user commands, Section 8 for system administration commands)."
             },
         ],
     },
