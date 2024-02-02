@@ -1434,12 +1434,16 @@ int main() {
             },
             // Interprocess Communication.
             {
-                question: "What is Inter-process Communication (IPC) in the context of operating systems?",
-                answer: "Inter-process Communication (IPC) is the mechanism through which processes communicate with each other in an operating system.",
+                question: "What does IPC stand for in the context of operating system?",
+                answer: "Inter-process Communication",
+            },
+            {
+                question: "What is IPC in the context of operating systems?",
+                answer: "IPC is the mechanism through which processes communicate with each other in an operating system.",
             },
             {
                 question: "What are the two primary methods of IPC?",
-                answer: "The two primary methods of IPC are:\n1. Shared memory (with a process 'kick'): Fast and involves no data transfer.\n2. Message Passing: Distributed and provides better isolation between processes.",
+                answer: "1. Shared memory (with a process 'kick'): Fast and involves no data transfer.\n2. Message Passing: Distributed and provides better isolation between processes.",
             },
             {
                 question: "Describe the Shared memory method of IPC.",
@@ -1451,8 +1455,12 @@ int main() {
             },
             // Remote Procedure Call.
             {
-                question: "What is the purpose of Remote Procedure Call (RPC) in networked systems?",
-                answer: "Remote Procedure Call (RPC) abstracts procedure calls between processes on networked systems, allowing communication and execution of procedures across different machines.",
+                question: "What does RPC stand for?",
+                answer: "Remote Procedure Call",
+            },
+            {
+                question: "What is the purpose of RPC in networked systems?",
+                answer: "To abstract procedure calls between processes on networked systems, allowing communication and execution of procedures across different machines.",
             },
             {
                 question: "What is the role of Stubs in the context of RPC?",
