@@ -1106,10 +1106,11 @@ echo $str`,
         title: "OS: Lecture 4",
         subtitle: "Process",
         flashcards: [
+            // Lecture 4.1.
             // Definitions.
             {
                 question: "What are the multiple parts of a process?",
-                answer: "* Program code (text section)\n* Current activity (program counter, processor registers)\n* Stack (temporary data like function parameters, return addresses, local variables)\n* Data section (containing global variables)\n* Heap (containing dynamically allocated memory during runtime)"
+                answer: "* Text section (program code)\n* Current activity (program counter, processor registers)\n* Stack (temporary data like function parameters, return addresses, local variables)\n* Data section (containing global variables)\n* Heap (containing dynamically allocated memory during runtime)"
             },
             {
                 question: "Can one program result in several processes?",
@@ -1297,6 +1298,173 @@ echo $str`,
             {
                 question: "What is the role of a service in Android multitasking?",
                 answer: "In Android, a service is used by background processes to perform tasks. A service can continue running even if the background process is suspended. Services have no user interface and typically use small amounts of memory.",
+            },
+            // Lecture 4.2.
+            {
+                question: "How are processes created in an operating system?",
+                answer: "Processes are created in an operating system when a parent process creates children processes. This hierarchical structure results in a tree of processes.",
+            },
+            {
+                question: "What is a process identifier (pid) and how is it used in process management?",
+                answer: "A process identifier (pid) is a unique identifier assigned to each process in the system. It is used to identify and manage processes.",
+            },
+            {
+                question: "What are the resource sharing options between parent and child processes?",
+                answer: "Resource sharing options between parent and child processes include:\n1. Parent and children share all resources.\n2. Children share a subset of the parent's resources.\n3. Parent and child share no resources.",
+            },
+            {
+                question: "What are the execution options for parent and child processes?",
+                answer: "Execution options for parent and child processes include:\n1. Parent and children execute concurrently.\n2. Parent waits until children terminate.",
+            },
+            {
+                question: "How is the address space managed between parent and child processes?",
+                answer: "Address space management options between parent and child processes include:\n1. Child as a duplicate of the parent's address space.\n2. Child with a program loaded into its address space.",
+            },
+            {
+                question: "What are examples of UNIX system calls related to process creation?",
+                answer: "In UNIX, the fork() system call is used to create a new process, and the exec() system call is used after a fork() to replace the process's memory space with a new program.",
+            },
+            // C Program Forking Separate Process.
+            {
+                question: "Write a C program to fork a child process.",
+                answer: `#include <sys/types.h> // Include necessary header for type pid_t.
+#include <sys/wait.h> // Include necessary header for function wait.
+#include <stdio.h> // Include necessary header for function printf.
+#include <stdlib.h> // Include necessary header for NULL.
+#include <unistd.h> // Include necessary header for function exit.
+
+int main() {
+    pid_t pid;
+
+    // Create a new process by duplicating the existing process.
+    pid = fork();
+
+    if (pid < 0) {
+        // Handle fork failure.
+        perror("Fork child process failed");
+    } else if (pid == 0) {
+        // Code inside this block is executed by the child process.
+        // Replacing the current process image with ls.
+        execlp("/bin/ls", "ls", NULL);
+
+        // execlp only returns if an error occurs.
+        perror("Exec failed");
+        // Exit with an error code.
+        exit(1);
+    } else {
+        // Code inside this block is executed by the parent process.
+        // Wait for the child process to complete.
+        wait(NULL);
+        printf("Child process completed.");
+    }
+
+    return 0;
+}`
+            },
+            // Process Termination.
+            {
+                question: "How does a process initiate termination in an operating system?",
+                answer: "A process initiates termination by executing its last statement and then requesting the operating system to delete it using the exit() system call.",
+            },
+            {
+                question: "What is the role of the exit() system call in process termination?",
+                answer: "The exit() system call is used by a process to request termination. It returns status data from the child to the parent, and the operating system deallocates the process's resources.",
+            },
+            {
+                question: "How does the exit() system call facilitate communication between child and parent processes?",
+                answer: "The exit() system call facilitates communication between child and parent processes by returning status data from the child to the parent. This information is typically retrieved by the parent using the wait() system call.",
+            },
+            {
+                question: "What happens to a process's resources during termination?",
+                answer: "During termination, a process's resources are deallocated by the operating system. This ensures efficient utilization of system resources.",
+            },
+            {
+                question: "Under what circumstances may a parent terminate the execution of its children processes?",
+                answer: "A parent may terminate the execution of its children processes using the abort() system call under certain circumstances. Some reasons for doing so include:\n1. Child has exceeded allocated resources.\n2. Task assigned to child is no longer required.\n3. The parent is exiting, and the operating system does not allow a child to continue if its parent terminates.",
+            },
+            // Process Termination.
+            {
+                question: "What is cascading termination in the context of process termination?",
+                answer: "Cascading termination refers to the scenario where some operating systems do not allow a child process to exist if its parent has terminated. In such cases, if a process terminates, all its children must also be terminated. The termination is initiated by the operating system, leading to the termination of all descendants.",
+            },
+            {
+                question: "How is cascading termination managed in an operating system?",
+                answer: "Cascading termination is managed by the operating system, which initiates the termination of all children, grandchildren, and so on, if a parent process terminates. This ensures a clean and systematic termination of all related processes.",
+            },
+            {
+                question: "What role does the wait() system call play in the termination of child processes?",
+                answer: "The wait() system call allows the parent process to wait for the termination of a child process. It returns status information and the process identifier (pid) of the terminated process. This enables the parent to gather information about the terminated child process.",
+            },
+            {
+                question: "How is the wait() system call used in obtaining information about terminated processes?",
+                answer: "The parent process uses the wait() system call to wait for the termination of a child process. The call returns the process identifier (pid) and status information of the terminated process, which can be stored and analyzed by the parent.",
+            },
+            {
+                question: "What is the purpose of the pid = wait(&status) statement in process termination?",
+                answer: "The statement pid = wait(&status) is used in process termination to wait for the termination of a child process. It assigns the process identifier (pid) of the terminated process to the variable 'pid' and returns status information about the termination in the variable 'status'.",
+            },
+            // Multiprocess Architecture - Chrome Browser.
+            {
+                question: "What is the typical architecture of web browsers in terms of processes?",
+                answer: "Many web browsers traditionally ran as a single process, but some still follow this model. However, modern browsers are moving towards a multiprocess architecture for improved stability and security.",
+            },
+            {
+                question: "What are the drawbacks of a single-process web browser architecture?",
+                answer: "In a single-process web browser architecture, if one website causes trouble, the entire browser can hang or crash. This lack of isolation can lead to a less stable user experience.",
+            },
+            {
+                question: "How does the Google Chrome Browser differ in terms of its process architecture?",
+                answer: "The Google Chrome Browser follows a multiprocess architecture with three different types of processes, providing enhanced stability and security:\n1. Browser process manages user interface, disk, and network I/O.\n2. Renderer process renders web pages and handles HTML, Javascript. A new renderer is created for each website opened, running in a sandbox to restrict disk and network I/O and minimize the impact of security exploits.\n3. Plug-in process is dedicated to each type of plug-in.",
+            },
+            {
+                question: "What is the role of the browser process in the Chrome Browser's architecture?",
+                answer: "The browser process in the Chrome Browser manages the user interface, disk, and network I/O. It serves as the central coordinator for various functions within the browser.",
+            },
+            {
+                question: "What functions does the renderer process perform in the Chrome Browser?",
+                answer: "The renderer process in the Chrome Browser is responsible for rendering web pages, handling HTML, and executing Javascript. A new renderer process is created for each website opened, running in a sandbox to restrict disk and network I/O and enhance security.",
+            },
+            {
+                question: "Why is the use of a sandbox for renderer processes important in the Chrome Browser?",
+                answer: "The sandbox for renderer processes in the Chrome Browser is crucial for security. It restricts disk and network I/O, minimizing the impact of potential security exploits, and provides an additional layer of protection for the overall system.",
+            },
+            {
+                question: "What is the purpose of the plug-in process in the Chrome Browser's architecture?",
+                answer: "The plug-in process in the Chrome Browser is dedicated to each type of plug-in. It ensures that plug-ins operate in isolated processes, preventing issues with one plug-in from affecting others or the overall browser functionality.",
+            },
+            // Interprocess Communication.
+            {
+                question: "What is Inter-process Communication (IPC) in the context of operating systems?",
+                answer: "Inter-process Communication (IPC) is the mechanism through which processes communicate with each other in an operating system.",
+            },
+            {
+                question: "What are the two primary methods of IPC?",
+                answer: "The two primary methods of IPC are:\n1. Shared memory (with a process 'kick'): Fast and involves no data transfer.\n2. Message Passing: Distributed and provides better isolation between processes.",
+            },
+            {
+                question: "Describe the Shared memory method of IPC.",
+                answer: "Shared memory in IPC involves processes sharing a common memory region. A 'process kick' is often used to signal the other process to access the shared memory. This method is fast and does not involve actual data transfer between processes.",
+            },
+            {
+                question: "Explain the Message Passing method of IPC.",
+                answer: "Message Passing in IPC involves processes communicating by exchanging messages. This method is distributed and provides better isolation between processes, as they do not share memory directly. Messages can be used to transfer data and synchronize processes.",
+            },
+            // Remote Procedure Call.
+            {
+                question: "What is the purpose of Remote Procedure Call (RPC) in networked systems?",
+                answer: "Remote Procedure Call (RPC) abstracts procedure calls between processes on networked systems, allowing communication and execution of procedures across different machines.",
+            },
+            {
+                question: "What is the role of Stubs in the context of RPC?",
+                answer: "Stubs act as client-side proxies for the actual procedures on the server. They facilitate the communication between the client and server by abstracting the procedure calls.",
+            },
+            {
+                question: "What tasks does the client-side stub perform in an RPC?",
+                answer: "The client-side stub in an RPC locates the server and marshalls the parameters. It prepares the necessary information for the remote procedure call and initiates the communication with the server.",
+            },
+            {
+                question: "What responsibilities does the server-side stub have in an RPC?",
+                answer: "The server-side stub in an RPC receives the message from the client, unpacks the marshalled parameters, and performs the actual procedure on the server. It acts as an intermediary between the client and the server, handling the communication and execution process.",
             },
         ],
     },
