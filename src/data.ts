@@ -711,7 +711,7 @@ echo $str`,
                 answer: "Ensure that concurrent processes do not interfere with each other. Protection involves controlling access to system resources, while security requires user authentication to safeguard the system from outsiders."
             },
             {
-                question: "How do processes communicate in operating systems, and what are the two main methods mentioned?",
+                question: "How do processes communicate in operating systems?",
                 answer: "Processes in operating systems communicate either on the same computer or between computers over a network."
             },
             {
@@ -945,11 +945,11 @@ echo $str`,
             },
             {
                 question: "What types of tools are included in programming-language support system programs?",
-                answer: "Programming-language support system programs include compilers, assemblers, debuggers, and interpreters."
+                answer: "Compilers, assemblers, debuggers, and interpreters."
             },
             {
                 question: "What functions are associated with program loading and execution system programs?",
-                answer: "Program loading and execution system programs include absolute loaders, relocatable loaders, linkage editors, overlay loaders, and debugging systems for both higher-level and machine language."
+                answer: "Absolute loaders, relocatable loaders, linkage editors, overlay loaders, and debugging systems for both higher-level and machine language."
             },
             {
                 question: "What is the role of communication system programs?",
@@ -961,7 +961,7 @@ echo $str`,
             },
             {
                 question: "What facilities do background services system programs provide?",
-                answer: "Background services system programs offer facilities such as disk checking, process scheduling, error logging, and printing to enhance the overall system functionality."
+                answer: "Disk checking, process scheduling, error logging, and printing to enhance the overall system functionality."
             },
             {
                 question: "In which context do background services system programs run?",
