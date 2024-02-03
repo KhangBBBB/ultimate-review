@@ -1647,7 +1647,7 @@ int main() {
             },
             {
                 question: "What are the two ways to create Java threads?",
-                answer: "Java threads may be created by either extending the Thread class or implementing the Runnable interface.",
+                answer: "* Extending the Thread class\n* Implementing the Runnable interface",
             },
         ],
     },
