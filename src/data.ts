@@ -1649,6 +1649,136 @@ int main() {
                 question: "What are the two ways to create Java threads?",
                 answer: "* Extending the Thread class\n* Implementing the Runnable interface",
             },
+            // Lecture 5.2.
+            // Multithreading Models.
+            {
+                question: "What are different multithreading models?",
+                answer: "* One-to-one\n* Many-to-one\n*Many-to-many"
+            },
+            // Many-to-One.
+            {
+                question: "What characterizes the many-to-one threading model?",
+                answer: "Mapping many user-level threads to a single kernel thread."
+            },
+            {
+                question: "In the many-to-one model, what happens when a single thread blocks?",
+                answer: "Blocking of one thread leads to the blocking of all threads."
+            },
+            {
+                question: "Why may multiple threads not execute in parallel on a multicore system in the many-to-one model?",
+                answer: "Because only one thread is allowed in the kernel at a time, hindering parallel execution."
+            },
+            {
+                question: "Is the many-to-one threading model widely adopted in current systems?",
+                answer: "No, this model is not extensively used in contemporary systems."
+            },
+            {
+                question: "Can you provide examples of systems that employ the many-to-one model?",
+                answer: "* Solaris Green Threads\n* GNU Portable Threads"
+            },
+            // User-Level Threads.
+            {
+                question: "What does ULT stand for in the context of multithreading?",
+                answer: "User-Level Thread.",
+            },
+            {
+                question: "Does the kernel aware of the ULT existence?",
+                answer: "No"
+            },
+            {
+                question: "What manages the ULTs??",
+                answer: "User-space thread library."
+            },
+            {
+                question: "Is there a transition involving the kernel in ULTs?",
+                answer: "No, there is no kernel involvement or mode switch during thread management."
+            },
+            {
+                question: "What potential challenge may arise in ULT when one thread engages in I/O operations?",
+                answer: "I/O in one thread has the potential to block the entire process."
+            },
+            // Kernel Role for ULTs
+            {
+                question: "Thread states are independent of ____ states.",
+                answer: "process",
+            },
+            // Advantages and Disadvantages of ULTs.
+            {
+                question: "What are the advantages of User-Level Threads (ULT)?",
+                answer: "1. Thread switching does not involve the kernel, resulting in no mode switching and faster performance.\n2. Scheduling can be application-specific, allowing the selection of the best algorithm for the situation.\n3. ULTs can run on any operating system, requiring only a thread library."
+            },
+            {
+                question: "What are the disadvantages of User-Level Threads (ULT)?",
+                answer: "1. Most system calls are blocking for processes, leading to implicit blocking of all threads within a process.\n2. The kernel can only assign processors to processes, preventing two threads within the same process from running simultaneously on two processors."
+            },
+            // One-to-one.
+            {
+                question: "What characterizes the One-to-One threading model?",
+                answer: "Each user-level thread corresponds to a kernel thread."
+            },
+            {
+                question: "What happens when a user-level thread is created in the One-to-One model?",
+                answer: "Creating a user-level thread simultaneously creates a kernel thread."
+            },
+            {
+                question: "How does the level of concurrency in the one-to-one model compare to the many-to-one model?",
+                answer: "The one-to-one model provides more concurrency than the many-to-one model."
+            },
+            {
+                question: "Why might the number of threads per process be restricted in the one-to-one model?",
+                answer: "The overhead involved may lead to restrictions on the number of threads per process."
+            },
+            {
+                question: "Can you provide examples of systems that use the One-to-One model?",
+                answer: "Windows and Linux."
+            },
+            // Kernel-Level Threads.
+            {
+                question: "What does KLT stand for in the context of multithreading?",
+                answer: "Kernel-Level Thread.",
+            },
+            {
+                question: "What is characteristic of KLTs",
+                answer: "All thread management is handled by the kernel itself."
+            },
+            {
+                question: "How is thread management implemented in KLT in contrast to ULT?",
+                answer: "There is no thread library; instead, an API is provided to the kernel thread facility."
+            },
+            {
+                question: "What information does the kernel maintain for processes and threads in KLT?",
+                answer: "The kernel maintains context information for both the process and its threads."
+            },
+            {
+                question: "In KLT, what is required for switching between threads?",
+                answer: "Thread switching requires the involvement of the kernel."
+            },
+            {
+                question: "How does the kernel perform scheduling in KLT?",
+                answer: "The kernel performs scheduling on a thread basis."
+            },
+            // Advantages and Disvantages of KLT.
+            {
+                question: "Advantages of KLT",
+                answer: "1. Kernel can schedule multiple threads on multiple processors.\n2. Blocking occurs at the thread level.\n3. CPU can be assigned to another thread if one blocks.\n4. Even kernel routines can be multithreaded."
+            },
+            {
+                question: "Disadvantages of KLT",
+                answer: "1. Thread switching involves the kernel, resulting in two mode switches.\n2. Slower compared to ULT, but faster than a full process switch."
+            },
+            // Many-to-Many.
+            {
+                question: "What characterizes the many-to-many threading model?",
+                answer: "It allows many user-level threads to be mapped to many kernel threads."
+            },
+            {
+                question: "What advantage does the many-to-many model provide in terms of kernel threads?",
+                answer: "It allows the operating system to create a sufficient number of kernel threads."
+            },
+            {
+                question: "Can you provide an example of a system that implements the many-to-many model?",
+                answer: "Windows with the ThreadFiber package."
+            },
         ],
     },
 ];
