@@ -10,8 +10,8 @@
     {#if topic.subtitle.length > 0}
         <p class="subtitle">{topic.subtitle}</p>
     {/if}
-    {#each topic.flashcards as { question, answer }}
-        <Flashcard {question} {answer} />
+    {#each topic.flashcards as { question, answer }, index}
+        <Flashcard {question} {answer} {index} />
     {/each}
 </div>
 

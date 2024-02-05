@@ -1,6 +1,7 @@
 <script lang="ts">
     export let question: string;
     export let answer: string;
+    export let index: number;
 
     let showAnswer = false;
 
@@ -23,7 +24,7 @@
     tabindex="0"
 >
     <div class="question-answer">
-        {showAnswer ? "Answer" : "Question"}
+        {showAnswer ? "Answer" : `Question ${index + 1}`}
     </div>
     <div class="question-answer-content">
         {#if showAnswer}
