@@ -1123,7 +1123,7 @@ echo $str`,
             // Process State.
             {
                 question: "What are the different states the process can be in?",
-                answer: "New\nRunning\nWaiting\nReady\nTerminated",
+                answer: "1. New\n2. Running\n3. Waiting\n4. Ready\n5. Terminated",
             },
             {
                 question: "What does 'New' represent in process states?",
@@ -1164,7 +1164,7 @@ echo $str`,
             },
             {
                 question: "What information does a PCB contain?",
-                answer: "*Process State\n* Program Counter\n* CPU registers\nCPU-scheduling information\n* Memory management information\n* Accounting information\n* I/O information",
+                answer: "1. Process state\n2. Program counter\n3. CPU registers\n4. CPU-scheduling information\n5. Memory management information\n6. Accounting information\n7. I/O information",
             },
             // Scheduling Components.
             {
@@ -1318,7 +1318,7 @@ echo $str`,
             },
             {
                 question: "What are the resource sharing options between parent and child processes?",
-                answer: "Resource sharing options between parent and child processes include:\n1. Parent and children share all resources.\n2. Children share a subset of the parent's resources.\n3. Parent and child share no resources.",
+                answer: "1. Parent and children share all resources.\n2. Children share a subset of the parent's resources.\n3. Parent and child share no resources.",
             },
             {
                 question: "What are the execution options for parent and child processes?",
