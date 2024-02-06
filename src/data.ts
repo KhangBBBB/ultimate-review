@@ -1122,12 +1122,16 @@ echo $str`,
             },
             // Process State.
             {
+                question: "What are the different states the process can be in?",
+                answer: "New\nRunning\nWaiting\nReady\nTerminated",
+            },
+            {
                 question: "What does 'New' represent in process states?",
-                answer: "The process is just being put together."
+                answer: "The process is being created."
             },
             {
                 question: "What does 'Running' represent in process states?",
-                answer: "Instructions being executed. This running process holds the CPU."
+                answer: "Instructions are being executed. This running process holds the CPU."
             },
             {
                 question: "What does 'Waiting' signify in process states?",
@@ -1143,7 +1147,7 @@ echo $str`,
             },
             {
                 question: "What does 'Terminated' signify in process states?",
-                answer: "The process is being torn apart."
+                answer: "The process has finished execution and is being torn apart."
             },
             // Process State.
             {
@@ -1160,7 +1164,7 @@ echo $str`,
             },
             {
                 question: "What information does a PCB contain?",
-                answer: "* Program Counter\n* CPU registers\n* Memory management details\n* Accounting data\n* I/O status\n* Scheduling data",
+                answer: "*Process State\n* Program Counter\n* CPU registers\nCPU-scheduling information\n* Memory management information\n* Accounting information\n* I/O information",
             },
             // Scheduling Components.
             {
@@ -1173,7 +1177,7 @@ echo $str`,
             },
             {
                 question: "Define a context switch in the context of process scheduling.",
-                answer: "A context switch in process scheduling is the act of changing the memory seen by one process to the memory seen by another process.",
+                answer: "The kernel saves the context (state) of the old process in its PCB and loads the saved context of the new process scheduled to run.",
             },
             {
                 question: "What does the system do during a context switch?",
@@ -1305,8 +1309,12 @@ echo $str`,
                 answer: "Processes are created in an operating system when a parent process creates children processes. This hierarchical structure results in a tree of processes.",
             },
             {
-                question: "What is a process identifier (pid) and how is it used in process management?",
-                answer: "A process identifier (pid) is a unique identifier assigned to each process in the system. It is used to identify and manage processes.",
+                question: "What does pid stand for?",
+                answer: "Process identifier",
+            },
+            {
+                question: "What is a pid and how is it used in process management?",
+                answer: "A pid is a unique identifier assigned to each process in the system. It is used to identify and manage processes.",
             },
             {
                 question: "What are the resource sharing options between parent and child processes?",
