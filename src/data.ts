@@ -1123,7 +1123,7 @@ echo $str`,
             // Process State.
             {
                 question: "What are the different states the process can be in?",
-                answer: "1. New\n2. Running\n3. Waiting\n4. Ready\n5. Terminated",
+                answer: "1. New\n2. Running\n3. Waiting\n4. Ready\n5. Suspended\n6. Terminated",
             },
             {
                 question: "What does 'New' represent in process states?",
