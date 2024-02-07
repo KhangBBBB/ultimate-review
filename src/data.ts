@@ -1908,4 +1908,157 @@ int main() {
             },
         ],
     },
+    {
+        title: "DM: NumPy",
+        subtitle: "Numerical Programming Package for the Python Programming Language",
+        flashcards: [
+            {
+                question: "What is NumPy?",
+                answer: "NumPy is a Python library for numerical computing.",
+            },
+            {
+                question: "What is the main object in NumPy?",
+                answer: "The main object in NumPy is the ndarray (N-dimensional array).",
+            },
+            {
+                question: "How do you import NumPy?",
+                answer: "import numpy as np",
+            },
+            {
+                question: "What is the purpose of NumPy?",
+                answer: "NumPy provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays efficiently.",
+            },
+            {
+                question: "What is an array in NumPy?",
+                answer: "An array in NumPy is a grid of values, either integers or floating-point numbers, indexed by a tuple of non-negative integers. Example:\nnp.array([1, 2, 3])",
+            },
+            {
+                question: "How do you create an array with elements 1, 4, 5, 10 in NumPy?",
+                answer: `import numpy as np
+
+arr = np.array([1, 4, 5, 10])
+print(arr)
+
+# Output:
+# [ 1  4  5 10]`,
+            },
+            {
+                question: "What is the data type of elements in a NumPy array?",
+                answer: "The data type of elements in a NumPy array is homogeneous, meaning all elements are of the same type.",
+            },
+            {
+                question: "What are some advantages of using NumPy arrays over Python lists?",
+                answer: "NumPy arrays are more memory-efficient and faster than Python lists for numerical operations. They also provide a wide range of mathematical functions and methods for array manipulation.",
+            },
+            {
+                question: "What is the shape of a NumPy array?",
+                answer: "The shape of a NumPy array is a tuple of integers representing the size of the array along each dimension.",
+            },
+            // Access Element(s).
+            {
+                question: "How do you access elements of a NumPy array?",
+                answer: "You can access elements of a NumPy array using indexing, slicing, and fancy indexing.",
+            },
+            {
+                question: "How do you access an element of a 1D array using basic indexing in NumPy?",
+                answer: `import numpy as np
+
+# Create a 1D array.
+arr = np.array([1, 2, 3, 4, 5])
+
+# Access and print the element at index 2.
+print("Element at index 2:", arr[2])
+
+# Output:
+# Element at index 2: 3`,
+            },
+            {
+                question: "How do you access elements at specific indices in NumPy?",
+                answer: `import numpy as np
+
+# Create a 1D array.
+arr = np.array([1, 2, 3, 4, 5])
+
+# Access and print elements at specific indexes.
+print("Elements at specific indexes:", arr[[0, 2, 4]])
+
+# Output:
+# Elements at specific indexes: [1 3 5]`,
+            },
+            {
+                question: "What is slicing in NumPy?",
+                answer: "Slicing in NumPy refers to extracting a portion of the array by specifying a range of indices along each dimension.",
+            },
+            {
+                question: "How do you perform slicing (access elements from index 1 to 3 (exclusive)) in NumPy?",
+                answer: `import numpy as np
+
+arr = np.array([1, 2, 3, 4, 5])
+
+# Access and print elements from index 1 to 3 (exclusive) using slicing.
+print("Subset:", arr[1:3])
+
+# Output:
+# Subset: [2 3]`
+            },
+            {
+                question: "What is broadcasting in NumPy?",
+                answer: "Broadcasting in NumPy is a mechanism that allows NumPy to perform arithmetic operations between arrays of different shapes.",
+            },
+            {
+                question: "How do you perform element-wise operations on NumPy arrays?",
+                answer: "You can perform element-wise operations on NumPy arrays using arithmetic operators (+, -, *, /) or NumPy's built-in functions.",
+            },
+            {
+                question: "What is the dot product of two NumPy arrays?",
+                answer: "The dot product of two NumPy arrays is a scalar value obtained by multiplying corresponding elements of the arrays and summing the result.",
+            },
+            {
+                question: "What are some common methods for array manipulation in NumPy?",
+                answer: "Some common methods for array manipulation in NumPy include reshaping arrays, concatenating arrays, and splitting arrays.",
+            },
+            {
+                question: "How do you concatenate 2D arrays along rows in NumPy?",
+                answer: `import numpy as np
+
+# Create two example 2D arrays.
+arr1_2d = np.array([[1, 2], [3, 4]])
+arr2_2d = np.array([[5, 6], [7, 8]])
+
+# Concatenate the arrays along axis 0 (rows).
+concatenated_array_along_axis_0 = np.concatenate((arr1_2d, arr2_2d), axis=0)
+
+print("Concatenated array along axis 0 (rows):")
+print(concatenated_array_along_axis_0)
+
+# Output:
+# Concatenated array along axis 0 (rows):
+# [[1 2]
+#  [3 4]
+#  [5 6]
+#  [7 8]]`,
+            },
+            {
+                question: "What is the transpose of a NumPy array?",
+                answer: "The transpose of a NumPy array is obtained by switching the rows and columns of the array.",
+            },
+            {
+                question: "What is the NumPy random module used for?",
+                answer: "The NumPy random module is used for generating random numbers and random arrays.",
+            },
+            {
+                question: "How do you compute mean of a 1D array in NumPy?",
+                answer: `import numpy as np
+
+# Create an example array.
+arr = np.array([1, 2, 3, 4, 5])
+
+# Compute and print the mean.
+print("Mean of the array:", np.mean(arr))
+
+# Output:
+# Mean of the array: 3.0`,
+            },
+        ],
+    },
 ];
