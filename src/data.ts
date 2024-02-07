@@ -1806,4 +1806,88 @@ int main() {
             },
         ],
     },
+    {
+        title: "DM: Lecture 1",
+        subtitle: "Introduction to Data Mining",
+        flashcards: [
+            // Lecture 1.1.
+            {
+                question: "What is the focus of Data Mining?",
+                answer: "Data Mining studies algorithms and computational paradigms for computers to identify patterns, regularities, and insights in databases.",
+            },
+            {
+                question: "What are the objectives of Data Mining?",
+                answer: "The objectives include discovering patterns, making predictions, and enhancing performance through data analysis.",
+            },
+            {
+                question: "What does Data Mining involve?",
+                answer: "Data Mining explores algorithms enabling computers to find patterns, predict trends, and improve performance using data.",
+            },
+            {
+                question: "What is Data Mining's role in Knowledge Discovery?",
+                answer: "Data Mining is a key component of Knowledge Discovery, extracting valuable insights from raw data.",
+            },
+            {
+                question: "What are the steps in the knowledge discovery process?",
+                answer: "The process involves data selection, cleaning, coding, applying statistical and machine learning techniques, and visualizing the results.",
+            },
+            {
+                question: "Define Data Mining.",
+                answer: "Data Mining is the process of efficiently discovering previously unknown, valid, and potentially useful patterns in large datasets. It involves analyzing observational data sets to uncover unsuspected relationships and summarize the data in novel and understandable ways.",
+            },
+            // Overview of terms.
+            {
+                question: "What does 'Data' refer to in Data Mining?",
+                answer: "Data in Data Mining refers to a set of facts (items) D, typically stored in a database.",
+            },
+            {
+                question: "What is a 'Pattern' in Data Mining?",
+                answer: "A pattern in Data Mining is an expression E in a language L that describes a subset of facts within the dataset.",
+            },
+            {
+                question: "Define 'Attribute' in the context of Data Mining.",
+                answer: "An attribute in Data Mining is a field in an item i within the dataset D.",
+            },
+            {
+                question: "What is 'Interestingness' in Data Mining?",
+                answer: "Interestingness in Data Mining is a function ID,L that maps an expression E in language L into a measure space M, indicating the significance or value of a pattern.",
+            },
+            {
+                question: "What are the steps in knowledge discovery?",
+                answer: "1. Selection: Data → Target Data\n2. Preprocessing: Target Data → Preprocessed Data\n3. Transformation: Preprocessed Data → Transformed Data\n4. Data Mining: Transformed Data → Pattern\n5. Interpretation/Evaluation: Patterns → Knowledge",
+            },
+            // The Data Mining Process.
+            {
+                question: "What are the steps involved in The Data Mining Process?",
+                answer: "1. Understand the domain.\n2. Create a dataset by selecting interesting attributes and performing data cleaning and preprocessing.\n3. Choose the data mining task and the specific algorithm.\n4. Interpret the results, and possibly return to step 2 for further refinement.",
+            },
+            // Origins of Data Mining.
+            {
+                question: "What disciplines contribute to the origins of Data Mining?",
+                answer: "Data Mining originates from statistics, database systems, AI (machine learning is a subset of AI), and pattern recognition.",
+            },
+            // Data Mining Tasks.
+            {
+                question: "What is Classification in Data Mining?",
+                answer: "Classification involves learning a function that assigns an item to one of several predefined classes.",
+            },
+            {
+                question: "What is Regression in Data Mining?",
+                answer: "Regression involves learning a function that maps an item to a real value.",
+            },
+            {
+                question: "What is Clustering in Data Mining?",
+                answer: "Clustering aims to identify groups of similar items within a dataset.",
+            },
+            {
+                question: "What are Dependencies and Associations in Data Mining?",
+                answer: "Dependencies and associations involve identifying significant relationships between data attributes.",
+            },
+            {
+                question: "What is Summarization in Data Mining?",
+                answer: "Summarization aims to provide a concise description of either the entire dataset or a subset of the dataset.",
+            },
+            // Lecture 2.1.
+        ],
+    },
 ];
