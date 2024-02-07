@@ -1482,6 +1482,23 @@ int main() {
                 question: "What responsibilities does the server-side stub have in an RPC?",
                 answer: "The server-side stub in an RPC receives the message from the client, unpacks the marshalled parameters, and performs the actual procedure on the server. It acts as an intermediary between the client and the server, handling the communication and execution process.",
             },
+            // Bonus: Dispatcher.
+            {
+                question: "What is the role of the dispatcher in CPU scheduling?",
+                answer: "Transferring control of the CPU to the process selected by the short-term scheduler. It facilitates the context switch and transitions the CPU to user mode, allowing the selected process to resume execution.",
+            },
+            {
+                question: "What functions does the dispatcher perform during CPU scheduling?",
+                answer: "1. Switching context between processes.\n2. Switch the CPU to user mode.\n3. Jumping to the proper location in the user program to restart the execution of the selected process.",
+            },
+            {
+                question: "Why is it important for the dispatcher to be fast?",
+                answer: "The dispatcher's speed is crucial as it's called upon for every process switch, enhancing system responsiveness.",
+            },
+            {
+                question: "What is dispatch latency?",
+                answer: "Dispatch latency is the time between stopping one process and starting another.",
+            },
         ],
     },
     {
