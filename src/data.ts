@@ -1948,6 +1948,14 @@ array([1, 2, 3])`,
             },
             // Array Creations.
             {
+                question: "How do you create a 1D array filled with zeros in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 1D array filled with zeros.
+>>> arr = np.zeros(5)
+>>> arr
+array([0., 0., 0., 0., 0.])`,
+            },
+            {
                 question: "How do you create a 2x3 matrix filled with zeros in NumPy?",
                 answer: `>>> import numpy as np
 >>> # Create a 2x3 matrix filled with zeros.
@@ -2143,6 +2151,16 @@ array([[1, 2],
        [7, 8]])`,
             },
             {
+                question: "How do you split an array in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 1D array.
+>>> arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> # Split the array into three equal parts.
+>>> parts = np.split(arr, 3)
+>>> parts
+[array([1, 2, 3]), array([4, 5, 6]), array([7, 8, 9])]`,
+            },
+            {
                 question: "What is the transpose of a NumPy array?",
                 answer: "The transpose of a NumPy array is obtained by switching the rows and columns of the array.",
             },
@@ -2186,6 +2204,24 @@ array([[1, 2, 3],
 >>> arr_mean = np.mean(arr)
 >>> arr_mean
 3.0`,
+            },
+            {
+                question: "How do you apply a custom function to each element of an array in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 1D array.
+>>> arr = np.array([1, 2, 3, 4, 5])
+>>> # Define a custom function to map values to strings.
+>>> def map_to_string(x):
+...     if x % 2 == 0:
+...         return "Even"
+...     return "Odd"
+...
+>>> # Vectorize the custom function.
+>>> vectorized_map_to_string = np.vectorize(map_to_string)
+>>> # Apply the vectorized function to each element of the array.
+>>> result = vectorized_map_to_string(arr)
+>>> result
+array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`,
             },
         ],
     },
