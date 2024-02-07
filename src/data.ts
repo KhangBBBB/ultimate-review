@@ -1983,6 +1983,34 @@ array([ 1,  4,  5, 10])`,
 >>> arr
 array([ 5, 10, 15, 20])`,
             },
+            {
+                question: "How do you specify a data type for elements during array creation in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create an array with specified data type.
+>>> arr = np.array([1, 2, 3], dtype=np.float64)
+>>> arr.dtype
+dtype('float64')`
+            },
+            {
+                question: "How do you create an identity matrix in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 3x3 identity matrix.
+>>> identity_matrix = np.eye(3)
+>>> identity_matrix
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])`,
+            },
+            {
+                question: "How do you create a diagonal matrix in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a diagonal matrix with specified diagonal elements.
+>>> diagonal_matrix = np.diag([1, 2, 3])
+>>> diagonal_matrix
+array([[1, 0, 0],
+       [0, 2, 0],
+       [0, 0, 3]])`,
+            },
             // Types and Properties of the Array.
             {
                 question: "How do you access the data type of elements in a NumPy array?",
@@ -1998,8 +2026,16 @@ dtype('int32')`,
                 answer: "The shape of a NumPy array is a tuple of integers representing the size of the array along each dimension.",
             },
             {
+                question: "What is the total number of elements in a NumPy matrix with the shape (3, 4, 2)?",
+                answer: "Number of elements: 3 × 4 × 2 = 24",
+            },
+            {
                 question: "What is the data type of elements in a NumPy array?",
                 answer: "The data type of elements in a NumPy array is homogeneous, meaning all elements are of the same type.",
+            },
+            {
+                question: "What is the default data type of elements in NumPy arrays?",
+                answer: "The default data type for elements in NumPy arrays is float64 (64-bit floating-point numbers) if the elements are not explicitly specified during array creation.",
             },
             {
                 question: "How do you obtain the number of elements in an array in NumPy?",
