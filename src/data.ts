@@ -1917,6 +1917,10 @@ int main() {
                 answer: "NumPy is a Python library for numerical computing.",
             },
             {
+                question: "What does NumPy stand for?",
+                answer: "NumPy stands for Numerical Python.",
+            },
+            {
                 question: "What is the main object in NumPy?",
                 answer: "The main object in NumPy is the ndarray (N-dimensional array).",
             },
