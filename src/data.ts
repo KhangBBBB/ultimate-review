@@ -2225,4 +2225,24 @@ array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`,
             },
         ],
     },
+    {
+        title: "DM: Pandas",
+        subtitle: "Data Analysis and Manipulation Tool",
+        flashcards: [],
+    },
+    {
+        title: "DM: Matplotlib",
+        subtitle: "Visualization with Python",
+        flashcards: [],
+    },
+    {
+        title: "DM: Seaborn",
+        subtitle: "Data Visualization Library Based on Matplotlib",
+        flashcards: [],
+    },
+    {
+        title: "DM: scikit-learn",
+        subtitle: "Machine Learning in Python",
+        flashcards: [],
+    },
 ];
