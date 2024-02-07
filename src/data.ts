@@ -1887,7 +1887,25 @@ int main() {
                 question: "What is Summarization in Data Mining?",
                 answer: "Summarization aims to provide a concise description of either the entire dataset or a subset of the dataset.",
             },
-            // Lecture 2.1.
+        ],
+    },
+    {
+        title: "DM: Lecture 2",
+        subtitle: "What is Data?",
+        flashcards: [
+            // Why Data Preprocessing?
+            {
+                question: "What are the reasons for Data Preprocessing?",
+                answer: "Data preprocessing is necessary because real-world data is often dirty, incomplete, noisy, and inconsistent. Without quality data, achieving quality mining results becomes challenging.",
+            },
+            {
+                question: "What are common issues with real-world data?",
+                answer: "Real-world data can be incomplete, noisy, and inconsistent, lacking attribute values, containing errors or outliers, and having discrepancies in codes or names.",
+            },
+            {
+                question: "Why is quality data important for Data Mining?",
+                answer: "Quality data is essential for quality mining results. Decisions based on data must be of high quality, and data preprocessing ensures consistency and integration of quality data, which is vital for effective Data Mining.",
+            },
         ],
     },
 ];
