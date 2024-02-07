@@ -1918,11 +1918,11 @@ int main() {
             },
             {
                 question: "What does NumPy stand for?",
-                answer: "NumPy stands for Numerical Python.",
+                answer: "Numerical Python.",
             },
             {
-                question: "What is the main object in NumPy?",
-                answer: "ndarray (N-dimensional array).",
+                question: "NumPy is the ____ package for ____ computing in Python",
+                answer: "fundamental\nscientific",
             },
             {
                 question: "How do you import NumPy?",
@@ -1933,10 +1933,38 @@ int main() {
                 answer: "NumPy provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays efficiently.",
             },
             {
+                question: "What are some advantages of using NumPy arrays over Python lists?",
+                answer: "NumPy arrays are more memory-efficient and faster than Python lists for numerical operations. They also provide a wide range of mathematical functions and methods for array manipulation.",
+            },
+            {
+                question: "What is the main object in NumPy?",
+                answer: "ndarray (N-dimensional array).",
+            },
+            {
                 question: "What is an array in NumPy?",
                 answer: `An array in NumPy is a grid of values, either integers or floating-point numbers, indexed by a tuple of non-negative integers. Example:
 >>> np.array([1, 2, 3])
 array([1, 2, 3])`,
+            },
+            // Array Creations.
+            {
+                question: "How do you create a 2x3 matrix filled with zeros in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 2x3 matrix filled with zeros.
+>>> matrix = np.zeros((2, 3))
+>>> matrix
+array([[0., 0., 0.],
+       [0., 0., 0.]])`,
+            },
+            {
+                question: "How do you create a 3x4 matrix filled with ones in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 3x4 matrix filled with ones.
+>>> matrix = np.ones((3, 4))
+>>> matrix
+array([[1., 1., 1., 1.],
+       [1., 1., 1., 1.],
+       [1., 1., 1., 1.]])`,
             },
             {
                 question: "How do you create an array with elements 1, 4, 5, 10 in NumPy?",
@@ -1946,16 +1974,44 @@ array([1, 2, 3])`,
 array([ 1,  4,  5, 10])`,
             },
             {
-                question: "What is the data type of elements in a NumPy array?",
-                answer: "The data type of elements in a NumPy array is homogeneous, meaning all elements are of the same type.",
+                question: "How can you generate a one-dimensional array with evenly spaced values within a defined range?",
+                answer: `>>> import numpy as np
+>>> # Creating a one-dimensional NumPy array with evenly spaced values.
+>>> # The array starts from 5 (inclusive) and ends before 25 (exclusive).
+>>> # The values are spaced by increments of 5.
+>>> arr = np.arange(5, 25, 5)
+>>> arr
+array([ 5, 10, 15, 20])`,
             },
+            // Types and Properties of the Array.
             {
-                question: "What are some advantages of using NumPy arrays over Python lists?",
-                answer: "NumPy arrays are more memory-efficient and faster than Python lists for numerical operations. They also provide a wide range of mathematical functions and methods for array manipulation.",
+                question: "How do you access the data type of elements in a NumPy array?",
+                answer: `>>> import numpy as np
+>>> # Create a 2D array.
+>>> arr = np.array([1, 2, 3, 4, 5])
+>>> # Access the data type of the elements in the array.
+>>> arr.dtype
+dtype('int32')`,
             },
             {
                 question: "What is the shape of a NumPy array?",
                 answer: "The shape of a NumPy array is a tuple of integers representing the size of the array along each dimension.",
+            },
+            {
+                question: "What is the data type of elements in a NumPy array?",
+                answer: "The data type of elements in a NumPy array is homogeneous, meaning all elements are of the same type.",
+            },
+            {
+                question: "How do you obtain the number of elements in an array in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Define an array.
+>>> arr = np.array([[1, 2, 3], [4, 5, 6]])
+>>> # Get the number of elements using the .size attribute.
+>>> arr.size
+6
+>>> # Get the number of elements using the np.size() function.
+>>> np.size(arr)
+6`,
             },
             // Access Element(s).
             {
@@ -1998,16 +2054,43 @@ array([2, 3])`
                 answer: "Broadcasting in NumPy is a mechanism that allows NumPy to perform arithmetic operations between arrays of different shapes.",
             },
             {
+                question: "What is element-wise addition in NumPy?",
+                answer: "Element-wise addition in NumPy refers to the operation where corresponding elements of two arrays are added together to produce a new array. This means that each element in one array is added to the element in the same position in the other array.",
+            },
+            {
                 question: "How do you perform element-wise operations on NumPy arrays?",
                 answer: "You can perform element-wise operations on NumPy arrays using arithmetic operators (+, -, *, /) or NumPy's built-in functions.",
+            },
+            {
+                question: "How do you perform element-wise addition in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Define two arrays.
+>>> arr1 = np.array([1, 2, 3])
+>>> arr2 = np.array([4, 5, 6])
+>>> # Perform element-wise addition.
+>>> result = arr1 + arr2
+>>> result
+array([5, 7, 9])`,
             },
             {
                 question: "What is the dot product of two NumPy arrays?",
                 answer: "The dot product of two NumPy arrays is a scalar value obtained by multiplying corresponding elements of the arrays and summing the result.",
             },
             {
+                question: "How do you perform a dot product between two arrays in NumPy?",
+                answer: `>>> import numpy as np
+>>> arr1 = np.array([1, 2, 3])
+>>> arr2 = np.array([4, 5, 6])
+>>> # Perform dot product using numpy.dot().
+>>> np.dot(arr1, arr2)
+32
+>>> # Perform dot product using the @ operator.
+>>> arr1 @ arr2
+32`,
+            },
+            {
                 question: "What are some common methods for array manipulation in NumPy?",
-                answer: "Some common methods for array manipulation in NumPy include reshaping arrays, concatenating arrays, and splitting arrays.",
+                answer: "Reshaping arrays\n* Concatenating arrays\n* Splitting arrays",
             },
             {
                 question: "How do you concatenate 2D arrays along rows in NumPy?",
@@ -2026,6 +2109,33 @@ array([[1, 2],
             {
                 question: "What is the transpose of a NumPy array?",
                 answer: "The transpose of a NumPy array is obtained by switching the rows and columns of the array.",
+            },
+            {
+                question: "How do you transpose a 2D array in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 2D array.
+>>> arr = np.array([[1, 2, 3], [4, 5, 6]])
+>>> # Transpose the array using numpy.transpose().
+>>> np.transpose(arr)
+array([[1, 4],
+       [2, 5],
+       [3, 6]])
+>>> # Transpose the array using the .T attribute.
+>>> arr.T
+array([[1, 4],
+       [2, 5],
+       [3, 6]])`,
+            },
+            {
+                question: "How do you reshape an array in NumPy?",
+                answer: `>>> import numpy as np
+>>> # Create a 2D array.
+>>> arr = np.array([1, 2, 3, 4, 5, 6])
+>>> # Reshape the array to a 2x3 matrix.
+>>> reshaped_arr = np.reshape(arr, (2, 3))
+>>> reshaped_arr
+array([[1, 2, 3],
+       [4, 5, 6]])`,
             },
             {
                 question: "What is the NumPy random module used for?",
