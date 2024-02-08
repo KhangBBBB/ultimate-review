@@ -3006,6 +3006,47 @@ Name: A, dtype: int64`,
                 question: "What is the purpose of Matplotlib's subplots?",
                 answer: "Matplotlib's subplots allow you to create multiple plots within the same figure, arranged in a grid.",
             },
+            // Line plot.
+            {
+                question: "What is the purpose of the 'marker' parameter in plt.plot() function?",
+                answer: "The 'marker' parameter in plt.plot() function specifies the style of markers used to represent data points in the line plot. It allows customization of the markers along the line.",
+            },
+            {
+                question: "What is the purpose of the 'linestyle' parameter in plt.plot() function?",
+                answer: "The 'linestyle' parameter in plt.plot() function specifies the style of the line connecting the data points in the line plot. It allows customization of the appearance of the line.",
+            },
+            {
+                question: "How can you add labels to the x and y axes in a line plot created using matplotlib?",
+                answer: "You can add labels to the x and y axes in a line plot using the plt.xlabel() and plt.ylabel() functions by passing the label text as arguments.",
+            },
+            {
+                question: "What is the purpose of the 'linewidth' parameter in plt.plot() function?",
+                answer: "The 'linewidth' parameter in plt.plot() function specifies the width of the line in the line plot. It allows customization of the thickness of the line.",
+            },
+            {
+                question: "How can you add a legend to a line plot created using matplotlib?",
+                answer: "You can add a legend to a line plot using the plt.legend() function by passing the label text as arguments for each line.",
+            },
+            {
+                question: "How do you create a line chart in matplotlib?",
+                answer: `>>> import matplotlib.pyplot as plt
+>>> # Data to plot.
+>>> x = [1, 2, 3, 4, 5]
+>>> y = [2, 3, 5, 7, 11]
+>>> # Plot.
+>>> plt.plot(x, y, marker='o', linestyle='-', color='green')
+[<matplotlib.lines.Line2D object at 0x000001AD3BF64770>]
+>>> # Add labels and title with font sizes.
+>>> plt.xlabel('X-axis Label', fontsize=12)
+Text(0.5, 0, 'X-axis Label')
+>>> plt.ylabel('Y-axis label', fontsize=12)
+Text(0, 0.5, 'Y-axis label')
+>>> plt.title('Line Chart Example', fontsize=14)
+Text(0.5, 1.0, 'Line Chart Example')
+>>> # Show plot.
+>>> plt.show()`,
+            },
+            // Scatter plot.
             {
                 question: "How do you create a scatter plot using Matplotlib?",
                 answer: `>>> import matplotlib.pyplot as plt
@@ -3023,6 +3064,78 @@ Text(0, 0.5, 'Y axis label')
 >>> plt.title('Scatter Plot Example')
 Text(0.5, 1.0, 'Scatter Plot Example')
 >>> # Display the plot.
+>>> plt.show()`,
+            },
+            // Piechart.
+            {
+                question: "What is the purpose of the 'x' parameter in plt.pie() function?",
+                answer: "The 'x' parameter in plt.pie() function specifies the data values that are used to draw the pie chart. It represents the numerical proportions of the slices.",
+            },
+            {
+                question: "What is the purpose of the 'labels' parameter in plt.pie() function?",
+                answer: "The 'labels' parameter in plt.pie() function specifies the labels for each slice of the pie chart. It provides additional information about the data represented by each slice.",
+            },
+            {
+                question: "What is the purpose of the 'autopct' parameter in plt.pie() function?",
+                answer: "The 'autopct' parameter in plt.pie() function specifies the format of the percentage labels displayed on each slice of the pie chart. It allows customization of the label format.",
+            },
+            {
+                question: "What is the purpose of the 'explode' parameter in plt.pie() function?",
+                answer: "The 'explode' parameter in plt.pie() function specifies the fraction of the radius by which to offset each wedge. It is used to emphasize specific slices of the pie chart by pulling them out.",
+            },
+            {
+                question: "How do you create a pie chart in matplotlib?",
+                answer: `>>> import matplotlib.pyplot as plt
+>>> # Data to plot.
+>>> labels = ['A', 'B', 'C', 'D']
+>>> sizes = [15, 30, 45, 10]  # Sizes of each slice.
+>>> colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']  # Colors for each slice.
+>>> explode = (0, 0.1, 0, 0)  # "Explode" the 2nd slice (B).
+>>> # Plot
+>>> plt.figure(figsize=(6,6))  # optional, to control the size of the plot.
+<Figure size 600x600 with 0 Axes>
+>>> plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+([<matplotlib.patches.Wedge object at 0x0000013AD2518380>, <matplotlib.patches.Wedge object at 0x0000013AD25182C0>, <matplotlib.patches.Wedge object at 0x0000013AD2519490>, <matplotlib.patches.Wedge object at 0x0000013AD2519D30>], [Text(-1.0718070758972749, 0.24744613970828805, 'A'), Text(-0.44952782876224534, -1.112620659150414, 'B'), Text(1.0125553066047401, 0.4298043171800172, 'C'), Text(-0.5829112299595214, 0.9328528812128298, 'D')], [Text(-0.5846220413985135, 0.1349706216590662, '15.0%'), Text(-0.26222456677797645, -0.6490287178377414, '30.0%'), Text(0.5523028945116764, 0.23443871846182754, '45.0%'), Text(-0.31795157997792073, 0.5088288442979071, '10.0%')])
+>>> plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+(-1.1081434574663034, 1.1003724753128676, -1.1973534278829092, 1.1046239187563924)
+>>> plt.title('A Pie Chart Example')
+Text(0.5, 1.0, 'A Pie Chart Example')
+>>> plt.show()`,
+            },
+            // Bar Chart.
+            {
+                question: "What is the purpose of the 'x' parameter in plt.bar() function?",
+                answer: "The 'x' parameter in plt.bar() function specifies the positions of the bars on the x-axis. It represents the categories or labels for each bar in the bar chart.",
+            },
+            {
+                question: "What is the purpose of the 'height' parameter in plt.bar() function?",
+                answer: "The 'height' parameter in plt.bar() function specifies the heights of the bars. It represents the values or frequencies of each category in the bar chart.",
+            },
+            {
+                question: "What is the purpose of the 'tick_label' parameter in plt.bar() function?",
+                answer: "The 'tick_label' parameter in plt.bar() function specifies the labels for each bar on the x-axis. It provides additional information about the categories represented by each bar.",
+            },
+            {
+                question: "What is the purpose of the 'color' parameter in plt.bar() function?",
+                answer: "The 'color' parameter in plt.bar() function specifies the color of the bars. It allows customization of the visual appearance of the bars in the bar chart.",
+            },
+            {
+                question: "How do you create a bar chart in matplotlib?",
+                answer: `>>> import matplotlib.pyplot as plt
+>>> # Data to plot.
+>>> categories = ['Category A', 'Category B', 'Category C', 'Category D']
+>>> values = [20, 35, 30, 25]  # Values for each category.
+>>> # Plot.
+>>> plt.bar(categories, values, color='skyblue')
+<BarContainer object of 4 artists>
+>>> # Adding labels and title.
+>>> plt.xlabel('Categories')
+Text(0.5, 0, 'Categories')
+>>> plt.ylabel('Values')
+Text(0, 0.5, 'Values')
+>>> plt.title('A Bar Chart Example.')
+Text(0.5, 1.0, 'A Bar Chart Example.')
+>>> # Show plot.
 >>> plt.show()`,
             },
         ],
