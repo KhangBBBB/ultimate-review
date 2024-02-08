@@ -2403,6 +2403,29 @@ array([[1, 2, 3],
 array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`,
             },
             {
+                question: "How can None values be filtered from a numpy array?",
+                answer: `>>> import numpy as np
+>>> # Create a sample data with None values.
+>>> arr = np.array([1, 2, None, 4, None, 6])
+>>> arr
+array([1, 2, None, 4, None, 6], dtype=object)
+>>> # Filter None values using boolean indexing.
+>>> arr[arr != None]
+array([1, 2, 4, 6], dtype=object)`,
+            },
+            {
+                question: "How do you eliminate np.nan values from a numpy array?",
+                answer: `>>> import numpy as np
+>>> arr = np.array([1, 2, np.nan, 4, np.nan, 6])
+>>> # Create a boolean mask for np.nan values.
+>>> nan_mask = np.isnan(arr)
+>>> nan_mask
+array([False, False,  True, False,  True, False])
+>>> # Invert the mask to select non-nan values.
+>>> arr[~nan_mask]
+array([1., 2., 4., 6.])`,
+            },
+            {
                 question: `>>> import numpy as np
 >>> arr = np.array([[5, 8, 2], [1, 6, 4]])
 >>> np.max(arr, axis=1)`,
