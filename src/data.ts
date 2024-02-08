@@ -2268,6 +2268,26 @@ array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`,
 3    David   40      Houston`,
             },
             {
+                question: "How can you insert a column into an existing DataFrame in Pandas?",
+                answer: `>>> import pandas as pd
+>>> # Create a sample DataFrame.
+>>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+>>> # Insert a new column 'C' at index 1.
+>>> df.insert(1, 'C', [7, 8, 9])
+>>> df
+   A  C  B
+0  1  7  4
+1  2  8  5
+2  3  9  6
+>>> # Assign a new column 'D' to the DataFrame.
+>>> df['D'] = [10, 11, 12]
+>>> df
+   A  C  B   D
+0  1  7  4  10
+1  2  8  5  11
+2  3  9  6  12`,
+            },
+            {
                 question: "What are some common operations you can perform with Pandas?",
                 answer: "Data manipulation, cleaning, filtering, grouping, merging, and reshaping.",
             },
@@ -2430,6 +2450,45 @@ D    David   40  Houston`,
             {
                 question: "What is the purpose of the cut() function in Pandas?",
                 answer: "The cut() function in Pandas is used to segment and sort data values into bins for analysis.",
+            },
+            {
+                question: "What is the difference between concatenate and merge in Pandas?",
+                answer: `* Concatenate (pd.concat()):
+  * Used for stacking DataFrames along a particular axis.
+  * Does not require a common key.
+  * Results in a DataFrame with the union of columns (or rows) of input DataFrames.
+* Merge (pd.merge()):
+  * Used for combining DataFrames based on common keys.
+  * Requires a common key or keys.
+  * Provides more control over the joining behavior with options like inner, outer, left, or right joins.`,
+            },
+            {
+                question: "How do you concatenate two DataFrames (row-wise) in Pandas?",
+                answer: `>>> import pandas as pd
+>>> # Create sample DataFrames.
+>>> df1 = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+>>> df2 = pd.DataFrame({'A': [7, 8, 9], 'B': [10, 11, 12]})
+>>> # Concatenate along axis 0 (row-wise).
+>>> pd.concat([df1, df2])
+   A   B
+0  1   4
+1  2   5
+2  3   6
+0  7  10
+1  8  11
+2  9  12`,
+            }, {
+                question: "How do you concatenate two DataFrames (column-wise) in Pandas?",
+                answer: `>>> import pandas as pd
+>>> # Create sample DataFrames.
+>>> df1 = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+>>> df2 = pd.DataFrame({'C': [7, 8, 9], 'D': [10, 11, 12]})
+>>> # Concatenate along axis 1 (column-wise).
+>>> pd.concat([df1, df2], axis=1)
+   A  B  C   D
+0  1  4  7  10
+1  2  5  8  11
+2  3  6  9  12`,
             },
             {
                 question: "How do you plot data directly from DataFrame using the plot method in Pandas?",
