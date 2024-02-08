@@ -1999,6 +1999,96 @@ int main() {
         ],
     },
     {
+        title: "DM: Lecture 3",
+        subtitle: "Data Warehouse",
+        flashcards: [
+            {
+                question: "What is a Warehouse in the context of data?",
+                answer: "A Warehouse is a collection of diverse data that is subject-oriented, aimed at executive decision-makers. It often contains a copy of operational data along with value-added data such as summaries and history. Warehouses are integrated, time-varying, and non-volatile.",
+            },
+            {
+                question: "What are the two main approaches to managing data discussed in the text?",
+                answer: "Query-Driven (Lazy) and Warehouse (Eager).",
+            },
+            {
+                question: "How does the query-driven (lazy) approach handle data retrieval?",
+                answer: "It fetches or processes data only when a specific query or request is made for it.",
+            },
+            {
+                question: "What is the characteristic feature of the warehouse (eager) approach?",
+                answer: "Proactive storing and organizing of data, even before it's requested.",
+            },
+            {
+                question: "Why is the query-driven approach sometimes referred to as 'lazy'?",
+                answer: "Because it defers data retrieval until a query or request for it is made.",
+            },
+            {
+                question: "In what manner does the warehouse approach anticipate future needs?",
+                answer: "By collecting, processing, and storing data in a structured manner regardless of immediate need, anticipating potential future queries or analyses.",
+            },
+            {
+                question: "What factors might influence the choice between these two approaches?",
+                answer: "Factors such as the volume of data, frequency of queries, need for real-time analysis, and available resources.",
+            },
+            {
+                question: "What does OLTP stand for and what does it entail?",
+                answer: "OLTP stands for On Line Transaction Processing. It involves processing at operational sites, mostly dealing with updates, many small transactions, and typically handles data sizes ranging from Megabytes to Terabytes.",
+            },
+            {
+                question: "What types of users typically interact with OLTP systems?",
+                answer: "Clerical users are typical users of OLTP systems, as they require up-to-date data for day-to-day operations.",
+            },
+            {
+                question: "What are some critical aspects of OLTP systems?",
+                answer: "For OLTP systems, consistency and recoverability are critical due to the nature of operational transactions.",
+            },
+            {
+                question: "What does OLAP stand for and what distinguishes it from OLTP?",
+                answer: "OLAP stands for On Line Analytical Processing. Unlike OLTP, OLAP describes processing at a data warehouse, mainly involving reads, long and complex queries, and handling data sizes from Gigabytes to Terabytes.",
+            },
+            {
+                question: "Who are the primary users of OLAP systems?",
+                answer: "Decision-makers and analysts are the primary users of OLAP systems as they require summarized and consolidated data for analysis and decision-making purposes.",
+            },
+            {
+                question: "What is a data mart?",
+                answer: "A data mart is a subset of a data warehouse focused on specific business lines, departments, or user groups, containing a curated set of data tailored to the needs of those users.",
+            },
+            {
+                question: "How does a data mart differ from a data warehouse?",
+                answer: "While a data warehouse stores vast amounts of data from various sources across an organization, a data mart focuses on a particular subject area, such as sales, marketing, or finance, providing more targeted and specialized data.",
+            },
+            {
+                question: "What are the benefits of using data marts?",
+                answer: "Data marts offer benefits such as improved performance for specific queries, simplified data access for users, easier management of data relevant to particular departments or business units, and enhanced agility in responding to specific analytical needs.",
+            },
+            {
+                question: "What is a star schema?",
+                answer: "A star schema is a data modeling technique used in data warehousing where data is organized into a central 'fact' table surrounded by 'dimension' tables.",
+            },
+            {
+                question: "What is the purpose of the fact table in a star schema?",
+                answer: "The fact table in a star schema contains the primary measurements or metrics of interest and serves as the centerpiece for analyzing business processes.",
+            },
+            {
+                question: "What are dimension tables in a star schema?",
+                answer: "Dimension tables in a star schema contain descriptive attributes (such as categories, time, and location) that provide context to the data stored in the fact table.",
+            },
+            {
+                question: "What is the structure of a star schema?",
+                answer: "A star schema consists of one central fact table connected to multiple dimension tables, resembling the shape of a star when visualized.",
+            },
+            {
+                question: "What are some advantages of using a star schema?",
+                answer: "Advantages include simplified queries, improved query performance, easier navigation of data relationships, and enhanced data aggregation capabilities.",
+            },
+            {
+                question: "How does a star schema differ from other data modeling techniques?",
+                answer: "Unlike other techniques such as snowflake schema or normalized schemas, a star schema denormalizes data by combining related attributes into a single dimension table for easier querying and analysis.",
+            },
+        ],
+    },
+    {
         title: "DM: NumPy",
         subtitle: "Numerical Programming Package for the Python Programming Language",
         flashcards: [
