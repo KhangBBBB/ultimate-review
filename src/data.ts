@@ -2668,6 +2668,55 @@ Text(0.5, 1.0, 'Sales Over Time')
 3  4     apple      fruit
 4  5    carrot  vegetable`,
             },
+            {
+                question: "How can you eliminate duplicate rows from a DataFrame in Pandas?",
+                answer: `>>> import pandas as pd
+>>> # Create sample DataFrame with duplicate rows.
+>>> df = pd.DataFrame({'A': [1, 2, 2, 3, 4], 'B': ['a', 'b', 'b', 'c', 'c']})
+>>> # Remove duplicate rows.
+>>> df.drop_duplicates()
+   A  B
+0  1  a
+1  2  b
+3  3  c
+4  4  c`,
+            },
+            {
+                question: "How can you remove duplicate rows from a DataFrame in Pandas without creating a new DataFrame?",
+                answer: `>>> import pandas as pd
+>>> # Sample DataFrame with duplicate rows.
+>>> df = pd.DataFrame({'A': [1, 2, 2, 3, 4], 'B': ['a', 'b', 'b', 'c', 'c']})
+>>> # Drop duplicate rows in place.
+>>> df.drop_duplicates(inplace=True)
+>>> df
+   A  B
+0  1  a
+1  2  b
+3  3  c
+4  4  c`,
+            },
+            {
+                question: "What does the .where() method do in Pandas?",
+                answer: "The .where() method in Pandas is used to replace values in a DataFrame where a given condition is False, resulting in a new DataFrame where values that don't satisfy the condition are replaced with NaN (Not a Number).",
+            },
+            {
+                question: "How does the .where() method affect a DataFrame?",
+                answer: "The .where() method preserves the shape of the original DataFrame while replacing values that don't meet the condition with NaN. It essentially filters the DataFrame based on the specified condition.",
+            },
+            {
+                question: "Can you provide an example of using the .where() method in Pandas?",
+                answer: `>>> import pandas as pd
+>>> # Create sample DataFrame.
+>>> df = pd.DataFrame({'A': [1, 2, 3, 4, 5], 'B': [10, 20, 30, 40, 50]})
+>>> # Replace values with NaN where the value in column 'A' is less than 3.
+>>> df.where(df['A'] < 3)
+     A     B
+0  1.0  10.0
+1  2.0  20.0
+2  NaN   NaN
+3  NaN   NaN
+4  NaN   NaN`,
+            },
         ],
     },
     {
