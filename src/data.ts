@@ -1906,6 +1906,67 @@ int main() {
                 question: "Why is quality data important for Data Mining?",
                 answer: "Quality data is essential for quality mining results. Decisions based on data must be of high quality, and data preprocessing ensures consistency and integration of quality data, which is vital for effective Data Mining.",
             },
+            // Un-, Semi-, Structured Data.
+            {
+                question: "What are the characteristics of Structured Data?",
+                answer: "Structured Data is searchable, strictly defined, and stored in predefined formats.",
+            },
+            {
+                question: "Where is Structured Data typically stored?",
+                answer: "Structured Data is commonly stored in warehouses.",
+            },
+            {
+                question: "How does Structured Data impact workability?",
+                answer: "Structured Data makes it easy to search, analyze, and comprehend.",
+            },
+            {
+                question: "How is Structured Data organized?",
+                answer: "Structured Data is organized by means of a Relations Database.",
+            },
+            {
+                question: "Can you provide examples of Structured Data?",
+                answer: "Examples of Structured Data include Oracle, MSSQL, MySQL, DB2, etc.",
+            },
+            {
+                question: "What are the characteristics of Semi-structured Data?",
+                answer: "Semi-structured Data contains Data but is not stored in a tabular or predefined format. It includes tags and elements for grouping data.",
+            },
+            {
+                question: "Where is Semi-structured Data typically stored?",
+                answer: "Semi-structured Data is often stored in Data Lake houses.",
+            },
+            {
+                question: "How does Semi-structured Data impact workability?",
+                answer: "Semi-structured Data requires additional work compared to structured data for processing.",
+            },
+            {
+                question: "How is Semi-structured Data organized?",
+                answer: "Semi-structured Data is organized using tags and elements, typically in XML/RDF format.",
+            },
+            {
+                question: "Can you provide examples of Semi-structured Data?",
+                answer: "Examples of Semi-structured Data include CSV, JSON, XML, MongoDB, etc.",
+            },
+            {
+                question: "What are the characteristics of Unstructured Data?",
+                answer: "Unstructured Data is stored in its primitive form, often in various formats.",
+            },
+            {
+                question: "Where is Unstructured Data typically stored?",
+                answer: "Unstructured Data is commonly stored in Data Lake houses and Data Lakes.",
+            },
+            {
+                question: "How does Unstructured Data impact workability?",
+                answer: "Unstructured Data requires significant effort for processing compared to structured or semi-structured data.",
+            },
+            {
+                question: "What is the format of Unstructured Data?",
+                answer: "Unstructured Data is stored in various formats, including simple character and binary data.",
+            },
+            {
+                question: "Can you provide examples of Unstructured Data?",
+                answer: "Examples of Unstructured Data include PDFs, JPEGs, MP3, Movies, etc.",
+            },
         ],
     },
     {
