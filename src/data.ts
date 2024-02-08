@@ -2722,7 +2722,67 @@ Text(0.5, 1.0, 'Sales Over Time')
     {
         title: "DM: Matplotlib",
         subtitle: "Visualization with Python",
-        flashcards: [],
+        flashcards: [
+            {
+                question: "What is Matplotlib?",
+                answer: "Matplotlib is a plotting library for Python programming language and its numerical mathematics extension, NumPy.",
+            },
+            {
+                question: "How can you import Matplotlib?",
+                answer: "import matplotlib.pyplot as plt.",
+            },
+            {
+                question: "What is the purpose of Matplotlib?",
+                answer: "Matplotlib is used for creating static, interactive, and animated visualizations in Python.",
+            },
+            {
+                question: "What are some of the types of plots that Matplotlib supports?",
+                answer: "Matplotlib supports various types of plots, including line plots, scatter plots, bar plots, histogram plots, and many more.",
+            },
+            {
+                question: "How can you create a simple line plot using Matplotlib?",
+                answer: "To create a simple line plot, you can use the plt.plot() function by passing the data points for x and y axes.",
+            },
+            {
+                question: "What function is used to display a plot in Matplotlib?",
+                answer: "The plt.show() function is used to display a plot created using Matplotlib.",
+            },
+            {
+                question: "What are some common customization options available in Matplotlib?",
+                answer: "Matplotlib allows customization of plots through options such as setting titles, labels, colors, styles, and adding legends.",
+            },
+            {
+                question: "What is the main module in Matplotlib for creating plots?",
+                answer: "The main module in Matplotlib for creating plots is matplotlib.pyplot, often imported as plt.",
+            },
+            {
+                question: "How can you save a plot as an image file using Matplotlib?",
+                answer: "You can save a plot as an image file using the plt.savefig() function by specifying the filename and file format.",
+            },
+            {
+                question: "What is the purpose of Matplotlib's subplots?",
+                answer: "Matplotlib's subplots allow you to create multiple plots within the same figure, arranged in a grid.",
+            },
+            {
+                question: "How do you create a scatter plot using Matplotlib?",
+                answer: `>>> import matplotlib.pyplot as plt
+>>> # Sample data.
+>>> x = [1, 2, 3, 4, 5]
+>>> y = [2, 3, 5, 7, 11]
+>>> # Create scatter plot with additional options.
+>>> plt.scatter(x, y, alpha=0.5, marker='o', color='blue', linewidth=1.5)
+<matplotlib.collections.PathCollection object at 0x000001F52A1C48C0>
+>>> # Customize the plot title and labels.
+>>> plt.xlabel('X axis label')
+Text(0.5, 0, 'X axis label')
+>>> plt.ylabel('Y axis label')
+Text(0, 0.5, 'Y axis label')
+>>> plt.title('Scatter Plot Example')
+Text(0.5, 1.0, 'Scatter Plot Example')
+>>> # Display the plot.
+>>> plt.show()`,
+            },
+        ],
     },
     {
         title: "DM: Seaborn",
