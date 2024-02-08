@@ -2689,6 +2689,23 @@ D    David   40  Houston`,
   * Provides more control over the joining behavior with options like inner, outer, left, or right joins.`,
             },
             {
+                question: "How do concat, join, and merge in Pandas differ from each other?",
+                answer: `1. concat():
+   - Purpose: Concatenating DataFrames along a particular axis.
+   - Behavior: Stacks DataFrames together vertically or horizontally without considering indexes or columns.
+   - Usage: pd.concat([df1, df2])
+
+2. join():
+   - Purpose: Merging DataFrames based on their indexes.
+   - Behavior: Joins columns of two DataFrames based on their index labels.
+   - Usage: df1.join(df2)
+
+3. merge():
+   - Purpose: Merging DataFrames based on the values of one or more columns.
+   - Behavior: More flexible than join(), allows merging on columns other than indexes.
+   - Usage: pd.merge(left, right, on='key')`,
+            },
+            {
                 question: "How do you concatenate two DataFrames (row-wise) in Pandas?",
                 answer: `>>> import pandas as pd
 >>> # Create sample DataFrames.
