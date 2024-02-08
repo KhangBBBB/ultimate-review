@@ -3035,6 +3035,19 @@ Text(0.5, 1.0, 'Scatter Plot Example')
     {
         title: "DM: scikit-learn",
         subtitle: "Machine Learning in Python",
-        flashcards: [],
+        flashcards: [
+            {
+                question: "What is scikit-learn?",
+                answer: "Scikit-learn is a Python library for machine learning built on top of NumPy, SciPy, and Matplotlib. It provides simple and efficient tools for data mining and data analysis, and it's accessible to everybody and reusable in various contexts.",
+            },
+            {
+                question: "What types of machine learning algorithms are supported by scikit-learn?",
+                answer: "Scikit-learn supports a wide range of machine learning algorithms including classification, regression, clustering, dimensionality reduction, model selection, and preprocessing techniques.",
+            },
+            {
+                question: "How can scikit-learn be used in practice?",
+                answer: "In practice, scikit-learn can be used for tasks such as building predictive models, clustering data, reducing dimensionality, preprocessing data, and evaluating model performance through cross-validation and other techniques.",
+            },
+        ],
     },
 ];
