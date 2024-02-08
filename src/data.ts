@@ -2516,6 +2516,15 @@ Text(0.5, 1.0, 'Sales Over Time')
                 question: "What is the purpose of the describe() function in Pandas?",
                 answer: "The describe() function in Pandas is used to generate descriptive statistics of the DataFrame, such as count, mean, std, min, max, etc.",
             },
+            {
+                question: `>>> import pandas as pd
+>>> df1 = pd.DataFrame({'ID': [1, 2, 3, 4], 'Name': ['Alice', 'Bob', 'Charlie', 'David']})
+>>> df2 = pd.DataFrame({'ID': [2, 3, 5], 'Age': [25, 30, 22]})
+>>> pd.merge(df1, df2, on='ID')`,
+                answer: `   ID     Name  Age
+0   2      Bob   25
+1   3  Charlie   30`,
+            },
         ],
     },
     {
