@@ -2233,8 +2233,7 @@ array([5, 7, 9])`,
 >>> arr1 = np.array([[1, 2], [3, 4]])
 >>> arr2 = np.array([[5, 6], [7, 8]])
 >>> # Concatenate the arrays along the axis 0 (rows).
->>> result = np.concatenate((arr1, arr2), axis=0)
->>> result
+>>> np.concatenate((arr1, arr2), axis=0)
 array([[1, 2],
        [3, 4],
        [5, 6],
@@ -2312,6 +2311,27 @@ array([[1, 2, 3],
 >>> result = vectorized_map_to_string(arr)
 >>> result
 array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`,
+            },
+            {
+                question: `>>> import numpy as np
+>>> arr = np.array([[5, 8, 2], [1, 6, 4]])
+>>> np.max(arr, axis=1)`,
+                answer: `array([8, 6])`,
+            },
+            {
+                question: `>>> import numpy as np
+>>> np.max(np.array([[5, 8, 2], [1, 6, 4]]), axis=0)`,
+                answer: `array([5, 8, 4])`,
+            },
+            {
+                question: `>>> import numpy as np
+>>> np.max(np.array([[5, 8, 2], [1, 6, 4]]), axis=0)`,
+                answer: `array([5, 8, 4])`,
+            },
+            {
+                question: `>>> import numpy as np
+>>> np.max(np.array([[5, 8, 2], [1, 6, 4]]))`,
+                answer: `8`,
             },
         ],
     },
@@ -2716,6 +2736,139 @@ Text(0.5, 1.0, 'Sales Over Time')
 2  NaN   NaN
 3  NaN   NaN
 4  NaN   NaN`,
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df = pd.DataFrame({'X': [10, 20, 30], 'Y': [40, 50, 60]})
+>>> (df['X'] + df['Y']).iloc[2]`,
+                answer: `90`
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df = pd.DataFrame({'X': [10, 20, 30], 'Y': [40, 50, 60]})
+>>> (df['X'] + df['Y']).iloc[4]`,
+                answer: `IndexError: single positional indexer is out-of-bounds`,
+            },
+            {
+                question: "What is the purpose of the .reset_index() function in pandas?",
+                answer: "The .reset_index() function in pandas is used to reset the index of a DataFrame. It can be useful after operations that modify the DataFrame's structure, such as filtering or grouping, to reset the index to the default sequential integer index."
+            },
+            {
+                question: "How do you use the .reset_index() function in pandas?",
+                answer: "You can use the .reset_index() function by calling it on a DataFrame object. Optionally, you can specify parameters such as 'drop' to remove the old index column, 'level' to reset specific levels of a multi-index DataFrame, and 'inplace' to modify the DataFrame in place without creating a new copy."
+            },
+            {
+                question: "What does the 'drop' parameter do in the .reset_index() function?",
+                answer: "The 'drop' parameter in the .reset_index() function specifies whether to drop the old index column after resetting the index. By default, it is set to False, meaning the old index column will be added as a new column in the DataFrame. Setting it to True will discard the old index column."
+            },
+            {
+                question: "How can you reset the index of a DataFrame inplace using .reset_index()?",
+                answer: "You can reset the index of a DataFrame inplace by setting the 'inplace' parameter of the .reset_index() function to True. This modifies the original DataFrame without creating a new copy."
+            },
+            {
+                question: "What is the default behavior of the .reset_index() function in pandas?",
+                answer: "By default, the .reset_index() function in pandas resets the index of a DataFrame to the default sequential integer index. It adds the old index column as a new column in the DataFrame."
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df1 = pd.DataFrame({'A': [10, 20], 'B': [30, 40]})
+>>> df2 = pd.DataFrame({'A': [50, 60], 'B': [70, 80]})
+>>> pd.concat([df1, df2]).reset_index(drop=True)`,
+                answer: `    A   B
+0  10  30
+1  20  40
+2  50  70
+3  60  80`,
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df1 = pd.DataFrame({'A': [10, 20], 'B': [30, 40]})
+>>> df2 = pd.DataFrame({'A': [50, 60], 'B': [70, 80]})
+>>> pd.concat([df1, df2]).reset_index()`,
+                answer: `   index   A   B
+0      0  10  30
+1      1  20  40
+2      0  50  70
+3      1  60  80`,
+            }, {
+                question: "What is the purpose of the .head() method in pandas?",
+                answer: "The .head() method in pandas is used to view the first few rows of a DataFrame. By default, it displays the first 5 rows, but you can specify the number of rows to show by passing an argument to the method."
+            },
+            {
+                question: "How do you use the .head() method in pandas?",
+                answer: "You can use the .head() method by calling it on a DataFrame object. Optionally, you can pass the number of rows you want to display as an argument. For example, df.head(10) will display the first 10 rows of the DataFrame."
+            },
+            {
+                question: "What is the purpose of the .tail() method in pandas?",
+                answer: "The .tail() method in pandas is used to view the last few rows of a DataFrame. By default, it displays the last 5 rows, but you can specify the number of rows to show by passing an argument to the method."
+            },
+            {
+                question: "How do you use the .tail() method in pandas?",
+                answer: "You can use the .tail() method by calling it on a DataFrame object. Optionally, you can pass the number of rows you want to display as an argument. For example, df.tail(10) will display the last 10 rows of the DataFrame."
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df = pd.DataFrame({'X': [10, 20, 30], 'Y': [40, 50, 60]})
+>>> df.mean()`,
+                answer: `X    20.0
+Y    50.0
+dtype: float64`,
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df = pd.DataFrame({'X': [10, 20, 30], 'Y': [40, 50, 60]})
+>>> df.mean(axis=1)`,
+                answer: `0    25.0
+1    35.0
+2    45.0
+dtype: float64`,
+            },
+            {
+                question: "What is the purpose of the .apply() method in pandas?",
+                answer: "The .apply() method in pandas is used to apply a function along an axis of a DataFrame or Series. It allows for the application of custom functions to each element, row, or column of the DataFrame."
+            },
+            {
+                question: "What is the difference between .apply() for Series and .apply() for DataFrame in pandas?",
+                answer: "The .apply() method for Series applies a function to each element of the Series, whereas the .apply() method for DataFrame applies a function to each column or row of the DataFrame, depending on the specified axis. The Series .apply() returns a Series with the results of applying the function to each element, while the DataFrame .apply() returns a Series or DataFrame with the results of applying the function to each column or row."
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+>>> df.apply(sum)`,
+                answer: `A     6
+B    15
+dtype: int64`,
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+>>> df.apply(sum, axis=1)`,
+                answer: `0    5
+1    7
+2    9
+dtype: int64`,
+            },
+            {
+                question: `>>> import pandas as pd
+>>> df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+>>> df['A'].apply(lambda x: x**2)`,
+                answer: `0    1
+1    4
+2    9
+Name: A, dtype: int64`,
+            },
+            {
+                question: `How can you transform the "Timestamp" column, currently represented as strings, into datetime objects?`,
+                answer: `>>> import pandas as pd
+>>> # Create a sample DataFrame.
+>>> df = pd.DataFrame({'Timestamp': ['2024-02-08 08:30:00', '2024-02-08 09:45:00', '2024-02-08 10:15:00']})
+>>> # Convert the 'Timestamp' column to datetime objects.
+>>> df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+>>> df
+            Timestamp
+0 2024-02-08 08:30:00
+1 2024-02-08 09:45:00
+2 2024-02-08 10:15:00`,
             },
         ],
     },
