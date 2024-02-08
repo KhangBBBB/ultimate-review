@@ -3201,6 +3201,64 @@ Text(0.5, 1.0, 'A Bar Chart Example.')
                 question: "How can scikit-learn be used in practice?",
                 answer: "In practice, scikit-learn can be used for tasks such as building predictive models, clustering data, reducing dimensionality, preprocessing data, and evaluating model performance through cross-validation and other techniques.",
             },
+            // Linear Regression.
+            {
+                question: "What is the purpose of the train_test_split function in scikit-learn?",
+                answer: "The train_test_split function in scikit-learn is used to split a dataset into training and testing sets. It allows for evaluation of the model's performance on unseen data.",
+            },
+            {
+                question: "How do you use the train_test_split function in scikit-learn?",
+                answer: "You can use the train_test_split function by importing it from the sklearn.model_selection module and passing in the features and target variables along with the test size and random state as arguments.",
+            },
+            {
+                question: "What is the purpose of linear regression in scikit-learn?",
+                answer: "Linear regression in scikit-learn is a machine learning algorithm used for modeling the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the observed data.",
+            },
+            {
+                question: "How do you perform linear regression in scikit-learn?",
+                answer: "You can perform linear regression in scikit-learn by importing the LinearRegression class from the sklearn.linear_model module, creating an instance of the class, and then fitting the model to the training data using the fit() method.",
+            },
+            {
+                question: "What are some common evaluation metrics used for linear regression models?",
+                answer: "Some common evaluation metrics used for linear regression models include mean squared error (MSE), root mean squared error (RMSE), mean absolute error (MAE), and R-squared (coefficient of determination).",
+            },
+            {
+                question: "What is the purpose of the LinearRegression class in scikit-learn?",
+                answer: "The LinearRegression class in scikit-learn is used to perform linear regression, which models the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the observed data.",
+            },
+            {
+                question: "How do you use the LinearRegression class in scikit-learn?",
+                answer: "You can use the LinearRegression class by importing it from the sklearn.linear_model module, creating an instance of the class, and then fitting the model to the training data using the fit() method.",
+            },
+            {
+                question: "What are some common attributes of the LinearRegression class in scikit-learn?",
+                answer: "Some common attributes of the LinearRegression class in scikit-learn include coef_, which returns the coefficients of the linear regression model, and intercept_, which returns the intercept of the linear regression model.",
+            },
+            {
+                question: "What are some common methods of the LinearRegression class in scikit-learn?",
+                answer: "Some common methods of the LinearRegression class in scikit-learn include fit(), which fits the model to the training data, predict(), which makes predictions based on the fitted model, and score(), which returns the coefficient of determination (R^2) of the prediction.",
+            },
+            // Logistics Regression.
+            {
+                question: "What is the purpose of the LogisticRegression class in scikit-learn?",
+                answer: "The LogisticRegression class in scikit-learn is used to perform logistic regression, which is a classification algorithm used to model the probability of a binary outcome based on one or more predictor variables.",
+            },
+            {
+                question: "How do you use the LogisticRegression class in scikit-learn?",
+                answer: "You can use the LogisticRegression class by importing it from the sklearn.linear_model module, creating an instance of the class, and then fitting the model to the training data using the fit() method.",
+            },
+            {
+                question: "What are some common attributes of the LogisticRegression class in scikit-learn?",
+                answer: "Some common attributes of the LogisticRegression class in scikit-learn include coef_, which returns the coefficients of the logistic regression model, and intercept_, which returns the intercept of the logistic regression model.",
+            },
+            {
+                question: "What are some common methods of the LogisticRegression class in scikit-learn?",
+                answer: "Some common methods of the LogisticRegression class in scikit-learn include fit(), which fits the model to the training data, predict(), which makes predictions based on the fitted model, and score(), which returns the mean accuracy of the predictions.",
+            },
+            {
+                question: "What is logistic regression?",
+                answer: "Logistic regression is a statistical method used for modeling the probability of a binary outcome based on one or more predictor variables. It predicts the probability that a given input belongs to a particular category.",
+            },
         ],
     },
 ];
