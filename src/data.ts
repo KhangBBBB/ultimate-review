@@ -2641,6 +2641,33 @@ Text(0.5, 1.0, 'Sales Over Time')
 0   2      Bob   25
 1   3  Charlie   30`,
             },
+            {
+                question: "How can I transform all the strings in a specific column of a DataFrame to lowercase?",
+                answer: `>>> import pandas as pd
+>>> df = pd.DataFrame({'Name': ['John', 'Alice', 'Bob', 'David'], 'Age': [25, 30, 35, 40]})
+>>> # Convert the 'Name' column to lowercase.
+>>> df['Name'] = df['Name'].str.lower()
+>>> df
+    Name  Age
+0   john   25
+1  alice   30
+2    bob   35
+3  david   40`,
+            },
+            {
+                question: "How can I transform the values in a DataFrame using a mapping in Pandas?",
+                answer: `>>> import pandas as pd
+>>> df = pd.DataFrame({'A': [1, 2, 3, 4, 5], 'B': ['apple', 'broccoli', 'orange', 'apple', 'carrot']})
+>>> mapping = {'apple': 'fruit', 'orange': 'fruit', 'broccoli': 'vegetable', 'carrot': 'vegetable'}
+>>> df['category'] = df['B'].map(mapping)
+>>> df
+   A         B   category
+0  1     apple      fruit
+1  2  broccoli  vegetable
+2  3    orange      fruit
+3  4     apple      fruit
+4  5    carrot  vegetable`,
+            },
         ],
     },
     {
