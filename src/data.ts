@@ -2370,6 +2370,32 @@ D    David   40  Houston`,
                 answer: "The loc[] accessor is used to select rows and columns by label, while iloc[] is used to select rows and columns by integer index.",
             },
             {
+                question: "How do you filter rows in a DataFrame based on multiple conditions in Pandas?",
+                answer: `>>> import pandas as pd
+>>> # Create a sample DataFrame.
+>>> data = {
+...     'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
+...     'Age': [25, 35, 40, 30, 45],
+...     'Membership': ['Premium', 'Basic', 'Premium', 'Basic', 'Premium'],
+... }
+>>> df = pd.DataFrame(data)
+>>> # Method 1: Using loc.
+>>> df.loc[(df['Age'] > 30) & (df['Membership'] == 'Premium')]
+      Name  Age Membership
+2  Charlie   40    Premium
+4      Eve   45    Premium
+>>> # Method 2: Use query.
+>>> df.query('Age > 30 and Membership == "Premium"')
+      Name  Age Membership
+2  Charlie   40    Premium
+4      Eve   45    Premium
+>>> # Method 3: Using boolean indexing.
+>>> df[(df['Age'] > 30) & (df['Membership'] == 'Premium')]
+      Name  Age Membership
+2  Charlie   40    Premium
+4      Eve   45    Premium`,
+            },
+            {
                 question: "How do you handle missing data in Pandas?",
                 answer: `>>> import pandas as pd
 >>> import numpy as np
