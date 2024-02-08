@@ -1967,6 +1967,35 @@ int main() {
                 question: "Can you provide examples of Unstructured Data?",
                 answer: "Examples of Unstructured Data include PDFs, JPEGs, MP3, Movies, etc.",
             },
+            // Bonus: Data Warehouse, Data Lake, and Data Lakehouse.
+            {
+                question: "What is a data warehouse?",
+                answer: "A data warehouse is a centralized repository for storing structured, processed, and curated data optimized for analytics and reporting.",
+            },
+            {
+                question: "What is a data lake?",
+                answer: "A data lake is a storage repository that holds a vast amount of raw data in its native format until it is needed, supporting structured, semi-structured, and unstructured data.",
+            },
+            {
+                question: "How does a data warehouse handle data?",
+                answer: "Data warehouses follow a schema-on-write approach, meaning data is structured before being loaded into the warehouse, ensuring data consistency and accuracy.",
+            },
+            {
+                question: "How does a data lake handle data?",
+                answer: "Data lakes follow a schema-on-read approach, storing data in its raw form and applying schema at the time of analysis, offering flexibility and scalability for diverse data types.",
+            },
+            {
+                question: "What is a data lakehouse?",
+                answer: "A data lakehouse is a hybrid approach that combines the capabilities of data warehouses and data lakes, aiming to address limitations in handling diverse data types and complexities in governance and performance.",
+            },
+            {
+                question: "How does a data lakehouse address the limitations of traditional data warehouses and data lakes?",
+                answer: "A data lakehouse combines the strengths of data warehouses and data lakes by providing a unified architecture for efficient querying and analytics while supporting diverse data types and maintaining governance and performance.",
+            },
+            {
+                question: "What is the main advantage of schema-on-read approach in data lakes?",
+                answer: "The schema-on-read approach in data lakes allows for storing data in its raw form, enabling flexibility in handling diverse data types and avoiding the need for upfront schema definition.",
+            }
         ],
     },
     {
