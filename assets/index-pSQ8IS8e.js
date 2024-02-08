@@ -1,4 +1,4 @@
-var be=Object.defineProperty;var ve=(t,e,s)=>e in t?be(t,e,{enumerable:!0,configurable:!0,writable:!0,value:s}):t[e]=s;var X=(t,e,s)=>(ve(t,typeof e!="symbol"?e+"":e,s),s);(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))n(a);new MutationObserver(a=>{for(const i of a)if(i.type==="childList")for(const h of i.addedNodes)h.tagName==="LINK"&&h.rel==="modulepreload"&&n(h)}).observe(document,{childList:!0,subtree:!0});function s(a){const i={};return a.integrity&&(i.integrity=a.integrity),a.referrerPolicy&&(i.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?i.credentials="include":a.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function n(a){if(a.ep)return;a.ep=!0;const i=s(a);fetch(a.href,i)}})();function _(){}function ge(t){return t()}function ie(){return Object.create(null)}function A(t){t.forEach(ge)}function Z(t){return typeof t=="function"}function $(t,e){return t!=t?e==e:t!==e||t&&typeof t=="object"||typeof t=="function"}function qe(t){return Object.keys(t).length===0}function y(t,e){t.appendChild(e)}function W(t,e,s){t.insertBefore(e,s||null)}function x(t){t.parentNode&&t.parentNode.removeChild(t)}function ee(t,e){for(let s=0;s<t.length;s+=1)t[s]&&t[s].d(e)}function v(t){return document.createElement(t)}function T(t){return document.createTextNode(t)}function C(){return T(" ")}function xe(){return T("")}function B(t,e,s,n){return t.addEventListener(e,s,n),()=>t.removeEventListener(e,s,n)}function k(t,e,s){s==null?t.removeAttribute(e):t.getAttribute(e)!==s&&t.setAttribute(e,s)}function ke(t){return Array.from(t.childNodes)}function M(t,e){e=""+e,t.data!==e&&(t.data=e)}function J(t,e,s,n){s==null?t.style.removeProperty(e):t.style.setProperty(e,s,n?"important":"")}let te;function z(t){te=t}const U=[],re=[];let L=[];const oe=[],We=Promise.resolve();let Y=!1;function Te(){Y||(Y=!0,We.then(ye))}function Q(t){L.push(t)}const K=new Set;let D=0;function ye(){if(D!==0)return;const t=te;do{try{for(;D<U.length;){const e=U[D];D++,z(e),Pe(e.$$)}}catch(e){throw U.length=0,D=0,e}for(z(null),U.length=0,D=0;re.length;)re.pop()();for(let e=0;e<L.length;e+=1){const s=L[e];K.has(s)||(K.add(s),s())}L.length=0}while(U.length);for(;oe.length;)oe.pop()();Y=!1,K.clear(),z(t)}function Pe(t){if(t.fragment!==null){t.update(),A(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(Q)}}function Ie(t){const e=[],s=[];L.forEach(n=>t.indexOf(n)===-1?e.push(n):s.push(n)),s.forEach(n=>n()),L=e}const j=new Set;let O;function se(){O={r:0,c:[],p:O}}function ne(){O.r||A(O.c),O=O.p}function q(t,e){t&&t.i&&(j.delete(t),t.i(e))}function I(t,e,s,n){if(t&&t.o){if(j.has(t))return;j.add(t),O.c.push(()=>{j.delete(t),n&&(s&&t.d(1),n())}),t.o(e)}else n&&n()}function N(t){return(t==null?void 0:t.length)!==void 0?t:Array.from(t)}function G(t){t&&t.c()}function V(t,e,s){const{fragment:n,after_update:a}=t.$$;n&&n.m(e,s),Q(()=>{const i=t.$$.on_mount.map(ge).filter(Z);t.$$.on_destroy?t.$$.on_destroy.push(...i):A(i),t.$$.on_mount=[]}),a.forEach(Q)}function E(t,e){const s=t.$$;s.fragment!==null&&(Ie(s.after_update),A(s.on_destroy),s.fragment&&s.fragment.d(e),s.on_destroy=s.fragment=null,s.ctx=[])}function Ce(t,e){t.$$.dirty[0]===-1&&(U.push(t),Te(),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function F(t,e,s,n,a,i,h=null,f=[-1]){const l=te;z(t);const o=t.$$={fragment:null,ctx:[],props:i,update:_,not_equal:a,bound:ie(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(e.context||(l?l.$$.context:[])),callbacks:ie(),dirty:f,skip_bound:!1,root:e.target||l.$$.root};h&&h(o.root);let c=!1;if(o.ctx=s?s(t,e.props||{},(d,r,...u)=>{const p=u.length?u[0]:r;return o.ctx&&a(o.ctx[d],o.ctx[d]=p)&&(!o.skip_bound&&o.bound[d]&&o.bound[d](p),c&&Ce(t,d)),r}):[],o.update(),c=!0,A(o.before_update),o.fragment=n?n(o.ctx):!1,e.target){if(e.hydrate){const d=ke(e.target);o.fragment&&o.fragment.l(d),d.forEach(x)}else o.fragment&&o.fragment.c();e.intro&&q(t.$$.fragment),V(t,e.target,e.anchor),ye()}z(l)}class R{constructor(){X(this,"$$");X(this,"$$set")}$destroy(){E(this,1),this.$destroy=_}$on(e,s){if(!Z(s))return _;const n=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return n.push(s),()=>{const a=n.indexOf(s);a!==-1&&n.splice(a,1)}}$set(e){this.$$set&&!qe(e)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}const _e="4";typeof window<"u"&&(window.__svelte||(window.__svelte={v:new Set})).v.add(_e);const H=[{title:"OS: Bash and Linux Commands",subtitle:"",flashcards:[{question:"Write a Bash script that uses a for loop (range) to print numbers from 1 to 100.",answer:`#!/bin/bash
+var be=Object.defineProperty;var ve=(t,e,s)=>e in t?be(t,e,{enumerable:!0,configurable:!0,writable:!0,value:s}):t[e]=s;var G=(t,e,s)=>(ve(t,typeof e!="symbol"?e+"":e,s),s);(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))n(a);new MutationObserver(a=>{for(const i of a)if(i.type==="childList")for(const d of i.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function s(a){const i={};return a.integrity&&(i.integrity=a.integrity),a.referrerPolicy&&(i.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?i.credentials="include":a.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function n(a){if(a.ep)return;a.ep=!0;const i=s(a);fetch(a.href,i)}})();function _(){}function ge(t){return t()}function ie(){return Object.create(null)}function L(t){t.forEach(ge)}function Z(t){return typeof t=="function"}function E(t,e){return t!=t?e==e:t!==e||t&&typeof t=="object"||typeof t=="function"}function qe(t){return Object.keys(t).length===0}function y(t,e){t.appendChild(e)}function W(t,e,s){t.insertBefore(e,s||null)}function x(t){t.parentNode&&t.parentNode.removeChild(t)}function ee(t,e){for(let s=0;s<t.length;s+=1)t[s]&&t[s].d(e)}function v(t){return document.createElement(t)}function T(t){return document.createTextNode(t)}function I(){return T(" ")}function xe(){return T("")}function z(t,e,s,n){return t.addEventListener(e,s,n),()=>t.removeEventListener(e,s,n)}function k(t,e,s){s==null?t.removeAttribute(e):t.getAttribute(e)!==s&&t.setAttribute(e,s)}function ke(t){return Array.from(t.childNodes)}function M(t,e){e=""+e,t.data!==e&&(t.data=e)}function K(t,e,s,n){s==null?t.style.removeProperty(e):t.style.setProperty(e,s,n?"important":"")}let te;function B(t){te=t}const N=[],oe=[];let H=[];const re=[],We=Promise.resolve();let J=!1;function Te(){J||(J=!0,We.then(ye))}function Q(t){H.push(t)}const X=new Set;let O=0;function ye(){if(O!==0)return;const t=te;do{try{for(;O<N.length;){const e=N[O];O++,B(e),Pe(e.$$)}}catch(e){throw N.length=0,O=0,e}for(B(null),N.length=0,O=0;oe.length;)oe.pop()();for(let e=0;e<H.length;e+=1){const s=H[e];X.has(s)||(X.add(s),s())}H.length=0}while(N.length);for(;re.length;)re.pop()();J=!1,X.clear(),B(t)}function Pe(t){if(t.fragment!==null){t.update(),L(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(Q)}}function Ce(t){const e=[],s=[];H.forEach(n=>t.indexOf(n)===-1?e.push(n):s.push(n)),s.forEach(n=>n()),H=e}const j=new Set;let D;function se(){D={r:0,c:[],p:D}}function ne(){D.r||L(D.c),D=D.p}function q(t,e){t&&t.i&&(j.delete(t),t.i(e))}function C(t,e,s,n){if(t&&t.o){if(j.has(t))return;j.add(t),D.c.push(()=>{j.delete(t),n&&(s&&t.d(1),n())}),t.o(e)}else n&&n()}function U(t){return(t==null?void 0:t.length)!==void 0?t:Array.from(t)}function Y(t){t&&t.c()}function F(t,e,s){const{fragment:n,after_update:a}=t.$$;n&&n.m(e,s),Q(()=>{const i=t.$$.on_mount.map(ge).filter(Z);t.$$.on_destroy?t.$$.on_destroy.push(...i):L(i),t.$$.on_mount=[]}),a.forEach(Q)}function V(t,e){const s=t.$$;s.fragment!==null&&(Ce(s.after_update),L(s.on_destroy),s.fragment&&s.fragment.d(e),s.on_destroy=s.fragment=null,s.ctx=[])}function Ie(t,e){t.$$.dirty[0]===-1&&(N.push(t),Te(),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function $(t,e,s,n,a,i,d=null,f=[-1]){const l=te;B(t);const r=t.$$={fragment:null,ctx:[],props:i,update:_,not_equal:a,bound:ie(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(e.context||(l?l.$$.context:[])),callbacks:ie(),dirty:f,skip_bound:!1,root:e.target||l.$$.root};d&&d(r.root);let c=!1;if(r.ctx=s?s(t,e.props||{},(h,o,...u)=>{const p=u.length?u[0]:o;return r.ctx&&a(r.ctx[h],r.ctx[h]=p)&&(!r.skip_bound&&r.bound[h]&&r.bound[h](p),c&&Ie(t,h)),o}):[],r.update(),c=!0,L(r.before_update),r.fragment=n?n(r.ctx):!1,e.target){if(e.hydrate){const h=ke(e.target);r.fragment&&r.fragment.l(h),h.forEach(x)}else r.fragment&&r.fragment.c();e.intro&&q(t.$$.fragment),F(t,e.target,e.anchor),ye()}B(l)}class R{constructor(){G(this,"$$");G(this,"$$set")}$destroy(){V(this,1),this.$destroy=_}$on(e,s){if(!Z(s))return _;const n=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return n.push(s),()=>{const a=n.indexOf(s);a!==-1&&n.splice(a,1)}}$set(e){this.$$set&&!qe(e)&&(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}const _e="4";typeof window<"u"&&(window.__svelte||(window.__svelte={v:new Set})).v.add(_e);const A=[{title:"OS: Bash and Linux Commands",subtitle:"",flashcards:[{question:"Write a Bash script that uses a for loop (range) to print numbers from 1 to 100.",answer:`#!/bin/bash
                 
 for i in {1..100}; do
     echo $i
@@ -303,4 +303,154 @@ array([[1, 2, 3],
 >>> # Apply the vectorized function to each element of the array.
 >>> result = vectorized_map_to_string(arr)
 >>> result
-array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`}]},{title:"DM: Pandas",subtitle:"Data Analysis and Manipulation Tool",flashcards:[]},{title:"DM: Matplotlib",subtitle:"Visualization with Python",flashcards:[]},{title:"DM: Seaborn",subtitle:"Data Visualization Library Based on Matplotlib",flashcards:[]},{title:"DM: scikit-learn",subtitle:"Machine Learning in Python",flashcards:[]}];function Me(t){let e;return{c(){e=T(t[0])},m(s,n){W(s,e,n)},p(s,n){n&1&&M(e,s[0])},d(s){s&&x(e)}}}function Se(t){let e;return{c(){e=T(t[1])},m(s,n){W(s,e,n)},p(s,n){n&2&&M(e,s[1])},d(s){s&&x(e)}}}function Oe(t){let e,s,n=t[3]?"Answer":`Question ${t[2]+1}`,a,i,h,f,l;function o(r,u){return r[3]?Se:Me}let c=o(t),d=c(t);return{c(){e=v("div"),s=v("div"),a=T(n),i=C(),h=v("div"),d.c(),k(s,"class","question-answer svelte-1c9grjx"),k(h,"class","question-answer-content svelte-1c9grjx"),k(e,"class","flashcard svelte-1c9grjx"),k(e,"role","button"),k(e,"tabindex","0")},m(r,u){W(r,e,u),y(e,s),y(s,a),y(e,i),y(e,h),d.m(h,null),f||(l=[B(e,"click",t[4]),B(e,"keypress",t[4])],f=!0)},p(r,[u]){u&12&&n!==(n=r[3]?"Answer":`Question ${r[2]+1}`)&&M(a,n),c===(c=o(r))&&d?d.p(r,u):(d.d(1),d=c(r),d&&(d.c(),d.m(h,null)))},i:_,o:_,d(r){r&&x(e),d.d(),f=!1,A(l)}}}function De(t,e,s){let{question:n}=e,{answer:a}=e,{index:i}=e,h=!1;function f(){h&&s(3,h=!1)}function l(){s(3,h=!h)}return t.$$set=o=>{"question"in o&&s(0,n=o.question),"answer"in o&&s(1,a=o.answer),"index"in o&&s(2,i=o.index)},[n,a,i,h,l,f]}class He extends R{constructor(e){super(),F(this,e,De,Oe,$,{question:0,answer:1,index:2,resetState:5})}get resetState(){return this.$$.ctx[5]}}function ce(t,e,s){const n=t.slice();return n[1]=e[s].question,n[2]=e[s].answer,n[4]=s,n}function le(t){let e,s=t[0].subtitle+"",n;return{c(){e=v("p"),n=T(s),k(e,"class","subtitle svelte-ms8g2g")},m(a,i){W(a,e,i),y(e,n)},p(a,i){i&1&&s!==(s=a[0].subtitle+"")&&M(n,s)},d(a){a&&x(e)}}}function he(t){let e,s;return e=new He({props:{question:t[1],answer:t[2],index:t[4]}}),{c(){G(e.$$.fragment)},m(n,a){V(e,n,a),s=!0},p(n,a){const i={};a&1&&(i.question=n[1]),a&1&&(i.answer=n[2]),e.$set(i)},i(n){s||(q(e.$$.fragment,n),s=!0)},o(n){I(e.$$.fragment,n),s=!1},d(n){E(e,n)}}}function Ue(t){let e,s,n=t[0].title+"",a,i,h,f,l=t[0].subtitle.length>0&&le(t),o=N(t[0].flashcards),c=[];for(let r=0;r<o.length;r+=1)c[r]=he(ce(t,o,r));const d=r=>I(c[r],1,1,()=>{c[r]=null});return{c(){e=v("div"),s=v("h1"),a=T(n),i=C(),l&&l.c(),h=C();for(let r=0;r<c.length;r+=1)c[r].c();k(s,"class","svelte-ms8g2g")},m(r,u){W(r,e,u),y(e,s),y(s,a),y(e,i),l&&l.m(e,null),y(e,h);for(let p=0;p<c.length;p+=1)c[p]&&c[p].m(e,null);f=!0},p(r,[u]){if((!f||u&1)&&n!==(n=r[0].title+"")&&M(a,n),r[0].subtitle.length>0?l?l.p(r,u):(l=le(r),l.c(),l.m(e,h)):l&&(l.d(1),l=null),u&1){o=N(r[0].flashcards);let p;for(p=0;p<o.length;p+=1){const P=ce(r,o,p);c[p]?(c[p].p(P,u),q(c[p],1)):(c[p]=he(P),c[p].c(),q(c[p],1),c[p].m(e,null))}for(se(),p=o.length;p<c.length;p+=1)d(p);ne()}},i(r){if(!f){for(let u=0;u<o.length;u+=1)q(c[u]);f=!0}},o(r){c=c.filter(Boolean);for(let u=0;u<c.length;u+=1)I(c[u]);f=!1},d(r){r&&x(e),l&&l.d(),ee(c,r)}}}function Le(t,e,s){let{topic:n}=e;return t.$$set=a=>{"topic"in a&&s(0,n=a.topic)},[n]}class Ne extends R{constructor(e){super(),F(this,e,Le,Ue,$,{topic:0})}}function de(t,e,s){const n=t.slice();return n[5]=e[s],n}function ue(t){let e,s=t[5].label+"",n,a,i,h;function f(){return t[4](t[5])}return{c(){e=v("button"),n=T(s),a=C(),k(e,"class","dropdown-item svelte-1mmmvwn")},m(l,o){W(l,e,o),y(e,n),y(e,a),i||(h=B(e,"click",f),i=!0)},p(l,o){t=l,o&2&&s!==(s=t[5].label+"")&&M(n,s)},d(l){l&&x(e),i=!1,h()}}}function Ae(t){let e,s,n,a,i,h,f,l=N(t[1]),o=[];for(let c=0;c<l.length;c+=1)o[c]=ue(de(t,l,c));return{c(){e=v("div"),s=v("button"),n=T(t[0]),a=C(),i=v("div");for(let c=0;c<o.length;c+=1)o[c].c();k(s,"class","dropdown-button svelte-1mmmvwn"),k(i,"class","dropdown-content svelte-1mmmvwn"),J(i,"display",t[2]?"block":"none"),k(e,"class","dropdown svelte-1mmmvwn")},m(c,d){W(c,e,d),y(e,s),y(s,n),y(e,a),y(e,i);for(let r=0;r<o.length;r+=1)o[r]&&o[r].m(i,null);h||(f=B(s,"click",t[3]),h=!0)},p(c,[d]){if(d&1&&M(n,c[0]),d&6){l=N(c[1]);let r;for(r=0;r<l.length;r+=1){const u=de(c,l,r);o[r]?o[r].p(u,d):(o[r]=ue(u),o[r].c(),o[r].m(i,null))}for(;r<o.length;r+=1)o[r].d(1);o.length=l.length}d&4&&J(i,"display",c[2]?"block":"none")},i:_,o:_,d(c){c&&x(e),ee(o,c),h=!1,f()}}}function ze(t,e,s){let{label:n}=e,{items:a}=e,i=!1;function h(){s(2,i=!i)}const f=l=>{l.onClick(),s(2,i=!1)};return t.$$set=l=>{"label"in l&&s(0,n=l.label),"items"in l&&s(1,a=l.items)},[n,a,i,h,f]}class Be extends R{constructor(e){super(),F(this,e,ze,Ae,$,{label:0,items:1})}}function Ve(t){let e,s,n,a;return{c(){e=v("button"),s=T(t[0]),k(e,"class","svelte-1bual08")},m(i,h){W(i,e,h),y(e,s),n||(a=B(e,"click",function(){Z(t[1])&&t[1].apply(this,arguments)}),n=!0)},p(i,[h]){t=i,h&1&&M(s,t[0])},i:_,o:_,d(i){i&&x(e),n=!1,a()}}}function Ee(t,e,s){let{label:n}=e,{onClick:a}=e;return t.$$set=i=>{"label"in i&&s(0,n=i.label),"onClick"in i&&s(1,a=i.onClick)},[n,a]}class $e extends R{constructor(e){super(),F(this,e,Ee,Ve,$,{label:0,onClick:1})}}function me(t,e,s){const n=t.slice();return n[2]=e[s],n[4]=s,n}function pe(t){let e,s;return e=new Ne({props:{topic:t[2]}}),{c(){G(e.$$.fragment)},m(n,a){V(e,n,a),s=!0},i(n){s||(q(e.$$.fragment,n),s=!0)},o(n){I(e.$$.fragment,n),s=!1},d(n){E(e,n)}}}function fe(t){let e,s,n=t[0]===t[4]&&pe(t);return{c(){n&&n.c(),e=xe()},m(a,i){n&&n.m(a,i),W(a,e,i),s=!0},p(a,i){a[0]===a[4]?n?i&1&&q(n,1):(n=pe(a),n.c(),q(n,1),n.m(e.parentNode,e)):n&&(se(),I(n,1,1,()=>{n=null}),ne())},i(a){s||(q(n),s=!0)},o(a){I(n),s=!1},d(a){a&&x(e),n&&n.d(a)}}}function Fe(t){let e,s,n,a,i,h,f,l=H[t[0]].flashcards.length+"",o,c,d,r,u,p;s=new Be({props:{label:"Select Topic",items:H.map(t[1])}});let P=N(H),g=[];for(let m=0;m<P.length;m+=1)g[m]=fe(me(t,P,m));const we=m=>I(g[m],1,1,()=>{g[m]=null});return u=new $e({props:{label:"Scroll to Top",onClick:Re}}),{c(){e=v("div"),G(s.$$.fragment),n=C(),a=v("div"),i=C(),h=v("div"),f=T("Number of Flashcards: "),o=T(l),c=C();for(let m=0;m<g.length;m+=1)g[m].c();d=C(),r=v("div"),G(u.$$.fragment),J(a,"margin-right","20px"),k(e,"class","control-box svelte-1lj0z4k")},m(m,w){W(m,e,w),V(s,e,null),y(e,n),y(e,a),y(e,i),y(e,h),y(h,f),y(h,o),W(m,c,w);for(let S=0;S<g.length;S+=1)g[S]&&g[S].m(m,w);W(m,d,w),W(m,r,w),V(u,r,null),p=!0},p(m,[w]){const S={};if(w&1&&(S.items=H.map(m[1])),s.$set(S),(!p||w&1)&&l!==(l=H[m[0]].flashcards.length+"")&&M(o,l),w&1){P=N(H);let b;for(b=0;b<P.length;b+=1){const ae=me(m,P,b);g[b]?(g[b].p(ae,w),q(g[b],1)):(g[b]=fe(ae),g[b].c(),q(g[b],1),g[b].m(d.parentNode,d))}for(se(),b=P.length;b<g.length;b+=1)we(b);ne()}},i(m){if(!p){q(s.$$.fragment,m);for(let w=0;w<P.length;w+=1)q(g[w]);q(u.$$.fragment,m),p=!0}},o(m){I(s.$$.fragment,m),g=g.filter(Boolean);for(let w=0;w<g.length;w+=1)I(g[w]);I(u.$$.fragment,m),p=!1},d(m){m&&(x(e),x(c),x(d),x(r)),E(s),ee(g,m),E(u)}}}function Re(){window.scrollTo({top:0,behavior:"smooth"})}function je(t,e,s){let n=0;return[n,(i,h)=>({label:i.title,onClick:()=>{s(0,n=h)}})]}class Ge extends R{constructor(e){super(),F(this,e,je,Fe,$,{})}}new Ge({target:document.getElementById("app")});
+array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`}]},{title:"DM: Pandas",subtitle:"Data Analysis and Manipulation Tool",flashcards:[{question:"What is Pandas?",answer:"Pandas is a Python library for data manipulation and analysis."},{question:"What are the two main data structures in Pandas?",answer:"Series and DataFrame."},{question:"How do you import Pandas?",answer:"import pandas as pd"},{question:"What is a Series in Pandas?",answer:`A Series in Pandas is a one-dimensional array-like object containing an array of data and an associated array of labels, called the index. Example:
+pd.Series([1, 2, 3, 4])`},{question:"What is a DataFrame in Pandas?",answer:`A DataFrame in Pandas is a two-dimensional labeled data structure with columns of potentially different types. It is similar to a spreadsheet or SQL table. Example:
+pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})`},{question:"How do you create a DataFrame from a dictionary?",answer:`>>> import pandas as pd
+>>> # My dictionary data.
+>>> data = {
+...     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+...     'Age': [25, 30, 35, 40],
+...     'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+... }
+>>> # Create DataFrame from the dictionary.
+>>> df = pd.DataFrame(data)
+>>> df
+      Name  Age         City
+0    Alice   25     New York
+1      Bob   30  Los Angeles
+2  Charlie   35      Chicago
+3    David   40      Houston`},{question:"What are some common operations you can perform with Pandas?",answer:"Data manipulation, cleaning, filtering, grouping, merging, and reshaping."},{question:"How do you select columns in a DataFrame?",answer:`>>> import pandas as pd
+>>> # Create DataFrame from the dictionary.
+>>> df = pd.DataFrame({
+...     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+...     'Age': [25, 30, 35, 40],
+...     'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+... })
+>>> # Select a single column using square brackets.
+>>> name_column = df['Name']
+>>> name_column
+0      Alice
+1        Bob
+2    Charlie
+3      David
+Name: Name, dtype: object
+>>> # Select multiple columns using square brackets.
+>>> name_and_age_columns = df[['Name', 'Age']]
+>>> name_and_age_columns
+      Name  Age
+0    Alice   25
+1      Bob   30
+2  Charlie   35
+3    David   40
+>>> # Select a single column using dot notation.
+>>> city_column = df.City
+>>> city_column
+0       New York
+1    Los Angeles
+2        Chicago
+3        Houston
+Name: City, dtype: object`},{question:"How do you select rows in a DataFrame?",answer:`>>> import pandas as pd
+>>> # My dictionary data.
+>>> data = {
+...     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+...     'Age': [25, 30, 35, 40],
+...     'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+... }
+>>> # Custom string indices.
+>>> index = ['A', 'B', 'C', 'D']
+>>> df = pd.DataFrame(data, index=index)
+>>> # Using .loc[] to select rows by label.
+>>> df.loc['A']
+Name       Alice
+Age           25
+City    New York
+Name: A, dtype: object
+>>> # Select multiple rows by labels.
+>>> df.loc['A':'B']
+    Name  Age         City
+A  Alice   25     New York
+B    Bob   30  Los Angeles
+>>> # Using .iloc[] to select rows by integer index.
+>>> df.iloc[0]
+Name       Alice
+Age           25
+City    New York
+Name: A, dtype: object
+>>> # Select multiple rows by integer index.
+>>> df.iloc[0:2]
+    Name  Age         City
+A  Alice   25     New York
+B    Bob   30  Los Angeles
+>>> # Use boolean indexing to select rows based on a condition.
+>>> df[df['Age'] > 30]
+      Name  Age     City
+C  Charlie   35  Chicago
+D    David   40  Houston`},{question:"What is the difference between loc[] and iloc[] in Pandas?",answer:"The loc[] accessor is used to select rows and columns by label, while iloc[] is used to select rows and columns by integer index."},{question:"How do you handle missing data in Pandas?",answer:`>>> import pandas as pd
+>>> import numpy as np
+>>> # Create a DataFrame with missing data.
+>>> data = {
+...     'A': [1, 2, np.nan, 4, 5],
+...     'B': [np.nan, 2, 3, np.nan, 5],
+...     'C': [1, 2, 3, 4, 5],
+... }
+>>> df = pd.DataFrame(data)
+>>> # Drop missing data.
+>>> df.dropna()  # drop rows with any NaN value.
+     A    B  C
+1  2.0  2.0  2
+4  5.0  5.0  5
+>>> df.dropna(axis=1)  # drop columns with any NaN value.
+   C
+0  1
+1  2
+2  3
+3  4
+4  5
+>>> # Fill missing data.
+>>> df.fillna(0)  # fill NaN with a specific value.
+     A    B  C
+0  1.0  0.0  1
+1  2.0  2.0  2
+2  0.0  3.0  3
+3  4.0  0.0  4
+4  5.0  5.0  5
+>>> df.ffill()  # fill NaN with the previous value.
+     A    B  C
+0  1.0  NaN  1
+1  2.0  2.0  2
+2  2.0  3.0  3
+3  4.0  3.0  4
+4  5.0  5.0  5
+>>> df.bfill()  # fill NaN with the next value.
+     A    B  C
+0  1.0  2.0  1
+1  2.0  2.0  2
+2  4.0  3.0  3
+3  4.0  5.0  4
+4  5.0  5.0  5
+>>> # Interpolate missing data.
+>>> df.interpolate()
+     A    B  C
+0  1.0  NaN  1
+1  2.0  2.0  2
+2  3.0  3.0  3
+3  4.0  4.0  4
+4  5.0  5.0  5`},{question:"What is groupby() function used for in Pandas?",answer:"The groupby() function in Pandas is used to group data based on one or more keys and perform aggregate functions on each group."},{question:"How do you merge DataFrames in Pandas?",answer:"You can merge DataFrames in Pandas using the merge() function, specifying the columns to merge on and the type of join."},{question:"What is the purpose of the apply() function in Pandas?",answer:"The apply() function in Pandas is used to apply a function along an axis of the DataFrame or Series."},{question:"How do you save and load data in Pandas?",answer:"You can save data to disk using methods like to_csv(), to_excel(), or to_pickle(), and load data using methods like read_csv(), read_excel(), or read_pickle()."},{question:"What is the purpose of the pivot_table() function in Pandas?",answer:"The pivot_table() function in Pandas is used to create a spreadsheet-style pivot table as a DataFrame."},{question:"How do you perform time series analysis in Pandas?",answer:"You can perform time series analysis in Pandas by converting date-time data to a DateTimeIndex and using methods like resample(), rolling(), or shift()."},{question:"What is the purpose of the cut() function in Pandas?",answer:"The cut() function in Pandas is used to segment and sort data values into bins for analysis."},{question:"How do you plot data directly from DataFrame using the plot method in Pandas?",answer:`>>> import pandas as pd
+>>> import matplotlib.pyplot as plt
+>>> # Create a DataFrame.
+>>> df = pd.DataFrame({
+...     'Year': [2010, 2011, 2012, 2013, 2014],
+...     'Sales': [100, 150, 200, 250, 300],
+... })
+>>> # Plot the DataFrame.
+>>> df.plot(x='Year', y='Sales', kind='line', marker='o', color='b', linestyle='-')
+<Axes: xlabel='Year'>
+>>> # Add labels and title.
+>>> plt.xlabel('Year')
+Text(0.5, 0, 'Year')
+>>> plt.ylabel('Sales')
+Text(0, 0.5, 'Sales')
+>>> plt.title('Sales Over Time')
+Text(0.5, 1.0, 'Sales Over Time')
+>>> # Display the plot.
+>>> plt.show()`},{question:"What is the purpose of the describe() function in Pandas?",answer:"The describe() function in Pandas is used to generate descriptive statistics of the DataFrame, such as count, mean, std, min, max, etc."}]},{title:"DM: Matplotlib",subtitle:"Visualization with Python",flashcards:[]},{title:"DM: Seaborn",subtitle:"Data Visualization Library Based on Matplotlib",flashcards:[]},{title:"DM: scikit-learn",subtitle:"Machine Learning in Python",flashcards:[]}];function Me(t){let e;return{c(){e=T(t[0])},m(s,n){W(s,e,n)},p(s,n){n&1&&M(e,s[0])},d(s){s&&x(e)}}}function Se(t){let e;return{c(){e=T(t[1])},m(s,n){W(s,e,n)},p(s,n){n&2&&M(e,s[1])},d(s){s&&x(e)}}}function De(t){let e,s,n=t[3]?"Answer":`Question ${t[2]+1}`,a,i,d,f,l;function r(o,u){return o[3]?Se:Me}let c=r(t),h=c(t);return{c(){e=v("div"),s=v("div"),a=T(n),i=I(),d=v("div"),h.c(),k(s,"class","question-answer svelte-1c9grjx"),k(d,"class","question-answer-content svelte-1c9grjx"),k(e,"class","flashcard svelte-1c9grjx"),k(e,"role","button"),k(e,"tabindex","0")},m(o,u){W(o,e,u),y(e,s),y(s,a),y(e,i),y(e,d),h.m(d,null),f||(l=[z(e,"click",t[4]),z(e,"keypress",t[4])],f=!0)},p(o,[u]){u&12&&n!==(n=o[3]?"Answer":`Question ${o[2]+1}`)&&M(a,n),c===(c=r(o))&&h?h.p(o,u):(h.d(1),h=c(o),h&&(h.c(),h.m(d,null)))},i:_,o:_,d(o){o&&x(e),h.d(),f=!1,L(l)}}}function Oe(t,e,s){let{question:n}=e,{answer:a}=e,{index:i}=e,d=!1;function f(){d&&s(3,d=!1)}function l(){s(3,d=!d)}return t.$$set=r=>{"question"in r&&s(0,n=r.question),"answer"in r&&s(1,a=r.answer),"index"in r&&s(2,i=r.index)},[n,a,i,d,l,f]}class Ae extends R{constructor(e){super(),$(this,e,Oe,De,E,{question:0,answer:1,index:2,resetState:5})}get resetState(){return this.$$.ctx[5]}}function ce(t,e,s){const n=t.slice();return n[1]=e[s].question,n[2]=e[s].answer,n[4]=s,n}function le(t){let e,s=t[0].subtitle+"",n;return{c(){e=v("p"),n=T(s),k(e,"class","subtitle svelte-ms8g2g")},m(a,i){W(a,e,i),y(e,n)},p(a,i){i&1&&s!==(s=a[0].subtitle+"")&&M(n,s)},d(a){a&&x(e)}}}function de(t){let e,s;return e=new Ae({props:{question:t[1],answer:t[2],index:t[4]}}),{c(){Y(e.$$.fragment)},m(n,a){F(e,n,a),s=!0},p(n,a){const i={};a&1&&(i.question=n[1]),a&1&&(i.answer=n[2]),e.$set(i)},i(n){s||(q(e.$$.fragment,n),s=!0)},o(n){C(e.$$.fragment,n),s=!1},d(n){V(e,n)}}}function Ne(t){let e,s,n=t[0].title+"",a,i,d,f,l=t[0].subtitle.length>0&&le(t),r=U(t[0].flashcards),c=[];for(let o=0;o<r.length;o+=1)c[o]=de(ce(t,r,o));const h=o=>C(c[o],1,1,()=>{c[o]=null});return{c(){e=v("div"),s=v("h1"),a=T(n),i=I(),l&&l.c(),d=I();for(let o=0;o<c.length;o+=1)c[o].c();k(s,"class","svelte-ms8g2g")},m(o,u){W(o,e,u),y(e,s),y(s,a),y(e,i),l&&l.m(e,null),y(e,d);for(let p=0;p<c.length;p+=1)c[p]&&c[p].m(e,null);f=!0},p(o,[u]){if((!f||u&1)&&n!==(n=o[0].title+"")&&M(a,n),o[0].subtitle.length>0?l?l.p(o,u):(l=le(o),l.c(),l.m(e,d)):l&&(l.d(1),l=null),u&1){r=U(o[0].flashcards);let p;for(p=0;p<r.length;p+=1){const P=ce(o,r,p);c[p]?(c[p].p(P,u),q(c[p],1)):(c[p]=de(P),c[p].c(),q(c[p],1),c[p].m(e,null))}for(se(),p=r.length;p<c.length;p+=1)h(p);ne()}},i(o){if(!f){for(let u=0;u<r.length;u+=1)q(c[u]);f=!0}},o(o){c=c.filter(Boolean);for(let u=0;u<c.length;u+=1)C(c[u]);f=!1},d(o){o&&x(e),l&&l.d(),ee(c,o)}}}function He(t,e,s){let{topic:n}=e;return t.$$set=a=>{"topic"in a&&s(0,n=a.topic)},[n]}class Ue extends R{constructor(e){super(),$(this,e,He,Ne,E,{topic:0})}}function he(t,e,s){const n=t.slice();return n[5]=e[s],n}function ue(t){let e,s=t[5].label+"",n,a,i,d;function f(){return t[4](t[5])}return{c(){e=v("button"),n=T(s),a=I(),k(e,"class","dropdown-item svelte-1mmmvwn")},m(l,r){W(l,e,r),y(e,n),y(e,a),i||(d=z(e,"click",f),i=!0)},p(l,r){t=l,r&2&&s!==(s=t[5].label+"")&&M(n,s)},d(l){l&&x(e),i=!1,d()}}}function Le(t){let e,s,n,a,i,d,f,l=U(t[1]),r=[];for(let c=0;c<l.length;c+=1)r[c]=ue(he(t,l,c));return{c(){e=v("div"),s=v("button"),n=T(t[0]),a=I(),i=v("div");for(let c=0;c<r.length;c+=1)r[c].c();k(s,"class","dropdown-button svelte-1mmmvwn"),k(i,"class","dropdown-content svelte-1mmmvwn"),K(i,"display",t[2]?"block":"none"),k(e,"class","dropdown svelte-1mmmvwn")},m(c,h){W(c,e,h),y(e,s),y(s,n),y(e,a),y(e,i);for(let o=0;o<r.length;o+=1)r[o]&&r[o].m(i,null);d||(f=z(s,"click",t[3]),d=!0)},p(c,[h]){if(h&1&&M(n,c[0]),h&6){l=U(c[1]);let o;for(o=0;o<l.length;o+=1){const u=he(c,l,o);r[o]?r[o].p(u,h):(r[o]=ue(u),r[o].c(),r[o].m(i,null))}for(;o<r.length;o+=1)r[o].d(1);r.length=l.length}h&4&&K(i,"display",c[2]?"block":"none")},i:_,o:_,d(c){c&&x(e),ee(r,c),d=!1,f()}}}function Be(t,e,s){let{label:n}=e,{items:a}=e,i=!1;function d(){s(2,i=!i)}const f=l=>{l.onClick(),s(2,i=!1)};return t.$$set=l=>{"label"in l&&s(0,n=l.label),"items"in l&&s(1,a=l.items)},[n,a,i,d,f]}class ze extends R{constructor(e){super(),$(this,e,Be,Le,E,{label:0,items:1})}}function Fe(t){let e,s,n,a;return{c(){e=v("button"),s=T(t[0]),k(e,"class","svelte-1bual08")},m(i,d){W(i,e,d),y(e,s),n||(a=z(e,"click",function(){Z(t[1])&&t[1].apply(this,arguments)}),n=!0)},p(i,[d]){t=i,d&1&&M(s,t[0])},i:_,o:_,d(i){i&&x(e),n=!1,a()}}}function Ve(t,e,s){let{label:n}=e,{onClick:a}=e;return t.$$set=i=>{"label"in i&&s(0,n=i.label),"onClick"in i&&s(1,a=i.onClick)},[n,a]}class Ee extends R{constructor(e){super(),$(this,e,Ve,Fe,E,{label:0,onClick:1})}}function me(t,e,s){const n=t.slice();return n[2]=e[s],n[4]=s,n}function pe(t){let e,s;return e=new Ue({props:{topic:t[2]}}),{c(){Y(e.$$.fragment)},m(n,a){F(e,n,a),s=!0},i(n){s||(q(e.$$.fragment,n),s=!0)},o(n){C(e.$$.fragment,n),s=!1},d(n){V(e,n)}}}function fe(t){let e,s,n=t[0]===t[4]&&pe(t);return{c(){n&&n.c(),e=xe()},m(a,i){n&&n.m(a,i),W(a,e,i),s=!0},p(a,i){a[0]===a[4]?n?i&1&&q(n,1):(n=pe(a),n.c(),q(n,1),n.m(e.parentNode,e)):n&&(se(),C(n,1,1,()=>{n=null}),ne())},i(a){s||(q(n),s=!0)},o(a){C(n),s=!1},d(a){a&&x(e),n&&n.d(a)}}}function $e(t){let e,s,n,a,i,d,f,l=A[t[0]].flashcards.length+"",r,c,h,o,u,p;s=new ze({props:{label:"Select Topic",items:A.map(t[1])}});let P=U(A),g=[];for(let m=0;m<P.length;m+=1)g[m]=fe(me(t,P,m));const we=m=>C(g[m],1,1,()=>{g[m]=null});return u=new Ee({props:{label:"Scroll to Top",onClick:Re}}),{c(){e=v("div"),Y(s.$$.fragment),n=I(),a=v("div"),i=I(),d=v("div"),f=T("Number of Flashcards: "),r=T(l),c=I();for(let m=0;m<g.length;m+=1)g[m].c();h=I(),o=v("div"),Y(u.$$.fragment),K(a,"margin-right","20px"),k(e,"class","control-box svelte-1lj0z4k")},m(m,w){W(m,e,w),F(s,e,null),y(e,n),y(e,a),y(e,i),y(e,d),y(d,f),y(d,r),W(m,c,w);for(let S=0;S<g.length;S+=1)g[S]&&g[S].m(m,w);W(m,h,w),W(m,o,w),F(u,o,null),p=!0},p(m,[w]){const S={};if(w&1&&(S.items=A.map(m[1])),s.$set(S),(!p||w&1)&&l!==(l=A[m[0]].flashcards.length+"")&&M(r,l),w&1){P=U(A);let b;for(b=0;b<P.length;b+=1){const ae=me(m,P,b);g[b]?(g[b].p(ae,w),q(g[b],1)):(g[b]=fe(ae),g[b].c(),q(g[b],1),g[b].m(h.parentNode,h))}for(se(),b=P.length;b<g.length;b+=1)we(b);ne()}},i(m){if(!p){q(s.$$.fragment,m);for(let w=0;w<P.length;w+=1)q(g[w]);q(u.$$.fragment,m),p=!0}},o(m){C(s.$$.fragment,m),g=g.filter(Boolean);for(let w=0;w<g.length;w+=1)C(g[w]);C(u.$$.fragment,m),p=!1},d(m){m&&(x(e),x(c),x(h),x(o)),V(s),ee(g,m),V(u)}}}function Re(){window.scrollTo({top:0,behavior:"smooth"})}function je(t,e,s){let n=0;return[n,(i,d)=>({label:i.title,onClick:()=>{s(0,n=d)}})]}class Ye extends R{constructor(e){super(),$(this,e,je,$e,E,{})}}new Ye({target:document.getElementById("app")});
