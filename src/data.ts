@@ -2228,7 +2228,236 @@ array(['Odd', 'Even', 'Odd', 'Even', 'Odd'], dtype='<U4')`,
     {
         title: "DM: Pandas",
         subtitle: "Data Analysis and Manipulation Tool",
-        flashcards: [],
+        flashcards: [
+            {
+                question: "What is Pandas?",
+                answer: "Pandas is a Python library for data manipulation and analysis.",
+            },
+            {
+                question: "What are the two main data structures in Pandas?",
+                answer: "Series and DataFrame.",
+            },
+            {
+                question: "How do you import Pandas?",
+                answer: "import pandas as pd",
+            },
+            {
+                question: "What is a Series in Pandas?",
+                answer: "A Series in Pandas is a one-dimensional array-like object containing an array of data and an associated array of labels, called the index. Example:\npd.Series([1, 2, 3, 4])",
+            },
+            {
+                question: "What is a DataFrame in Pandas?",
+                answer: "A DataFrame in Pandas is a two-dimensional labeled data structure with columns of potentially different types. It is similar to a spreadsheet or SQL table. Example:\npd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})",
+            },
+            {
+                question: "How do you create a DataFrame from a dictionary?",
+                answer: `>>> import pandas as pd
+>>> # My dictionary data.
+>>> data = {
+...     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+...     'Age': [25, 30, 35, 40],
+...     'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+... }
+>>> # Create DataFrame from the dictionary.
+>>> df = pd.DataFrame(data)
+>>> df
+      Name  Age         City
+0    Alice   25     New York
+1      Bob   30  Los Angeles
+2  Charlie   35      Chicago
+3    David   40      Houston`,
+            },
+            {
+                question: "What are some common operations you can perform with Pandas?",
+                answer: "Data manipulation, cleaning, filtering, grouping, merging, and reshaping.",
+            },
+            {
+                question: "How do you select columns in a DataFrame?",
+                answer: `>>> import pandas as pd
+>>> # Create DataFrame from the dictionary.
+>>> df = pd.DataFrame({
+...     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+...     'Age': [25, 30, 35, 40],
+...     'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+... })
+>>> # Select a single column using square brackets.
+>>> name_column = df['Name']
+>>> name_column
+0      Alice
+1        Bob
+2    Charlie
+3      David
+Name: Name, dtype: object
+>>> # Select multiple columns using square brackets.
+>>> name_and_age_columns = df[['Name', 'Age']]
+>>> name_and_age_columns
+      Name  Age
+0    Alice   25
+1      Bob   30
+2  Charlie   35
+3    David   40
+>>> # Select a single column using dot notation.
+>>> city_column = df.City
+>>> city_column
+0       New York
+1    Los Angeles
+2        Chicago
+3        Houston
+Name: City, dtype: object`,
+            },
+            {
+                question: "How do you select rows in a DataFrame?",
+                answer: `>>> import pandas as pd
+>>> # My dictionary data.
+>>> data = {
+...     'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+...     'Age': [25, 30, 35, 40],
+...     'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+... }
+>>> # Custom string indices.
+>>> index = ['A', 'B', 'C', 'D']
+>>> df = pd.DataFrame(data, index=index)
+>>> # Using .loc[] to select rows by label.
+>>> df.loc['A']
+Name       Alice
+Age           25
+City    New York
+Name: A, dtype: object
+>>> # Select multiple rows by labels.
+>>> df.loc['A':'B']
+    Name  Age         City
+A  Alice   25     New York
+B    Bob   30  Los Angeles
+>>> # Using .iloc[] to select rows by integer index.
+>>> df.iloc[0]
+Name       Alice
+Age           25
+City    New York
+Name: A, dtype: object
+>>> # Select multiple rows by integer index.
+>>> df.iloc[0:2]
+    Name  Age         City
+A  Alice   25     New York
+B    Bob   30  Los Angeles
+>>> # Use boolean indexing to select rows based on a condition.
+>>> df[df['Age'] > 30]
+      Name  Age     City
+C  Charlie   35  Chicago
+D    David   40  Houston`,
+            },
+            {
+                question: "What is the difference between loc[] and iloc[] in Pandas?",
+                answer: "The loc[] accessor is used to select rows and columns by label, while iloc[] is used to select rows and columns by integer index.",
+            },
+            {
+                question: "How do you handle missing data in Pandas?",
+                answer: `>>> import pandas as pd
+>>> import numpy as np
+>>> # Create a DataFrame with missing data.
+>>> data = {
+...     'A': [1, 2, np.nan, 4, 5],
+...     'B': [np.nan, 2, 3, np.nan, 5],
+...     'C': [1, 2, 3, 4, 5],
+... }
+>>> df = pd.DataFrame(data)
+>>> # Drop missing data.
+>>> df.dropna()  # drop rows with any NaN value.
+     A    B  C
+1  2.0  2.0  2
+4  5.0  5.0  5
+>>> df.dropna(axis=1)  # drop columns with any NaN value.
+   C
+0  1
+1  2
+2  3
+3  4
+4  5
+>>> # Fill missing data.
+>>> df.fillna(0)  # fill NaN with a specific value.
+     A    B  C
+0  1.0  0.0  1
+1  2.0  2.0  2
+2  0.0  3.0  3
+3  4.0  0.0  4
+4  5.0  5.0  5
+>>> df.ffill()  # fill NaN with the previous value.
+     A    B  C
+0  1.0  NaN  1
+1  2.0  2.0  2
+2  2.0  3.0  3
+3  4.0  3.0  4
+4  5.0  5.0  5
+>>> df.bfill()  # fill NaN with the next value.
+     A    B  C
+0  1.0  2.0  1
+1  2.0  2.0  2
+2  4.0  3.0  3
+3  4.0  5.0  4
+4  5.0  5.0  5
+>>> # Interpolate missing data.
+>>> df.interpolate()
+     A    B  C
+0  1.0  NaN  1
+1  2.0  2.0  2
+2  3.0  3.0  3
+3  4.0  4.0  4
+4  5.0  5.0  5`,
+            },
+            {
+                question: "What is groupby() function used for in Pandas?",
+                answer: "The groupby() function in Pandas is used to group data based on one or more keys and perform aggregate functions on each group.",
+            },
+            {
+                question: "How do you merge DataFrames in Pandas?",
+                answer: "You can merge DataFrames in Pandas using the merge() function, specifying the columns to merge on and the type of join.",
+            },
+            {
+                question: "What is the purpose of the apply() function in Pandas?",
+                answer: "The apply() function in Pandas is used to apply a function along an axis of the DataFrame or Series.",
+            },
+            {
+                question: "How do you save and load data in Pandas?",
+                answer: "You can save data to disk using methods like to_csv(), to_excel(), or to_pickle(), and load data using methods like read_csv(), read_excel(), or read_pickle().",
+            },
+            {
+                question: "What is the purpose of the pivot_table() function in Pandas?",
+                answer: "The pivot_table() function in Pandas is used to create a spreadsheet-style pivot table as a DataFrame.",
+            },
+            {
+                question: "How do you perform time series analysis in Pandas?",
+                answer: "You can perform time series analysis in Pandas by converting date-time data to a DateTimeIndex and using methods like resample(), rolling(), or shift().",
+            },
+            {
+                question: "What is the purpose of the cut() function in Pandas?",
+                answer: "The cut() function in Pandas is used to segment and sort data values into bins for analysis.",
+            },
+            {
+                question: "How do you plot data directly from DataFrame using the plot method in Pandas?",
+                answer: `>>> import pandas as pd
+>>> import matplotlib.pyplot as plt
+>>> # Create a DataFrame.
+>>> df = pd.DataFrame({
+...     'Year': [2010, 2011, 2012, 2013, 2014],
+...     'Sales': [100, 150, 200, 250, 300],
+... })
+>>> # Plot the DataFrame.
+>>> df.plot(x='Year', y='Sales', kind='line', marker='o', color='b', linestyle='-')
+<Axes: xlabel='Year'>
+>>> # Add labels and title.
+>>> plt.xlabel('Year')
+Text(0.5, 0, 'Year')
+>>> plt.ylabel('Sales')
+Text(0, 0.5, 'Sales')
+>>> plt.title('Sales Over Time')
+Text(0.5, 1.0, 'Sales Over Time')
+>>> # Display the plot.
+>>> plt.show()`,
+            },
+            {
+                question: "What is the purpose of the describe() function in Pandas?",
+                answer: "The describe() function in Pandas is used to generate descriptive statistics of the DataFrame, such as count, mean, std, min, max, etc.",
+            },
+        ],
     },
     {
         title: "DM: Matplotlib",
