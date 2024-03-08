@@ -1854,6 +1854,111 @@ int main() {
 4. Waiting time
 5. Response time`,
             },
+            {
+                question: "What is CPU utilization in terms of scheduling criteria?",
+                answer: "CPU utilization aims to keep the CPU as busy as possible."
+            },
+            {
+                question: "How is throughput defined in scheduling criteria?",
+                answer: "Throughput refers to the number of processes that complete their execution per time unit."
+            },
+            {
+                question: "What does turnaround time represent in scheduling criteria?",
+                answer: "Turnaround time is the amount of time it takes to execute a particular process."
+            },
+            {
+                question: "Define waiting time in terms of scheduling criteria.",
+                answer: "Waiting time is the amount of time a process has been waiting in the ready queue."
+            },
+            {
+                question: "Explain response time within the context of scheduling criteria.",
+                answer: "Response time is the amount of time it takes from when a request was submitted until the first response is produced, not output, particularly in a time-sharing environment."
+            },
+            // Scheduling Algorithm Optimization Criteria.
+            {
+                question: "What are the optimization criteria for scheduling algorithms?",
+                answer: `* Maximizing CPU utilization
+* Maximizing throughput
+* Minimizing turnaround time
+* Minimizing waiting time
+* Minimizing response time`
+            },
+            // First- Come, First-Served (FCFS) Scheduling.
+            {
+                question: "What does FCFS stand for?",
+                answer: "First-Come, First-Served",
+            },
+            {
+                question: "What is the simplest type of scheduling algorithm used in operating system?",
+                answer: "FCFS",
+            },
+            {
+                question: "What is FCFS?",
+                answer: "FCFS is a scheduling algorithm where processes are executed in the order they arrive in the ready queue.",
+            },
+            // Bonus.
+            {
+                question: "What data structure can be used to implement FCFS?",
+                answer: "A simple FIFO (First In, First Out) queue",
+            },
+            {
+                question: "How does FCFS handle arriving processes with equal arrival times?",
+                answer: "Processes with equal arrival times are executed in the order they are received.",
+            },
+            {
+                question: "Describe a scenario where FCFS might not be suitable.",
+                answer: "When there are time-sensitive tasks or tasks with varying priorities.",
+            },
+            {
+                question: "Is FCFS deterministic or underministic?",
+                answer: "Deterministic",
+            },
+            // FCFS Scheduling.
+            {
+                question: "Is FCFS preemptive or nonpreemptive? Why?",
+                answer: "Nonpreemptive because once a process initiates its execution, it continues until it completes its task or voluntarily releases control of the CPU",
+            },
+            // FCFS Advantages.
+            {
+                question: "What are the advantages of FCFS?",
+                answer: "* Simplicity\n* Fairness"
+            },
+            // FCFS Disadvantages.
+            {
+                question: "What are disadvantages of FCFS?",
+                answer: "* Convoy effect\n* Inefficient CPU utilization\n* Not suitable for time-sharing systems.",
+            },
+            {
+                question: "What is the convoy effect?",
+                answer: "The convoy effect in CPU scheduling occurs when a long-running process can block the queue, leading to higher waiting times for all subsequent processes.",
+            },
+            // Bonus.
+            {
+                question: "What is the relationship between turnaround, waiting, and burst time?",
+                answer: "Turnaround time = burst time + waiting time",
+            },
+            {
+                question: "Process A has a turnaround time of 20 milliseconds and a burst time of 12 milliseconds. Calculate the waiting time for Process B.",
+                answer: "Waiting time = turnaround time - burst time\n= 20 - 12 = 8 (ms)",
+            },
+            {
+                question: `A computer system where three processes, labeled as P1, P2, and P3, are arriving at different times. P1 arrives at the system at time 0 and demands 8 milliseconds of CPU time to complete its tasks. Following this, Process 2 enters the system at time 2 and requires 5 milliseconds of CPU time. Lastly, Process 3 joins the queue at time 4, needing 3 milliseconds of CPU time to execute its tasks.
+
+Calculate turnaround time and waiting time for each process.`,
+                answer: `Timeline for all processes:
+P1\tP2\tP3\tEnd
+0\t8\t13\t16
+
+P1 turnaround time = completion time - arrival time = 8 - 0 = 8 (ms)
+P1 waiting time = turnaround time - burst time = 8 - 8 = 0 (ms)
+
+P2 turnaround time = 13 - 2 = 11 (ms)
+P2 waiting time = 11 - 5 = 6 (ms)
+
+P3 turnaround time = 16 - 4 = 12 (ms)
+P3 waiting time = 12 - 3 = 9 (ms)
+`,
+            },
         ],
     },
 ];
