@@ -1965,6 +1965,7 @@ P3 waiting time = 12 - 3 = 9 (ms)
         title: "OS: Lecture 7",
         subtitle: "Main Memory",
         flashcards: [
+            // Lecture 7.1.
             // Background.
             {
                 question: "What must happen for a program to be run on a CPU?",
@@ -2122,6 +2123,42 @@ P3 waiting time = 12 - 3 = 9 (ms)
                 question: "What is 'roll out, roll in' swapping variant used for?",
                 answer: "Roll out, roll in is a swapping variant used for priority-based scheduling algorithms. In this variant, a lower-priority process is swapped out to make room for a higher-priority process to be loaded and executed."
             },
+            // Lecture 7.2.
+            // Memory Management Techniques.
+            {
+                question: "What are different memory management techniques",
+                answer: `1. Fixed Partitioning
+2. Dynamic Partitioning
+3. Simple Paging
+4. Simple Segmentation
+5. Virual-Memory Paging
+6. Virtual-Memory Segmentation`,
+            },
+            {
+                question: "What is Fixed Partitioning in memory management?",
+                answer: "Fixed Partitioning involves dividing memory into equal or unequal fixed-size partitions at boot time."
+            },
+            {
+                question: "Describe Dynamic Partitioning.",
+                answer: "Dynamic Partitioning involves creating partitions as programs are loaded."
+            },
+            {
+                question: "What is Simple Paging?",
+                answer: "Simple Paging divides memory into equal-size pages and loads programs into available pages."
+            },
+            {
+                question: "Explain Simple Segmentation.",
+                answer: "Simple Segmentation involves dividing a program into segments according to usage."
+            },
+            {
+                question: "What is Virtual-Memory Paging?",
+                answer: "Virtual-Memory Paging is a paging technique where not all pages need to be in memory at one time."
+            },
+            {
+                question: "Describe Virtual Memory Segmentation.",
+                answer: "Virtual Memory Segmentation is similar to simple segmentation, but not all segments need to be in memory at one time."
+            }
+            // Memory Management Techniques.
         ],
     },
 ];
