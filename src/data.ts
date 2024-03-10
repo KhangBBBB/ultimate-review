@@ -1944,7 +1944,7 @@ int main() {
             {
                 question: `A computer system where three processes, labeled as P1, P2, and P3, are arriving at different times. P1 arrives at the system at time 0 and demands 8 milliseconds of CPU time to complete its tasks. Following this, Process 2 enters the system at time 2 and requires 5 milliseconds of CPU time. Lastly, Process 3 joins the queue at time 4, needing 3 milliseconds of CPU time to execute its tasks.
 
-Calculate turnaround time and waiting time for each process.`,
+Calculate turnaround time and waiting time for each process using FCFS scheduling.`,
                 answer: `Timeline for all processes:
 P1\tP2\tP3\tEnd
 0\t8\t13\t16
@@ -1958,6 +1958,120 @@ P2 waiting time = 11 - 5 = 6 (ms)
 P3 turnaround time = 16 - 4 = 12 (ms)
 P3 waiting time = 12 - 3 = 9 (ms)
 `,
+            },
+            // Lecture 6.2.
+            // Shortest-Job-First (SJF) Scheduling.
+            {
+                question: "What does SJF stand for?",
+                answer: "Shortest-Job-First",
+            },
+            {
+                question: "What is SJF Scheduling?",
+                answer: "SJF Scheduling involves associating with each process the length of its next CPU burst and using these lengths to schedule the process with the shortest time."
+            },
+            {
+                question: "What is the optimality property associated with SJF Scheduling?",
+                answer: "SJF Scheduling is optimal as it provides the minimum average waiting time for a given set of processes."
+            },
+            {
+                question: "What is the main challenge in implementing SJF Scheduling?",
+                answer: "The main difficulty in implementing SJF Scheduling is knowing the length of the next CPU request. One approach could be to ask the user."
+            },
+            {
+                question: "What are the two variations of the SJF algorithm?",
+                answer: "The SJF algorithm can be either preemptive or non-preemptive."
+            },
+            // Bonus: Practice.
+            {
+                question: `A computer system where three processes, labeled as P1, P2, and P3, are arriving at different times. P1 arrives at the system at time 0 and demands 8 milliseconds of CPU time to complete its tasks. Following this, Process 2 enters the system at time 2 and requires 5 milliseconds of CPU time. Lastly, Process 3 joins the queue at time 4, needing 3 milliseconds of CPU time to execute its tasks.
+
+Calculate turnaround time and waiting time for each process using SJF (non-preemptive) scheduling.`,
+                answer: `Timeline for all processes:
+P1\tP3\tP2\tEnd
+0\t8\t11\t16
+
+P1 turnaround time = completion time - arrival time = 8 - 0 = 8 (ms)
+P1 waiting time = turnaround time - burst time = 8 - 8 = 0 (ms)
+
+P2 turnaround time = 16 - 2 = 14 (ms)
+P2 waiting time = 14 - 5 = 9 (ms)
+
+P3 turnaround time = 11 - 4 = 7 (ms)
+P3 waiting time = 7 - 3 = 4 (ms)
+`,
+            },
+            // Determining Length of Next CPU Burst.
+            {
+                question: "How is the length of the next CPU burst determined?",
+                answer: "The length of the next CPU burst can only be estimated, typically based on the assumption that it will be similar to the previous one. The process with the shortest predicted next CPU burst is then selected."
+            },
+            {
+                question: "What technique can be used to estimate the length of the next CPU burst?",
+                answer: "Exponential averaging can be used to estimate the length of the next CPU burst, based on the lengths of previous CPU bursts."
+            },
+            {
+                question: "What is the preemptive version of Shortest-Job-First scheduling called?",
+                answer: "The preemptive version of Shortest-Job-First scheduling is called Shortest-Remaining-Time-First."
+            },
+            // Bonus: Shortest-Job-First Scheduling.
+            {
+                question: "What is Shortest Remaining Time First (SRTF) scheduling?",
+                answer: "Shortest Remaining Time First (SRTF) scheduling is a CPU scheduling algorithm in operating systems where the process with the shortest estimated remaining time to completion is scheduled next.",
+            },
+            {
+                question: "How does SRTF scheduling work?",
+                answer: "SRTF scheduling works by preempting the currently running process if a new process arrives with a shorter remaining burst time. It continually selects the process with the shortest remaining time to execute next.",
+            },
+            {
+                question: "How does SRTF scheduling handle tie-break situations?",
+                answer: "In tie-break situations where multiple processes have the same remaining time, SRTF scheduling typically uses preemptive priority scheduling or other criteria such as process arrival time to determine the order of execution.",
+            },
+            {
+                question: `A computer system where three processes, labeled as P1, P2, and P3, are arriving at different times. P1 arrives at the system at time 0 and demands 8 milliseconds of CPU time to complete its tasks. Following this, Process 2 enters the system at time 2 and requires 5 milliseconds of CPU time. Lastly, Process 3 joins the queue at time 4, needing 3 milliseconds of CPU time to execute its tasks.
+
+Calculate turnaround time and waiting time for each process using SRTF scheduling.`,
+                answer: `Timeline for all processes:
+P1\tP2\tP3\tP1\tEnd
+0\t2\t7\t10\t16
+
+P1 turnaround time = completion time - arrival time = 16 - 0 = 16 (ms)
+P1 waiting time = turnaround time - burst time = 16 - 8 = 8 (ms)
+
+P2 turnaround time = 7 - 2 = 5 (ms)
+P2 waiting time = 5 - 5 = 0 (ms)
+
+P3 turnaround time = 10 - 4 = 6 (ms)
+P3 waiting time = 6 - 3 = 3 (ms)
+`,
+            },
+            // Shortest-Job-First (SJF) Scheduling.
+            {
+                question: "What are the advantages of Shortest-Job-First (SJF) Scheduling?",
+                answer: `1. Minimized Waiting Time: SJF reduces the average waiting time compared to other scheduling algorithms like First-Come, First-Served (FCFS).
+2. Optimal for Batch Processes: SJF is ideal for batch jobs where the execution times are known in advance.`
+            },
+            {
+                question: "What are the disadvantages of Shortest-Job-First (SJF) Scheduling?",
+                answer: `1. Starvation: Longer processes may suffer starvation as shorter processes keep arriving and being served first.
+2. Burst Time Requirement: SJF requires precise knowledge of how long a process will take, which is not always feasible in real-time systems.
+3. Not Ideal for Interactive Systems: Due to its nature, SJF may not be the best choice for systems that require more interactive process management.`
+            },
+            // Priority Scheduling.
+            {
+                question: "What is Priority Scheduling?",
+                answer: "Priority Scheduling involves associating a priority number (integer) with each process. The CPU is allocated to the process with the highest priority, where the smallest integer corresponds to the highest priority. Priority Scheduling can be preemptive or nonpreemptive."
+            },
+            {
+                question: "How is SJF related to Priority Scheduling?",
+                answer: "SJF (Shortest-Job-First) is a form of priority scheduling where the priority is determined by the inverse of the predicted next CPU burst time."
+            },
+            {
+                question: "What is the main problem associated with Priority Scheduling?",
+                answer: "The main problem with Priority Scheduling is starvation, where low priority processes may never execute."
+            },
+            {
+                question: "How can the problem of starvation be addressed in Priority Scheduling?",
+                answer: "The problem of starvation can be addressed through aging, where the priority of a process is increased as time progresses."
             },
         ],
     },
