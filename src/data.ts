@@ -2157,8 +2157,83 @@ P3 waiting time = 12 - 3 = 9 (ms)
             {
                 question: "Describe Virtual Memory Segmentation.",
                 answer: "Virtual Memory Segmentation is similar to simple segmentation, but not all segments need to be in memory at one time."
-            }
+            },
             // Memory Management Techniques.
+            {
+                question: "What is Fixed Partitioning in memory management?",
+                answer: "Fixed Partitioning involves dividing memory into partitions at boot time, where partition sizes may be equal or unequal but do not change. However, it suffers from internal fragmentation."
+            },
+            {
+                question: "Describe Dynamic Partitioning.",
+                answer: "Dynamic Partitioning involves creating partitions as programs are loaded. It avoids internal fragmentation but must deal with external fragmentation."
+            },
+            {
+                question: "Which memory allocation strategy is best among the following options?",
+                answer: "Among the options provided, the 'Worse Fit' strategy is considered the best performer because it ensures the largest fragment of free memory remains, thus maximizing available free memory."
+            },
+            {
+                question: "Explain the 'First Fit' memory allocation strategy.",
+                answer: "First Fit involves allocating memory to the first available partition that is large enough to satisfy the memory request. It is simple and fast, targeting the front end of available memory."
+            },
+            {
+                question: "What is the characteristic of the 'Next Fit' memory allocation strategy?",
+                answer: "Next Fit allocates memory to the end of the available partitions, potentially resulting in fragmenting the largest block of free memory."
+            },
+            {
+                question: "What is the main downside of the 'Best Fit' memory allocation strategy?",
+                answer: "The 'Best Fit' strategy, while aiming to guarantee the smallest fragments of memory, quickly fills the main memory with small blocks that cannot satisfy future allocation requests, making it a worse performer."
+            },
+            // Address Types.
+            {
+                question: "How do programmers refer to a memory address?",
+                answer: "Programmers refer to a memory address as the way to access a memory cell, which is also known as address space and addressability."
+            },
+            {
+                question: "What is a Logical (relative) memory address?",
+                answer: "A Logical memory address refers to a memory location independent of the current assignment of data to physical memory. It consists of a segment and an offset."
+            },
+            {
+                question: "Describe a Linear (flat) memory address.",
+                answer: "A Linear memory address presents memory to the program as a single contiguous address space that is directly addressable without paging schemes. It is mapped via segmentation."
+            },
+            {
+                question: "What is a Physical memory address?",
+                answer: "A Physical memory address represents the absolute address or actual physical entity in memory. It may require mapping via paging."
+            },
+            // Base/Bounds Relocation.
+            {
+                question: "What is the purpose of the Base Register in base/bounds relocation?",
+                answer: "The Base Register holds the beginning physical address, which is added to all program addresses."
+            },
+            {
+                question: "How is the Bounds Register utilized in base/bounds relocation?",
+                answer: "The Bounds Register is used to detect accesses beyond the end of the allocated memory. It may contain either the end address or the length of the allocated memory and provides protection to the system."
+            },
+            {
+                question: "How does base/bounds relocation facilitate moving programs in memory?",
+                answer: "Base/bounds relocation makes it easy to move programs in memory as these values are set when the process is loaded and when the process is swapped in."
+            },
+            {
+                question: "What has largely replaced base/bounds relocation?",
+                answer: "Base/bounds relocation has largely been replaced by paging."
+            },
+            // Simple Paging.
+            {
+                question: "What is the concept of Simple Paging in memory management?",
+                answer: "Simple Paging involves partitioning memory into small equal-size chunks and dividing each process into the same size chunks."
+            },
+            {
+                question: "What are chunks of each process partitioned by simple paging called?",
+                answer: "pages",
+            },
+            {
+                question: "What are chunks of memory partiioned by simple paging simple paging called?",
+                answer: "frames",
+            },
+            {
+                question: "What does the Operating System maintain for each process in Simple Paging?",
+                answer: "The Operating System maintains a page table for each process. This table contains the frame location for each page in the process. Memory addresses consist of a page number and offset within the page."
+            },
         ],
     },
 ];
