@@ -2350,4 +2350,114 @@ P3 waiting time = 6 - 3 = 3 (ms)
             },
         ],
     },
+    {
+        title: "OS: Lecture 8",
+        subtitle: "Main Memory",
+        flashcards: [
+            // Lecture 8.1.
+            // Overview.
+            {
+                question: "What is the primary role of magnetic disks in modern computers?",
+                answer: "Magnetic disks provide the bulk of secondary storage in modern computers."
+            },
+            {
+                question: "What are some key characteristics of magnetic disk drives?",
+                answer: "Magnetic disk drives typically rotate at speeds ranging from 60 to 250 times per second. The transfer rate refers to the rate at which data flows between the drive and the computer."
+            },
+            {
+                question: "What is positioning time, also known as random-access time, in the context of magnetic disks?",
+                answer: "Positioning time refers to the time required to move the disk arm to the desired cylinder (seek time) and the time for the desired sector to rotate under the disk head (rotational latency)."
+            },
+            {
+                question: "What is a head crash, and why is it problematic?",
+                answer: "A head crash occurs when the disk head makes contact with the disk surface, resulting in potential data loss or damage to the disk."
+            },
+            {
+                question: "How are disks typically attached to computers?",
+                answer: "Disks are attached to computers via an I/O bus. The host controller in the computer communicates with the disk controller built into the drive or storage array through this bus."
+            },
+            // The First Commercial Disk Drive.      
+            {
+                question: "When was the first commercial disk drive introduced?",
+                answer: "The first commercial disk drive, the IBM Model 350 disk storage system, was introduced in 1956."
+            },
+            {
+                question: "What were the specifications of the IBM Model 350 disk storage system?",
+                answer: "It had a capacity of 5 million (7-bit) characters and consisted of 50 platters, each with a size of 24 inches. The access time was less than 1 second."
+            },
+            // Addressing and Geometry.       
+            {
+                question: "What is the typical size of sectors (blocks) exposed by hard drives externally?",
+                answer: "Hard drives typically expose sectors (blocks) that are either 512 or 4096 bytes in size. Individual sector writes are atomic, but multiple sector writes may be interrupted, resulting in a torn write."
+            },
+            {
+                question: "Describe the drive geometry of hard drives.",
+                answer: "Hard drives have sectors arranged into tracks, with a cylinder representing a particular track on multiple platters. These tracks are arranged in concentric circles on the platters. A disk may have multiple double-sided platters."
+            },
+            {
+                question: "What is the function of the drive motor in hard drives?",
+                answer: "The drive motor spins the platters at a constant rate, which is measured in revolutions per minute (RPM)."
+            },
+            // Types of Delay With Disks.
+            {
+                question: "What are the three types of delay associated with disks?",
+                answer: "The three types of delay associated with disks are: 1. Rotational Delay, which is the time to rotate the desired sector to the read head and is related to RPM. 2. Seek Delay, which is the time to move the read head to a different track. 3. Transfer Time, which is the time to read or write bytes."
+            },
+            {
+                question: "What is track skew in disk storage?",
+                answer: "Track skew refers to the offsetting of sectors so that sequential reads across tracks incorporate seek delay."
+            },
+            // Caching.
+            {
+                question: "What is caching in the context of disk storage?",
+                answer: "Caching involves the use of a small amount of RAM (typically 8, 16, or 32 MB) in disk drives to store frequently accessed data temporarily."
+            },
+            {
+                question: "How does read caching benefit disk performance?",
+                answer: "Read caching reduces read delays by storing frequently accessed data in the cache, thereby reducing the need to seek and rotate the disk."
+            },
+            {
+                question: "What is write caching, and what are the two types of write caching?",
+                answer: "Write caching involves temporarily storing write operations in the cache before they are written to the disk. There are two types of write caching: 1. Write Back Cache: The drive reports that writes are complete after they have been cached, which can be potentially dangerous because data loss may occur if the cache is not properly managed. 2. Write Through Cache: The drive reports that writes are complete only after they have been written to the disk."
+            },
+            {
+                question: "What is a hybrid drive, and how does it incorporate caching?",
+                answer: "A hybrid drive includes both traditional disk storage and flash memory for persistent caching. This combination allows for improved performance by utilizing the faster access times of flash memory."
+            },
+            // Disk Scheduling.
+            {
+                question: "How does caching contribute to improving disk performance?",
+                answer: "Caching helps improve disk performance by temporarily storing frequently accessed data in a small amount of RAM within the disk drive."
+            },
+            {
+                question: "What is the limitation of caching in improving disk performance?",
+                answer: "Caching cannot fully compensate for poor random access times of disks."
+            },
+            {
+                question: "What is the key idea behind disk scheduling?",
+                answer: "The key idea behind disk scheduling is to reorder a queue of requests to the disk in order to improve performance."
+            },
+            {
+                question: "What are some examples of disk scheduling algorithms?",
+                answer: "Some examples of disk scheduling algorithms include: 1. First come, first serve (FCFS), 2. Shortest seek time first (SSTF), 3. SCAN (elevator algorithm), and 4. C-SCAN, C-LOOK, etc."
+            },
+            // Implementing Disk Scheduling.
+            {
+                question: "Where can disk scheduling be implemented?",
+                answer: "Disk scheduling can be implemented either in the operating system (OS) or on the disk itself."
+            },
+            {
+                question: "What is OS scheduling in the context of disk scheduling?",
+                answer: "In OS scheduling, the operating system can implement algorithms like Shortest Seek Time First (SSTF) or LOOK by ordering the queue of requests by logical block addressing (LBA). However, the OS cannot directly account for rotation delay."
+            },
+            {
+                question: "What are the advantages of on-disk scheduling?",
+                answer: "On-disk scheduling allows the disk to have knowledge of the exact position of the head and platters, enabling the implementation of more advanced schedulers. It can potentially lead to better disk performance."
+            },
+            {
+                question: "What are the requirements for implementing on-disk scheduling?",
+                answer: "Implementing on-disk scheduling requires specialized hardware and drivers to enable the disk to perform scheduling tasks autonomously."
+            },
+        ],
+    },
 ];
