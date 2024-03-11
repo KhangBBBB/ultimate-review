@@ -2460,4 +2460,46 @@ P3 waiting time = 6 - 3 = 3 (ms)
             },
         ],
     },
+    {
+        title: "OS: Lecture 9",
+        subtitle: "File System",
+        flashcards: [
+            // Lecture 9.1.
+            // File Concept.
+            {
+                question: "What is the characteristic of the logical address space in file concept?",
+                answer: "In file concept, the logical address space is contiguous."
+            },
+            {
+                question: "What are the types of files?",
+                answer: "Files can be categorized into two main types: 1. Data files, which can further be classified into numeric, character, and binary files. 2. Program files."
+            },
+            {
+                question: "How are the contents of a file defined?",
+                answer: "The contents of a file are defined by the file's creator and can vary widely depending on the file type. There are many types of files, including text files, source files, and executable files."
+            },
+            // File Attributes.
+            {
+                question: "What are the attributes associated with files?",
+                answer: "Files have several attributes, including: 1. Name: the only information kept in human-readable form. 2. Identifier: a unique tag (number) that identifies the file within the file system. 3. Type: specifies the type of file, which is necessary for systems that support different types. 4. Location: a pointer to the file's location on the storage device. 5. Size: the current size of the file. 6. Protection: controls who can perform reading, writing, and executing operations on the file. 7. Time, date, and user identification: data used for protection, security, and usage monitoring."
+            },
+            {
+                question: "Where is information about files typically stored?",
+                answer: "Information about files, including their attributes, is typically stored in the directory structure, which is maintained on the disk."
+            },
+            {
+                question: "What are some variations of file attributes?",
+                answer: "There are many variations of file attributes, including extended file attributes such as file checksums, which provide additional information or metadata about the file."
+            },
+            // File Operations.
+            {
+                question: "What is a file in terms of data structure?",
+                answer: "A file is an abstract data type."
+            },
+            {
+                question: "What are the basic file operations?",
+                answer: "The basic file operations include: 1. Create: to create a new file. 2. Write: to write data to the file at the write pointer location. 3. Read: to read data from the file at the read pointer location. 4. Reposition within file (Seek): to move the read/write pointer to a specific position within the file. 5. Delete: to delete the file. 6. Truncate: to reduce the size of the file. 7. Open(Fi): to search the directory structure on disk for entry Fi and move its content to memory. 8. Close(Fi): to move the content of entry Fi in memory to the directory structure on disk."
+            },
+        ],
+    },
 ];
