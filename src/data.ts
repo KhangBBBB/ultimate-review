@@ -2560,6 +2560,36 @@ P3 waiting time = 6 - 3 = 3 (ms)
                 question: "What is Direct (Random) Access?",
                 answer: "Description: Allows data to be read/written to any location in the file directly, without the need to sequentially traverse the file from the beginning. Use Cases: Ideal for databases and applications that need to frequently access and update data at random locations within a file, such as modifying a specific record in a database file."
             },
+            // Access Methods.
+            {
+                question: "Describe Sequential Access using pseudo code",
+                answer: `read net
+write next
+reset
+no read after last write
+\t(rewrite)
+`,
+            },
+            {
+                question: "Describe Direct Access (file is fixed length logical records) using pseudo code",
+                answer: `read n
+write n
+position to n
+\tread next
+\twrite next
+rewrite n
+
+n = relative block number
+`,
+            },
+            {
+                question: "What is Indexed Access?",
+                answer: "Description: Combines elements of sequential and direct access by using an index to quickly locate data. Use Cases: Useful for files that are accessed based on specific key values or attributes, such as database indexing or searching for specific entries in a large dataset."
+            },
+            {
+                question: "What is Memory-Mapped File Access?",
+                answer: "Description: Involves mapping the contents of a file directly into the process's address space. Use Cases: Effective for applications that require frequent, complex access patterns to large files, such as multimedia processing or large-scale data analysis, where the overhead of traditional file I/O calls is prohibitive."
+            },
         ],
     },
 ];
