@@ -2582,6 +2582,7 @@ rewrite n
 n = relative block number
 `,
             },
+            // Other Methods.
             {
                 question: "What is Indexed Access?",
                 answer: "Description: Combines elements of sequential and direct access by using an index to quickly locate data. Use Cases: Useful for files that are accessed based on specific key values or attributes, such as database indexing or searching for specific entries in a large dataset."
@@ -2589,6 +2590,133 @@ n = relative block number
             {
                 question: "What is Memory-Mapped File Access?",
                 answer: "Description: Involves mapping the contents of a file directly into the process's address space. Use Cases: Effective for applications that require frequent, complex access patterns to large files, such as multimedia processing or large-scale data analysis, where the overhead of traditional file I/O calls is prohibitive."
+            },
+            // Lecture 9.2.
+            // Disk Structure.
+            {
+                question: "What are the subdivisions of a disk?",
+                answer: "Disks can be subdivided into partitions."
+            },
+            {
+                question: "What is RAID protection for disks or partitions?",
+                answer: "Disks or partitions can be RAID protected against failure."
+            },
+            {
+                question: "What are the options for using disks or partitions?",
+                answer: "Disks or partitions can be used raw – without a file system, or formatted with a file system."
+            },
+            {
+                question: "What are partitions also known as?",
+                answer: "Partitions are also known as minidisks or slices."
+            },
+            {
+                question: "What is the entity containing a file system known as?",
+                answer: "The entity containing a file system is known as a volume."
+            },
+            {
+                question: "How is information about each volume's file system tracked?",
+                answer: "Each volume containing a file system also tracks that file system's information in a device directory or volume table of contents."
+            },
+            {
+                question: "What types of file systems exist alongside general-purpose file systems?",
+                answer: "As well as general-purpose file systems, there are many special-purpose file systems, frequently all within the same operating system or computer."
+            },
+            // Directory Structure.
+            {
+                question: "What is a directory structure?",
+                answer: "A directory structure is a collection of nodes containing information about all files."
+            },
+            {
+                question: "Where do both the directory structure and the files reside?",
+                answer: "Both the directory structure and the files reside on disk."
+            },
+            // Operations Performed on Directory.
+            {
+                question: "What operations can be performed on a directory?",
+                answer: "Several operations can be performed on a directory, including: searching for a file, creating a file, deleting a file, listing a directory, renaming a file, and traversing the file system."
+            },
+            // Directory Organization.
+            {
+                question: "What are the objectives of organizing a directory?",
+                answer: "The directory is organized logically to achieve efficiency in locating files quickly, convenient naming for users (allowing two users to have the same name for different files and a single file to have several different names), and logical grouping of files by properties (such as grouping all Java programs or all games together)."
+            },
+            // Single-Level Directory.
+            {
+                question: "What is a Single-Level Directory?",
+                answer: "A single-level directory consists of a single directory for all users."
+            },
+            {
+                question: "What are the problems associated with Single-Level Directories?",
+                answer: "The problems associated with single-level directories include:\n1. Naming problem.\n2. Grouping problem."
+            },
+            // Two-Level Directory.
+            {
+                question: "What is a Two-Level Directory?",
+                answer: "A two-level directory consists of a separate directory for each user."
+            },
+            {
+                question: "What features does a Two-Level Directory system offer?",
+                answer: "In a two-level directory system:\n1. Path name is used.\n2. It allows for having the same file name for different users.\n3. It facilitates efficient searching."
+            },
+            {
+                question: "What capability does a Two-Level Directory lack?",
+                answer: "A two-level directory system lacks grouping capability."
+            },
+            // Tree-Structured Directories.
+            {
+                question: "What features does a Tree-Structured Directory offer?",
+                answer: "A Tree-Structured Directory provides the following features:\n1. Efficient searching.\n2. Grouping Capability."
+            },
+            {
+                question: "What is the concept of the current directory in a Tree-Structured Directory?",
+                answer: "In a Tree-Structured Directory, the current directory (working directory) is used. Commands such as 'cd /spell/mail/prog' can be used to navigate the directory structure. Absolute or relative path names can be utilized."
+            },
+            {
+                question: "How is file creation typically handled in a Tree-Structured Directory?",
+                answer: "In a Tree-Structured Directory, creating a new file is done in the current directory."
+            },
+            {
+                question: "How can a file be deleted in a Tree-Structured Directory?",
+                answer: "To delete a file in a Tree-Structured Directory, the command 'rm <file-name>' is used."
+            },
+            {
+                question: "How are new subdirectories created in a Tree-Structured Directory?",
+                answer: "In a Tree-Structured Directory, creating a new subdirectory is done in the current directory using the command 'mkdir <dir-name>'. For example, if the current directory is '/mail', the command 'mkdir count' would create a new subdirectory named 'count'. Deleting the parent directory will delete the entire subtree rooted by it."
+            },
+            // General Graph Directory.
+            {
+                question: "How do we guarantee the absence of cycles in a General Graph Directory?",
+                answer: "To ensure that no cycles exist in a General Graph Directory, several measures can be taken:\n1. Allow only links to files, not subdirectories.\n2. Implement garbage collection mechanisms.\n3. Use a cycle detection algorithm every time a new link is added to determine whether it is permissible."
+            },
+            // File System Mounting.
+            {
+                question: "What is required before accessing a file system?",
+                answer: "Before a file system can be accessed, it must be mounted."
+            },
+            {
+                question: "What is meant by mounting a file system?",
+                answer: "Mounting a file system refers to the process of attaching the file system to the file hierarchy of the operating system."
+            },
+            {
+                question: "How is an unmounted file system accessed?",
+                answer: "An unmounted file system is mounted at a specific location known as a mount point."
+            },
+            // File Sharing.
+            {
+                question: "Why is file sharing desirable on multi-user systems?",
+                answer: "Sharing of files on multi-user systems is desirable to facilitate collaboration and efficient resource utilization."
+            },
+            {
+                question: "How is file sharing typically facilitated?",
+                answer: "File sharing may be accomplished through a protection scheme, which regulates access permissions to files and directories."
+            },
+            {
+                question: "What is a common method of file sharing on distributed systems?",
+                answer: "On distributed systems, files may be shared across a network using methods such as the Network File System (NFS)."
+            },
+            {
+                question: "What are the key components involved in file sharing on multi-user systems?",
+                answer: "In a multi-user system:\n- User IDs identify users, allowing permissions and protections to be per-user.\n- Group IDs allow users to be in groups, permitting group access rights.\n- Each file or directory has an owner and a group associated with it."
             },
         ],
     },
