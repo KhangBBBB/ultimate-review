@@ -2758,27 +2758,31 @@ P3 waiting time = 14 - 8 = 6 (ms)
             // Parallelizing Disk Access Using RAID Technology (cont.).
             {
                 question: "What is RAID Level 0?",
-                answer: "RAID Level 0 involves data striping without redundant data. It evenly distributes data across two or more disks."
+                answer: "Data striping across multiple disks without redundancy. Improved performance due to parallel data access."
             },
             {
                 question: "What is RAID Level 1?",
-                answer: "RAID Level 1 uses mirrored disks, providing redundancy by maintaining exact copies of data on multiple disks."
+                answer: "Data mirrored across two or more disks for redundancy. High data integrity and availability."
             },
             {
                 question: "What is RAID Level 2?",
-                answer: "RAID Level 2 employs Hamming codes for memory-style redundancy, enabling error detection and correction."
+                answer: "Bit-level striping with dedicated error-correction disks. High data transfer rates and error correction capabilities."
             },
             {
                 question: "What is RAID Level 3?",
-                answer: "RAID Level 3 utilizes a single parity disk controlled by the disk controller to provide redundancy."
+                answer: "Byte-level striping with dedicated parity disk. Good performance for large sequential data transfers."
             },
             {
-                question: "What are RAID Levels 4 and 5?",
-                answer: "RAID Levels 4 and 5 involve block-level data striping, distributing data across all disks. RAID Level 5 includes data distribution across all disks."
+                question: "What are RAID Levels 4?",
+                answer: "Block-level striping with dedicated parity disk. Good performance for large sequential data transfers."
+            },
+            {
+                question: "What are RAID Levels 5?",
+                answer: "Data striping with distributed parity across multiple disks. Balance of performance and fault tolerance."
             },
             {
                 question: "What is RAID Level 6?",
-                answer: "RAID Level 6 applies a P+Q redundancy scheme, protecting against up to two disk failures using just two redundant disks."
+                answer: "RAID Level 6 applies a P+Q redundancy scheme, protecting against up to two disk failures using just two redundant disks. Similar to RAID 5 but with dual parity blocks. Increased fault tolerance, can survive two simultaneous drive failures."
             },
             {
                 question: "Which RAID level is considered easiest for rebuilding?",
