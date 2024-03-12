@@ -2458,6 +2458,219 @@ P3 waiting time = 6 - 3 = 3 (ms)
                 question: "What are the requirements for implementing on-disk scheduling?",
                 answer: "Implementing on-disk scheduling requires specialized hardware and drivers to enable the disk to perform scheduling tasks autonomously."
             },
+            // Lecture 8.2.
+            // Beyond Spinning Disks.
+            {
+                question: "How long have hard drives been in existence?",
+                answer: "Hard drives have been around since 1956."
+            },
+            {
+                question: "What are some characteristics of hard drives?",
+                answer: "Hard drives are the cheapest way to store large amounts of data and their sizes are still increasing rapidly."
+            },
+            {
+                question: "What is a drawback of hard drives compared to other computer components?",
+                answer: "Hard drives are typically the slowest component in most computers. While CPUs and RAM operate at GHz speeds, hard drives operate much slower."
+            },
+            {
+                question: "Why are hard drives not suitable for mobile devices?",
+                answer: "Hard drives are not suitable for mobile devices due to their fragile mechanical components that can break easily, as well as the high power consumption of the disk motor."
+            },
+            // Solid State Drives.
+            {
+                question: "What are Solid State Drives (SSDs) based on?",
+                answer: "Solid State Drives (SSDs) are NAND flash memory-based drives."
+            },
+            {
+                question: "How does NAND flash memory work?",
+                answer: "In NAND flash memory, a high voltage is able to change the configuration of a floating-gate transistor. The state of the transistor is interpreted as binary data."
+            },
+            // Advantages of SSDs.
+            {
+                question: "What are the advantages of SSDs compared to hard drives in terms of resilience?",
+                answer: "SSDs are more resilient against physical damage due to the absence of sensitive read heads or moving parts, and they are immune to changes in temperature."
+            },
+            {
+                question: "How do SSDs compare to hard drives in terms of power consumption?",
+                answer: "SSDs have greatly reduced power consumption compared to hard drives because they have no mechanical, moving parts."
+            },
+            {
+                question: "What are the speed advantages of SSDs over hard drives?",
+                answer: "SSDs are much faster than hard drives, with speeds exceeding 500 MB/s compared to approximately 200 MB/s for hard drives."
+            },
+            {
+                question: "What advantages do SSDs offer for random access?",
+                answer: "SSDs have no penalty for random access because each flash cell can be addressed directly, eliminating the need to rotate or seek. This results in extremely high throughput."
+            },
+            // Challenges with Flash.
+            {
+                question: "How is flash memory typically organized for writing and erasing?",
+                answer: "Flash memory is written in pages, typically ranging from 4 to 16 KB in size, but erased in blocks, which are larger and range from 128 to 256 KB."
+            },
+            {
+                question: "What challenges arise from the organization of flash memory?",
+                answer: "The organization of flash memory into pages and blocks can lead to fragmentation, which in turn causes the write amplification problem."
+            },
+            {
+                question: "What limitations exist regarding the number of write cycles for flash memory?",
+                answer: "Flash memory can only be written a fixed number of times, typically between 3000 and 5000 cycles for MLC (Multi-Level Cell) flash."
+            },
+            {
+                question: "How do SSDs address the limitation of write cycles in flash memory?",
+                answer: "SSDs use wear leveling techniques to evenly distribute writes across all flash cells, thus prolonging the lifespan of the flash memory."
+            },
+            // Write Amplification.
+            {
+                question: "What is the process that occurs once all pages in flash memory have been written?",
+                answer: "Once all pages have been written, valid pages must be consolidated to free up space."
+            },
+            {
+                question: "Define the term 'write amplification'.",
+                answer: "Write amplification refers to the phenomenon where a write operation triggers garbage collection or compaction, which requires one or more blocks to be read, erased, and rewritten before the write operation can proceed."
+            },
+            // Delete Example.
+            {
+                question: "What happens when a file is written to an SSD?",
+                answer: "When a file is written to an SSD, the data is stored in the flash memory as pages."
+            },
+            {
+                question: "What occurs when a file is deleted from an SSD?",
+                answer: "When a file is deleted from an SSD, the pages containing the file's data are marked as invalid."
+            },
+            {
+                question: "Describe the process of garbage collection (GC) on an SSD.",
+                answer: "During garbage collection on an SSD, invalid pages are identified and reclaimed to free up space. This process involves consolidating valid pages and erasing blocks that contain invalid data."
+            },
+            {
+                question: "What is the consequence of a lack of explicit delete on an SSD?",
+                answer: "The lack of an explicit delete operation means that the garbage collection process may waste effort copying useless pages, resulting in decreased efficiency."
+            },
+            {
+                question: "How does the behavior of SSDs during garbage collection differ from that of hard drives?",
+                answer: "Unlike hard drives, SSDs undergo garbage collection, which involves reclaiming space by consolidating valid pages and erasing blocks containing invalid data."
+            },
+            // SSD Controllers.
+            {
+                question: "What is responsible for managing all operations within an SSD?",
+                answer: "All operations within an SSD are handled by the SSD controller."
+            },
+            {
+                question: "What are some tasks performed by the SSD controller?",
+                answer: "The SSD controller is responsible for tasks such as mapping Logic Block Addresses (LBAs) to physical pages, managing free pages, controlling garbage collection (GC), and implementing wear leveling through data rotation."
+            },
+            {
+                question: "What is the significance of the SSD controller's performance?",
+                answer: "The performance of the SSD controller is crucial for overall SSD performance."
+            },
+            // Flavors of NAND Flash Memory.
+            {
+                question: "What is Multi-Level Cell (MLC) NAND flash memory?",
+                answer: "Multi-Level Cell (MLC) NAND flash memory stores multiple bits per flash cell, allowing for multiple voltage levels to represent different data states."
+            },
+            {
+                question: "How many bits per cell can MLC NAND flash memory typically store?",
+                answer: "MLC NAND flash memory can typically store multiple bits per cell, such as two bits per cell for two-level MLC."
+            },
+            {
+                question: "What are some characteristics of MLC NAND flash memory?",
+                answer: "MLC NAND flash memory offers higher capacity and is cheaper than Single-Level Cell (SLC) flash, but it has lower throughput due to the need for error correction. It typically has 3000 to 5000 write cycles and consumes more power. MLC NAND flash memory is commonly used in consumer-grade drives."
+            },
+            {
+                question: "What is Single-Level Cell (SLC) NAND flash memory?",
+                answer: "Single-Level Cell (SLC) NAND flash memory stores one bit per flash cell, where each cell can represent either a 0 or a 1."
+            },
+            {
+                question: "How many bits per cell does SLC NAND flash memory store?",
+                answer: "SLC NAND flash memory stores one bit per cell."
+            },
+            {
+                question: "How does SLC NAND flash memory compare to MLC flash in terms of capacity and cost?",
+                answer: "SLC NAND flash memory has lower capacity and is more expensive than MLC flash."
+            },
+            {
+                question: "What are some characteristics of SLC NAND flash memory?",
+                answer: "SLC NAND flash memory typically offers higher throughput than MLC flash and has a higher number of write cycles, typically ranging from 10,000 to 100,000 cycles. It is commonly used in expensive enterprise-grade drives."
+            },
+            // Parallelizing Disk Access Using RAID Technology.
+            {
+                question: "What is the goal of Redundant Arrays of Independent Disks (RAID) technology?",
+                answer: "The goal of RAID technology is to improve disk speed and access time."
+            },
+            {
+                question: "How many RAID architectures are there, and what are they numbered from?",
+                answer: "There are sets of RAID architectures numbered from 0 through 6."
+            },
+            {
+                question: "What is data striping in the context of RAID?",
+                answer: "Data striping is a technique used in RAID where data is divided into segments and spread across multiple disks in the array."
+            },
+            {
+                question: "What are the two levels of data striping commonly used in RAID?",
+                answer: "The two levels of data striping commonly used in RAID are bit-level striping and block-level striping."
+            },
+            {
+                question: "How does data striping contribute to improving performance in RAID?",
+                answer: "Data striping in RAID achieves higher transfer rates by distributing data across multiple disks in the array."
+            },
+            // Parallelizing Disk Access Using RAID Technology (cont.).
+            {
+                question: "How does RAID improve reliability?",
+                answer: "RAID improves reliability through redundancy techniques such as mirroring and shadowing."
+            },
+            {
+                question: "What are some redundancy techniques used in RAID?",
+                answer: "Some redundancy techniques used in RAID include mirroring and shadowing."
+            },
+            // Parallelizing Disk Access Using RAID Technology (cont.).
+            {
+                question: "What is RAID Level 0?",
+                answer: "RAID Level 0 involves data striping without redundant data. It evenly distributes data across two or more disks."
+            },
+            {
+                question: "What is RAID Level 1?",
+                answer: "RAID Level 1 uses mirrored disks, providing redundancy by maintaining exact copies of data on multiple disks."
+            },
+            {
+                question: "What is RAID Level 2?",
+                answer: "RAID Level 2 employs Hamming codes for memory-style redundancy, enabling error detection and correction."
+            },
+            {
+                question: "What is RAID Level 3?",
+                answer: "RAID Level 3 utilizes a single parity disk controlled by the disk controller to provide redundancy."
+            },
+            {
+                question: "What are RAID Levels 4 and 5?",
+                answer: "RAID Levels 4 and 5 involve block-level data striping, distributing data across all disks. RAID Level 5 includes data distribution across all disks."
+            },
+            {
+                question: "What is RAID Level 6?",
+                answer: "RAID Level 6 applies a P+Q redundancy scheme, protecting against up to two disk failures using just two redundant disks."
+            },
+            {
+                question: "Which RAID level is considered easiest for rebuilding?",
+                answer: "Rebuilding is easiest for RAID Level 1."
+            },
+            {
+                question: "What is typically required for RAID levels other than RAID Level 1 during reconstruction?",
+                answer: "For RAID levels other than RAID Level 1, reconstruction typically involves reading data from multiple disks."
+            },
+            {
+                question: "For which type of storage is RAID levels 3 and 5 preferred?",
+                answer: "RAID levels 3 and 5 are preferred for large volume storage."
+            },
+            // The Consistent Update Problem.
+            {
+                question: "What is the consistent update problem in RAID?",
+                answer: "The consistent update problem refers to the challenge of ensuring that mirrored writes are atomic, where either all copies are successfully written or none are written."
+            },
+            {
+                question: "Why is guaranteeing atomic mirrored writes difficult?",
+                answer: "Guaranteeing atomic mirrored writes is difficult due to potential issues like power failure."
+            },
+            {
+                question: "What feature do many RAID controllers include to address the consistent update problem?",
+                answer: "Many RAID controllers include a write-ahead log, which is battery-backed and non-volatile storage used to store pending writes."
+            },
         ],
     },
     {
