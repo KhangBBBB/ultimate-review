@@ -2073,6 +2073,79 @@ P3 waiting time = 6 - 3 = 3 (ms)
                 question: "How can the problem of starvation be addressed in Priority Scheduling?",
                 answer: "The problem of starvation can be addressed through aging, where the priority of a process is increased as time progresses."
             },
+            // Bonus: Priority Scheduling.
+            {
+                question: "Consider a scenario where a CPU is tasked with executing three processes: P1, P2, and P3, arriving at time 0. Each process is defined by its arrival time, burst time, and priority. At time 0, P1 arrives with a burst time of 5 and a priority of 3. Following P1, P2 arrives at time 1 with a burst time of 3 and a priority of 1, while P3 arrives at time 2 with a burst time of 8 and a priority of 2. The scheduling algorithm in use is priority scheduling, which selects the process with the highest priority for execution. In cases of equal priority, the algorithm favors the process that arrived first. Calculate the average waiting time and average turnaround time for these processes under this scheduling scheme.",
+                answer: `Timeline for all processes:
+P1\tP2\tP3\tEnd
+0\t5\t8\t16
+
+P1 turnaround time = completion time - arrival time = 5 - 0 = 5 (ms)
+P1 waiting time = turnaround time - burst time = 5 - 5 = 0 (ms)
+
+P2 turnaround time = 8 - 1 = 7 (ms)
+P2 waiting time = 7 - 3 = 4 (ms)
+
+P3 turnaround time = 16 - 2 = 14 (ms)
+P3 waiting time = 14 - 8 = 6 (ms)
+`,
+            },
+            // Round Robin.
+            {
+                question: "What type of systems is the round-robin scheduling algorithm designed for?",
+                answer: "The round-robin scheduling algorithm is designed especially for timesharing systems."
+            },
+            {
+                question: "How does the round-robin scheduling algorithm differ from FCFS scheduling?",
+                answer: "The round-robin scheduling algorithm is similar to FCFS scheduling, but preemption is added to switch between processes."
+            },
+            {
+                question: "What is a time quantum or time slice?",
+                answer: "A time quantum or time slice is a small unit of time (generally from 10 to 100 milliseconds) defined in the round-robin scheduling algorithm."
+            },
+            {
+                question: "How does the CPU scheduler allocate the CPU to processes in the Round Robin (RR) scheduling algorithm?",
+                answer: "The CPU scheduler goes around the ready queue, allocating the CPU to each process for a time interval of up to 1 time quantum."
+            },
+            {
+                question: "If there are n processes in the ready queue and the time quantum is q, how much CPU time does each process get in the Round Robin (RR) algorithm?",
+                answer: "Each process gets 1/n of the CPU time in chunks of at most q time units at once."
+            },
+            {
+                question: "What is the maximum waiting time for a process in the Round Robin (RR) algorithm?",
+                answer: "No process waits more than (n-1)q time units."
+            },
+            // Example of RR with Time Quantum = 4.
+            {
+                question: "How does the average turnaround time of Round Robin (RR) scheduling compare to Shortest Job First (SJF) scheduling?",
+                answer: "Typically, Round Robin (RR) has a higher average turnaround time than SJF."
+            },
+            {
+                question: "What is the purpose of choosing a suitable value for the time quantum (q) in Round Robin (RR) scheduling?",
+                answer: "The time quantum (q) should be large compared to the context switch time."
+            },
+            {
+                question: "What are the typical ranges for the time quantum (q) in Round Robin (RR) scheduling?",
+                answer: "The time quantum (q) is usually between 10 milliseconds to 100 milliseconds, with the context switch time being less than 10 microseconds."
+            },
+            // Multilevel Queue.
+            {
+                question: "What is the concept behind Multilevel Queue scheduling?",
+                answer: "Multilevel Queue scheduling involves having separate queues for each priority level and scheduling processes from the highest-priority queue."
+            },
+            {
+                question: "How are processes prioritized in Multilevel Queue scheduling?",
+                answer: "Prioritization is typically based on process type, such as real-time processes, system processes, interactive processes, and batch processes."
+            },
+            // Thread Scheduling.
+            {
+                question: "What is the difference between user-level and kernel-level threads in thread scheduling?",
+                answer: "User-level threads are scheduled by the thread library within the process, known as process-contention scope (PCS), while kernel-level threads are scheduled by the operating system across all threads in the system, known as system-contention scope (SCS)."
+            },
+            {
+                question: "What are the models for scheduling threads in many-to-one and many-to-many systems?",
+                answer: "In many-to-one and many-to-many systems, the thread library schedules user-level threads to run on available CPUs, known as process-contention scope (PCS), while kernel threads are scheduled onto available CPUs by the operating system, known as system-contention scope (SCS)."
+            },
         ],
     },
     {
