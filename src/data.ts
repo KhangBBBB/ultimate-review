@@ -2500,6 +2500,66 @@ P3 waiting time = 6 - 3 = 3 (ms)
                 question: "What are the basic file operations?",
                 answer: "The basic file operations include: 1. Create: to create a new file. 2. Write: to write data to the file at the write pointer location. 3. Read: to read data from the file at the read pointer location. 4. Reposition within file (Seek): to move the read/write pointer to a specific position within the file. 5. Delete: to delete the file. 6. Truncate: to reduce the size of the file. 7. Open(Fi): to search the directory structure on disk for entry Fi and move its content to memory. 8. Close(Fi): to move the content of entry Fi in memory to the directory structure on disk."
             },
+            // Open Files.
+            {
+                question: "What are the components of data needed to manage open files?",
+                answer: "Several pieces of data are needed to manage open files, including:\n1. Open-file table: which tracks open files.\n2. File pointer: a pointer to the last read/write location, per process that has the file open.\n3. File-open count: a counter of the number of times a file is open, allowing removal of data from the open-file table when the last process closes it.\n4. Disk location of the file: a cache of data access information.\n5. Access rights: per-process access mode information."
+            },
+            // Open File Locking.
+            {
+                question: "what is open file locking in the context of operating system?",
+                answer: "Open file locking is a mechanism in operating systems that allows processes to control access to a file. It prevents conflicts by allowing processes to request locks on files, either for exclusive access (no other process can read or write) or shared access (multiple processes can read, but not write). This helps ensure data integrity and coordination in multi-process environments.",
+            },
+            {
+                question: "How is Open File Locking similar to reader-writer locks?",
+                answer: "Open File Locking is similar to reader-writer locks, with a shared lock similar to a reader lock, allowing several processes to acquire it concurrently, and an exclusive lock similar to a writer lock."
+            },
+            {
+                question: "What is the purpose of Open File Locking?",
+                answer: "Open File Locking mediates access to a file."
+            },
+            {
+                question: "What are the two types of Open File Locking?",
+                answer: "Open File Locking can be mandatory or advisory."
+            },
+            {
+                question: "What is the difference between mandatory and advisory Open File Locking?",
+                answer: "Mandatory locking denies access depending on locks held and requested, while advisory locking allows processes to find the status of locks and decide what to do."
+            },
+            // File Structure.
+            {
+                question: "What are the different types of file structures?",
+                answer: "File structures can be categorized into several types: None, Simple record structure, and Complex Structures."
+            },
+            {
+                question: "What does the 'None' file structure entail?",
+                answer: "In the 'None' file structure, data is stored as a sequence of words or bytes without any specific structure."
+            },
+            {
+                question: "What are the types of Simple record structures?",
+                answer: "Simple record structures include: Lines, Fixed length records, and Variable length records."
+            },
+            {
+                question: "What are examples of Complex Structures?",
+                answer: "Examples of Complex Structures include: Formatted document and Relocatable load file."
+            },
+            {
+                question: "How can the last two types of file structures be simulated using the first method?",
+                answer: "The last two types of file structures can be simulated using the first method by inserting appropriate control characters."
+            },
+            {
+                question: "Who decides the file structure?",
+                answer: "The decision about the file structure is made either by the operating system or the program."
+            },
+            // Access Methods.
+            {
+                question: "What is Sequential Access?",
+                answer: "Description: Data in a file is accessed in a linear sequence, from beginning to end. To read/write data to a specific location, the system must start from the beginning of the file and proceed sequentially until it reaches the desired point. Use Cases: Best suited for applications where data is processed in order, such as reading a text file line by line or processing log files."
+            },
+            {
+                question: "What is Direct (Random) Access?",
+                answer: "Description: Allows data to be read/written to any location in the file directly, without the need to sequentially traverse the file from the beginning. Use Cases: Ideal for databases and applications that need to frequently access and update data at random locations within a file, such as modifying a specific record in a database file."
+            },
         ],
     },
 ];
